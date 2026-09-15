@@ -7,483 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;600;700&family=Noto+Sans+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --ink:#20241f;
-    --deep:#123b36;
-    --teal:#2f6e62;
-    --green:#8dc63f;
-    --green-dark:#6ea82e;
-    --sand:#f6f2e7;
-    --sand-2:#efe8d8;
-    --line: rgba(18,59,54,0.16);
-    --white:#fffdf8;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--sand);
-    color:var(--ink);
-    font-family:"Noto Sans Tamil","Noto Sans",sans-serif;
-    line-height:1.7;
-    font-size:16px;
-  }
-  h1,h2,h3,.serif{
-    font-family:"Noto Serif Tamil","Noto Sans Tamil",serif;
-    color:var(--deep);
-    margin:0;
-    font-weight:600;
-  }
-  p{margin:0 0 1em 0;}
-  a{color:inherit;}
-  img{max-width:100%;display:block;}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
-
-  /* ---- Header ---- */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:var(--white);
-    border-bottom:1px solid var(--line);
-    box-shadow:0 2px 10px rgba(18,59,54,0.05);
-  }
-  .header-inner{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:10px 24px;max-width:1080px;margin:0 auto;
-  }
-  .brand{display:flex;align-items:center;gap:12px;}
-  .brand img{height:54px;width:auto;}
-  nav.nav-scroll{
-    display:flex;
-    align-items:center;
-    gap:6px;
-    overflow:visible;
-  }
-  nav a, .dropdown-toggle{
-    text-decoration:none;
-    color:var(--deep);
-    font-size:.95rem;
-    font-weight:500;
-    padding:6px 12px;
-    border-bottom:2px solid transparent;
-    display:inline-flex;
-    align-items:center;
-    gap:4px;
-    transition:all 0.2s ease;
-    cursor:pointer;
-  }
-  nav a:hover, .dropdown-toggle:hover, nav a.active, .dropdown-toggle.active, .nav-dropdown:hover .dropdown-toggle{
-    color:var(--teal);
-    border-bottom-color:var(--green);
-    background:rgba(141,198,63,0.1);
-    border-radius:4px 4px 0 0;
-  }
-
-  /* ---- Dropdown Menu ---- */
-  .nav-dropdown{
-    position:relative;
-    display:inline-block;
-  }
-  .dropdown-arrow{
-    transition:transform 0.2s ease;
-    fill:currentColor;
-  }
-  .nav-dropdown:hover .dropdown-arrow{
-    transform:rotate(180deg);
-  }
-  .dropdown-menu{
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    min-width:180px;
-    background:var(--white);
-    border:1px solid var(--line);
-    box-shadow:0 8px 24px rgba(18,59,54,0.14);
-    border-radius:0 6px 6px 6px;
-    padding:6px 0;
-    z-index:100;
-    margin-top:0;
-  }
-  .nav-dropdown::after{
-    content:"";
-    position:absolute;
-    top:100%;
-    left:0;
-    width:100%;
-    height:10px;
-  }
-  .nav-dropdown:hover .dropdown-menu{
-    display:block;
-    animation:navDropdownFade 0.2s ease-out;
-  }
-  .dropdown-menu a{
-    display:block;
-    padding:9px 16px;
-    color:var(--deep);
-    text-decoration:none;
-    font-size:.9rem;
-    border-bottom:none;
-    border-radius:0;
-    background:transparent;
-    transition:background 0.15s ease, color 0.15s ease;
-  }
-  .dropdown-menu a:hover, .dropdown-menu a.active{
-    background:var(--sand-2);
-    color:var(--teal);
-    border-bottom:none;
-  }
-
-  @keyframes navDropdownFade {
-    from { opacity: 0; transform: translateY(6px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ---- Hero ---- */
-  .hero{
-    position:relative;
-    background:var(--deep);
-    color:var(--white);
-    overflow:hidden;
-  }
-  .hero-media{
-    position:absolute;inset:0;
-  }
-  .hero-media img{
-    width:100%;height:100%;object-fit:cover;opacity:.55;
-  }
-  .hero-media::after{
-    content:"";position:absolute;inset:0;
-    background:linear-gradient(180deg, rgba(18,59,54,.55) 0%, rgba(18,59,54,.88) 78%, var(--sand) 100%);
-  }
-  .hero-content{
-    position:relative;padding:96px 24px 64px;max-width:1080px;margin:0 auto;
-  }
-  .eyebrow-tag{
-    display:inline-block;font-size:.85rem;color:var(--sand);
-    border:1px solid rgba(255,255,255,.4);padding:4px 12px;border-radius:2px;
-    margin-bottom:22px;
-  }
-  .hero h1{
-    color:var(--white);
-    font-size:clamp(2.1rem, 5vw, 3.4rem);
-    line-height:1.25;
-    max-width:18ch;
-  }
-  .hero p.lede{
-    margin-top:22px;max-width:58ch;color:#e7f0ea;font-size:1.05rem;
-  }
-  .wavecut{
-    display:block;width:100%;height:56px;margin-top:-2px;
-  }
-
-  /* ---- Stat strip ---- */
-  .stats{
-    background:var(--sand);
-    padding:8px 24px 48px;
-  }
-  .stat-row{
-    max-width:1080px;margin:0 auto;
-    display:grid;grid-template-columns: 1.1fr 2fr;
-    gap:40px;align-items:end;
-    border-bottom:1px solid var(--line);
-    padding-bottom:40px;
-  }
-  .stat-num{
-    font-family:"Noto Serif Tamil",serif;
-    font-size:clamp(3.2rem,9vw,5rem);
-    color:var(--teal);
-    line-height:1;
-    position:relative;
-    display:inline-block;
-  }
-  .stat-num::after{
-    content:"";display:block;width:64px;height:5px;background:var(--green);margin-top:14px;
-  }
-  .stat-note{color:var(--teal);font-size:.9rem;margin-top:8px;}
-  .stat-text p{color:#334;}
-
-  /* ---- Map Section ---- */
-  .map-box{
-    margin:36px 0 12px;
-    background:var(--white);
-    border:1px solid var(--line);
-    padding:20px;
-    border-radius:6px;
-    text-align:center;
-  }
-  .map-box img{
-    max-height:480px;
-    width:auto;
-    margin:0 auto 14px;
-    border-radius:4px;
-    border:1px solid var(--line);
-    background:var(--sand-2);
-  }
-  .map-caption{
-    font-size:.92rem;
-    color:var(--teal);
-    font-weight:500;
-  }
-
-  /* ---- Section shell ---- */
-  section{padding:64px 0;}
-  .section-head{
-    display:flex;align-items:baseline;gap:18px;margin-bottom:34px;
-    border-top:1px solid var(--line);padding-top:18px;
-  }
-  .section-head .idx{
-    font-family:"Noto Serif Tamil",serif;color:var(--green-dark);font-size:1rem;
-    white-space:nowrap;
-  }
-  .section-head h2{font-size:clamp(1.4rem,3vw,1.9rem);}
-
-  /* ---- Benefit Grid ---- */
-  .func-grid{
-    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:1px;background:var(--line);
-    border:1px solid var(--line);
-  }
-  .func-card{
-    background:var(--white);padding:26px 22px;
-  }
-  .func-card .ic{
-    font-size:1.8rem;margin-bottom:12px;line-height:1;display:block;
-  }
-  .func-card h3{font-size:1.05rem;margin-bottom:8px;color:var(--deep);}
-  .func-card p{font-size:.93rem;color:#3c473f;margin:0;}
-
-  /* ---- Flow / Chain ---- */
-  .flow{
-    display:flex;flex-direction:column;gap:0;
-  }
-  .flow-row{
-    display:grid;grid-template-columns:repeat(3,1fr);
-    border-top:1px solid var(--line);
-  }
-  .flow-row:last-child{border-bottom:1px solid var(--line);}
-  .flow-cell{
-    padding:18px 20px;font-size:.95rem;
-    border-left:1px solid var(--line);
-  }
-  .flow-cell:first-child{border-left:none;font-family:"Noto Serif Tamil",serif;color:var(--deep);font-weight:600;}
-  .flow-cell:nth-child(2){color:var(--teal);}
-  .flow-cell:nth-child(3){color:#3c473f;}
-
-  /* ---- Mountain Profiles ---- */
-  .dam{
-    display:grid;grid-template-columns: 1fr 1fr;gap:44px;
-    align-items:center;
-    padding:38px 0;
-    border-top:1px solid var(--line);
-  }
-  .dam:last-child{border-bottom:1px solid var(--line);}
-  .dam.rev .dam-media{order:2;}
-  .dam-media{
-    position:relative;
-  }
-  .dam-media img{
-    width:100%;height:280px;object-fit:cover;
-    border:1px solid var(--line);
-    background:var(--sand-2);
-  }
-  .dam-plate{
-    position:absolute;bottom:-16px;left:16px;
-    background:var(--deep);color:var(--sand);
-    padding:8px 16px;font-size:.82rem;
-    border-left:4px solid var(--green);
-  }
-  .dam-body .tag{
-    font-size:.82rem;color:var(--green-dark);letter-spacing:.02em;margin-bottom:6px;
-  }
-  .dam-body h3{font-size:1.4rem;margin-bottom:6px;}
-  .dam-body .meta{
-    display:flex;gap:14px;flex-wrap:wrap;
-    font-size:.85rem;color:var(--teal);margin-bottom:14px;
-  }
-  .dam-body .meta span{
-    background:rgba(47,110,98,0.08);
-    padding:2px 10px;border-radius:3px;
-  }
-  .dam-body p{font-size:.96rem;color:#33403a;}
-
-  /* ---- Table ---- */
-  table{
-    width:100%;border-collapse:collapse;font-size:.92rem;
-    background:var(--white);
-  }
-  thead th{
-    text-align:left;font-family:"Noto Serif Tamil",serif;font-weight:600;
-    color:var(--deep);border-bottom:2px solid var(--deep);
-    padding:12px 14px;
-  }
-  tbody td{
-    padding:11px 14px;border-bottom:1px solid var(--line);color:#333f38;
-  }
-  tbody tr:hover{background:var(--sand-2);}
-  .table-note{font-size:.85rem;color:var(--teal);margin-top:14px;}
-
-  /* ---- Quote Box ---- */
-  .quote-box{
-    background:var(--deep);color:var(--sand);
-    padding:40px 32px;border-radius:4px;text-align:center;
-    margin:48px 0 16px;
-  }
-  .quote-box p{
-    font-family:"Noto Serif Tamil",serif;
-    font-size:clamp(1.1rem, 2.5vw, 1.4rem);
-    line-height:1.7;color:var(--white);margin:0;
-  }
-
-  /* ---- Ghats Comparison Cards ---- */
-  .ghats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 28px;
-    margin-top: 14px;
-  }
-  .ghat-card {
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 30px 26px;
-    box-shadow: 0 4px 16px rgba(18,59,54,0.05);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-  .ghat-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 26px rgba(18,59,54,0.1);
-  }
-  .ghat-card::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 5px;
-    background: var(--teal);
-  }
-  .ghat-card.east::before {
-    background: var(--green-dark);
-  }
-  .ghat-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    padding-bottom: 14px;
-    border-bottom: 1px solid var(--line);
-  }
-  .ghat-title {
-    font-size: 1.3rem;
-    color: var(--deep);
-  }
-  .ghat-badge {
-    font-size: .8rem;
-    font-weight: 600;
-    padding: 3px 10px;
-    border-radius: 20px;
-    background: rgba(47,110,98,0.1);
-    color: var(--teal);
-  }
-  .ghat-card.east .ghat-badge {
-    background: rgba(110,168,46,0.15);
-    color: var(--green-dark);
-  }
-  .ghat-section-title {
-    font-size: .85rem;
-    text-transform: uppercase;
-    letter-spacing: .04em;
-    color: var(--teal);
-    margin-bottom: 10px;
-    font-weight: 600;
-  }
-  .ghat-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 22px;
-  }
-  .ghat-pill {
-    background: var(--sand-2);
-    color: var(--deep);
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-size: .92rem;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    border: 1px solid var(--line);
-  }
-  .ghat-chain-flow {
-    display: flex;
-    flex-direction: column;
-    gap: 9px;
-  }
-  .chain-step {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: var(--sand);
-    padding: 10px 14px;
-    border-radius: 6px;
-    font-size: .93rem;
-    color: #2c3630;
-    border-left: 3px solid var(--teal);
-  }
-  .ghat-card.east .chain-step {
-    border-left-color: var(--green-dark);
-  }
-  .chain-step-num {
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    background: var(--teal);
-    color: var(--white);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: .75rem;
-    font-weight: 700;
-    flex-shrink: 0;
-  }
-  .ghat-card.east .chain-step-num {
-    background: var(--green-dark);
-  }
-
-  /* ---- Footer ---- */
-  footer{
-    background:var(--deep);color:var(--sand);padding:56px 0 28px;
-  }
-  .foot-grid{
-    display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px;
-    padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.15);
-  }
-  .foot-brand img{height:46px;margin-bottom:14px;filter:brightness(0) invert(1);}
-  .foot-brand p{font-size:.88rem;color:#c9d8cf;max-width:32ch;}
-  footer h4{
-    font-family:"Noto Serif Tamil",serif;color:var(--sand);font-size:.95rem;
-    margin-bottom:14px;font-weight:600;
-  }
-  footer p, footer address{font-size:.88rem;color:#c9d8cf;font-style:normal;margin:0 0 6px;}
-  .foot-bottom{
-    padding-top:22px;font-size:.8rem;color:#93a99c;
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
-  }
-
-  @media (max-width:760px){
-    .header-inner{flex-wrap:wrap;gap:12px;}
-    .stat-row{grid-template-columns:1fr;}
-    .dam, .dam.rev{grid-template-columns:1fr;}
-    .dam.rev .dam-media{order:0;}
-    .flow-row{grid-template-columns:1fr;}
-    .flow-cell{border-left:none;border-top:1px solid var(--line);}
-    .flow-cell:first-child{border-top:none;}
-    .foot-grid{grid-template-columns:1fr;}
-    nav.nav-scroll{width:100%;overflow-x:auto;padding-bottom:4px;}
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -492,7 +16,8 @@
     <div class="brand">
       <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
     </div>
-    <nav class="nav-scroll">
+    
+    <nav class="desktop-nav">
       <div class="nav-dropdown">
         <a href="mountains.html" class="dropdown-toggle active">
           மலைகள்
@@ -514,8 +39,46 @@
       <a href="#table">பட்டியல்</a>
       <a href="#comparison">மலைத்தொடர்கள்</a>
     </nav>
+
+    <button class="mobile-toggle" aria-label="பட்டி திற" aria-expanded="false">
+      <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+    </button>
   </div>
 </header>
+
+<div class="drawer-backdrop"></div>
+<div class="mobile-drawer" role="dialog" aria-modal="true">
+  <div class="drawer-header">
+    <div class="brand">
+      <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+    </div>
+    <button class="drawer-close" aria-label="மூடு">&times;</button>
+  </div>
+  <div class="drawer-nav">
+    <div class="drawer-section-title">பிரிவுகள்</div>
+    <div class="mobile-cat-accordion">
+      <button class="mobile-cat-toggle" aria-expanded="false">
+        <span>வகைகள் (Categories)</span>
+        <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14"><path d="M7 10l5 5 5-5z"/></svg>
+      </button>
+      <div class="mobile-cat-content">
+        <a href="index.html">அணைகள் (Dams)</a>
+        <a href="rivers.html">ஆறுகள் (Rivers)</a>
+        <a href="falls.html">அருவிகள் (Waterfalls)</a>
+        <a href="forests.html">காடுகள் (Forests)</a>
+        <a href="mountains.html" class="active">மலைகள் (Mountains)</a>
+        <a href="lakes.html">ஏரிகள் (Lakes)</a>
+        <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+      </div>
+    </div>
+    <div class="drawer-section-title">பக்கத்தின் பகுதிகள்</div>
+    <a href="#intro">அறிமுகம்</a>
+    <a href="#benefits">பயன்கள்</a>
+    <a href="#profiles">மலைப்பகுதிகள்</a>
+    <a href="#table">பட்டியல்</a>
+    <a href="#comparison">மலைத்தொடர்கள்</a>
+  </div>
+</div>
 
 <section class="hero" id="intro">
   <div class="hero-media">
@@ -690,20 +253,20 @@
       <span class="idx">03</span>
       <h2>6 முக்கிய மலைப்பகுதிகள் — விரைவுப் பட்டியல்</h2>
     </div>
-    <div style="overflow-x:auto;">
-    <table>
-      <thead>
-        <tr><th>மலைப்பகுதி</th><th>மலைத்தொடர்</th><th>உயரமான சிகரம் / உயரம்</th><th>முக்கிய சிறப்புகள்</th></tr>
-      </thead>
-      <tbody>
-        <tr><td><strong>நீலகிரி மலைகள்</strong></td><td>மேற்குத் தொடர்ச்சி</td><td>தொட்டபெட்டா — 2,637 மீ</td><td>ஊட்டி, தேயிலைத் தோட்டங்கள், மலை ரயில்</td></tr>
-        <tr><td><strong>பழனி மலைகள்</strong></td><td>மேற்குத் தொடர்ச்சி</td><td>வந்தரவு — 2,533 மீ</td><td>கொடைக்கானல், சோலைக்காடுகள், ஏரிகள்</td></tr>
-        <tr><td><strong>ஆனைமலை & வால்பாறை</strong></td><td>மேற்குத் தொடர்ச்சி</td><td>ஆனைமுடி — 2,695 மீ*</td><td>மழைக்காடுகள், தேயிலை, வனவிலங்குகள்</td></tr>
-        <tr><td><strong>சேவராயன் மலைகள்</strong></td><td>கிழக்குத் தொடர்ச்சி</td><td>சோலைக்கரடு — ~1,620 மீ</td><td>ஏற்காடு, காபி, ஆரஞ்சு</td></tr>
-        <tr><td><strong>கொல்லிமலை</strong></td><td>கிழக்குத் தொடர்ச்சி</td><td>~1,300 மீ வரை</td><td>70 கொண்டை ஊசி வளைவுகள், ஆகாய கங்கை</td></tr>
-        <tr><td><strong>ஏலகிரி மலைகள்</strong></td><td>கிழக்குத் தொடர்ச்சி</td><td>சுவாமிமலை — ~1,322 மீ</td><td>மலையேற்றம், பாராகிளைடிங், பழத்தோட்டங்கள்</td></tr>
-      </tbody>
-    </table>
+    <div class="table-responsive">
+      <table>
+        <thead>
+          <tr><th>மலைப்பகுதி</th><th>மலைத்தொடர்</th><th>உயரமான சிகரம் / உயரம்</th><th>முக்கிய சிறப்புகள்</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>நீலகிரி மலைகள்</strong></td><td>மேற்குத் தொடர்ச்சி</td><td>தொட்டபெட்டா — 2,637 மீ</td><td>ஊட்டி, தேயிலைத் தோட்டங்கள், மலை ரயில்</td></tr>
+          <tr><td><strong>பழனி மலைகள்</strong></td><td>மேற்குத் தொடர்ச்சி</td><td>வந்தரவு — 2,533 மீ</td><td>கொடைக்கானல், சோலைக்காடுகள், ஏரிகள்</td></tr>
+          <tr><td><strong>ஆனைமலை & வால்பாறை</strong></td><td>மேற்குத் தொடர்ச்சி</td><td>ஆனைமுடி — 2,695 மீ*</td><td>மழைக்காடுகள், தேயிலை, வனவிலங்குகள்</td></tr>
+          <tr><td><strong>சேவராயன் மலைகள்</strong></td><td>கிழக்குத் தொடர்ச்சி</td><td>சோலைக்கரடு — ~1,620 மீ</td><td>ஏற்காடு, காபி, ஆரஞ்சு</td></tr>
+          <tr><td><strong>கொல்லிமலை</strong></td><td>கிழக்குத் தொடர்ச்சி</td><td>~1,300 மீ வரை</td><td>70 கொண்டை ஊசி வளைவுகள், ஆகாய கங்கை</td></tr>
+          <tr><td><strong>ஏலகிரி மலைகள்</strong></td><td>கிழக்குத் தொடர்ச்சி</td><td>சுவாமிமலை — ~1,322 மீ</td><td>மலையேற்றம், பாராகிளைடிங், பழத்தோட்டங்கள்</td></tr>
+        </tbody>
+      </table>
     </div>
     <p class="table-note">* குறிப்பு: ஆனைமுடி சிகரம் கேரளாவில் அமைந்துள்ளது. இது ஆனைமலை மலைத்தொடரின் உயரமான சிகரம்; தமிழ்நாட்டின் உயரமான சிகரம் என்று குறிப்பிடக்கூடாது.</p>
   </div>
@@ -827,5 +390,6 @@
   </div>
 </footer>
 
+<script src="main.js"></script>
 </body>
 </html>
