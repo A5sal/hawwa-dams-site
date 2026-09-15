@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>தமிழ்நாட்டின் ஏரிகள் மற்றும் நீர்நிலைகள் — Hawwa PrintShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;600;700&family=Noto+Sans+Tamil:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --ink: #20241f;
+            --deep: #123b36;
+            --teal: #2f6e62;
+            --green: #8dc63f;
+            --green-dark: #6ea82e;
+            --sand: #f6f2e7;
+            --sand-2: #efe8d8;
+            --line: rgba(18, 59, 54, 0.16);
+            --white: #fffdf8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--sand);
+            color: var(--ink);
+            font-family: "Noto Sans Tamil", "Noto Sans", sans-serif;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+
+        h1,
+        h2,
+        h3,
+        .serif {
+            font-family: "Noto Serif Tamil", "Noto Sans Tamil", serif;
+            color: var(--deep);
+            margin: 0;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0 0 1em 0;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .wrap {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ---- Header ---- */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: var(--white);
+            border-bottom: 1px solid var(--line);
+            box-shadow: 0 2px 10px rgba(18, 59, 54, 0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 24px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .brand img {
+            height: 54px;
+            width: auto;
+        }
+
+        nav.nav-scroll {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            overflow: visible;
+        }
+
+        nav a,
+        .dropdown-toggle {
+            text-decoration: none;
+            color: var(--deep);
+            font-size: .95rem;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-bottom: 2px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        nav a:hover,
+        .dropdown-toggle:hover,
+        nav a.active,
+        .dropdown-toggle.active,
+        .nav-dropdown:hover .dropdown-toggle {
+            color: var(--teal);
+            border-bottom-color: var(--green);
+            background: rgba(141, 198, 63, 0.1);
+            border-radius: 4px 4px 0 0;
+        }
+
+        /* ---- Dropdown Menu ---- */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-arrow {
+            transition: transform 0.2s ease;
+            fill: currentColor;
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 180px;
+            background: var(--white);
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 24px rgba(18, 59, 54, 0.14);
+            border-radius: 0 6px 6px 6px;
+            padding: 6px 0;
+            z-index: 100;
+            margin-top: 0;
+        }
+
+        .nav-dropdown::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 10px;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            display: block;
+            animation: navDropdownFade 0.2s ease-out;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 9px 16px;
+            color: var(--deep);
+            text-decoration: none;
+            font-size: .9rem;
+            border-bottom: none;
+            border-radius: 0;
+            background: transparent;
+            transition: background 0.15s ease, color 0.15s ease;
+        }
+
+        .dropdown-menu a:hover,
+        .dropdown-menu a.active {
+            background: var(--sand-2);
+            color: var(--teal);
+            border-bottom: none;
+        }
+
+        @keyframes navDropdownFade {
+            from {
+                opacity: 0;
+                transform: translateY(6px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ---- Hero ---- */
+        .hero {
+            position: relative;
+            background: var(--deep);
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero-media {
+            position: absolute;
+            inset: 0;
+        }
+
+        .hero-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: .55;
+        }
+
+        .hero-media::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(18, 59, 54, .55) 0%, rgba(18, 59, 54, .88) 78%, var(--sand) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            padding: 96px 24px 64px;
+            max-width: 1080px;
+            margin: 0 auto;
+        }
+
+        .eyebrow-tag {
+            display: inline-block;
+            font-size: .85rem;
+            color: var(--sand);
+            border: 1px solid rgba(255, 255, 255, .4);
+            padding: 4px 12px;
+            border-radius: 2px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: clamp(2.1rem, 5vw, 3.4rem);
+            line-height: 1.25;
+            max-width: 18ch;
+        }
+
+        .hero p.lede {
+            margin-top: 22px;
+            max-width: 58ch;
+            color: #e7f0ea;
+            font-size: 1.05rem;
+        }
+
+        .wavecut {
+            display: block;
+            width: 100%;
+            height: 56px;
+            margin-top: -2px;
+        }
+
+        /* ---- Stat strip ---- */
+        .stats {
+            background: var(--sand);
+            padding: 8px 24px 48px;
+        }
+
+        .stat-row {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.1fr 2fr;
+            gap: 40px;
+            align-items: end;
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 40px;
+        }
+
+        .stat-num {
+            font-family: "Noto Serif Tamil", serif;
+            font-size: clamp(2.8rem, 7vw, 4.2rem);
+            color: var(--teal);
+            line-height: 1;
+            position: relative;
+            display: inline-block;
+        }
+
+        .stat-num::after {
+            content: "";
+            display: block;
+            width: 64px;
+            height: 5px;
+            background: var(--green);
+            margin-top: 14px;
+        }
+
+        .stat-note {
+            color: var(--teal);
+            font-size: .9rem;
+            margin-top: 8px;
+        }
+
+        .stat-text p {
+            color: #334;
+        }
+
+        /* ---- Section shell ---- */
+        section {
+            padding: 64px 0;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: baseline;
+            gap: 18px;
+            margin-bottom: 34px;
+            border-top: 1px solid var(--line);
+            padding-top: 18px;
+        }
+
+        .section-head .idx {
+            font-family: "Noto Serif Tamil", serif;
+            color: var(--green-dark);
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+
+        .section-head h2 {
+            font-size: clamp(1.4rem, 3vw, 1.9rem);
+        }
+
+        /* ---- Benefit Grid ---- */
+        .func-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1px;
+            background: var(--line);
+            border: 1px solid var(--line);
+        }
+
+        .func-card {
+            background: var(--white);
+            padding: 26px 22px;
+        }
+
+        .func-card .ic {
+            font-size: 1.8rem;
+            margin-bottom: 12px;
+            line-height: 1;
+            display: block;
+        }
+
+        .func-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: var(--deep);
+        }
+
+        .func-card p {
+            font-size: .93rem;
+            color: #3c473f;
+            margin: 0;
+        }
+
+        /* ---- Type Cards Grid ---- */
+        .type-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .type-card {
+            background: var(--white);
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 28px 24px;
+            border-top: 4px solid var(--teal);
+        }
+
+        .type-card h3 {
+            font-size: 1.15rem;
+            color: var(--deep);
+            margin-bottom: 10px;
+        }
+
+        .type-card .type-usage {
+            font-size: .88rem;
+            color: var(--green-dark);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .type-card ul {
+            margin: 0;
+            padding-left: 20px;
+            color: #33403a;
+            font-size: .93rem;
+        }
+
+        .type-card li {
+            margin-bottom: 4px;
+        }
+
+        /* ---- Flow / Chain ---- */
+        .flow {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .flow-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--line);
+        }
+
+        .flow-row:last-child {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .flow-cell {
+            padding: 18px 20px;
+            font-size: .95rem;
+            border-left: 1px solid var(--line);
+        }
+
+        .flow-cell:first-child {
+            border-left: none;
+            font-family: "Noto Serif Tamil", serif;
+            color: var(--deep);
+            font-weight: 600;
+        }
+
+        .flow-cell:nth-child(2) {
+            color: var(--teal);
+        }
+
+        .flow-cell:nth-child(3) {
+            color: #3c473f;
+        }
+
+        /* ---- Lake Profiles ---- */
+        .dam {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 44px;
+            align-items: center;
+            padding: 38px 0;
+            border-top: 1px solid var(--line);
+        }
+
+        .dam:last-child {
+            border-bottom: 1px solid var(--line);
+        }
+
+        .dam.rev .dam-media {
+            order: 2;
+        }
+
+        .dam-media {
+            position: relative;
+        }
+
+        .dam-media img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border: 1px solid var(--line);
+            background: var(--sand-2);
+        }
+
+        .dam-plate {
+            position: absolute;
+            bottom: -16px;
+            left: 16px;
+            background: var(--deep);
+            color: var(--sand);
+            padding: 8px 16px;
+            font-size: .82rem;
+            border-left: 4px solid var(--green);
+        }
+
+        .dam-body .tag {
+            font-size: .82rem;
+            color: var(--green-dark);
+            letter-spacing: .02em;
+            margin-bottom: 6px;
+        }
+
+        .dam-body h3 {
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+        }
+
+        .dam-body .meta {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            font-size: .85rem;
+            color: var(--teal);
+            margin-bottom: 14px;
+        }
+
+        .dam-body .meta span {
+            background: rgba(47, 110, 98, 0.08);
+            padding: 2px 10px;
+            border-radius: 3px;
+        }
+
+        .dam-body p {
+            font-size: .96rem;
+            color: #33403a;
+        }
+
+        /* ---- Table ---- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: .92rem;
+            background: var(--white);
+        }
+
+        thead th {
+            text-align: left;
+            font-family: "Noto Serif Tamil", serif;
+            font-weight: 600;
+            color: var(--deep);
+            border-bottom: 2px solid var(--deep);
+            padding: 12px 14px;
+        }
+
+        tbody td {
+            padding: 11px 14px;
+            border-bottom: 1px solid var(--line);
+            color: #333f38;
+        }
+
+        tbody tr:hover {
+            background: var(--sand-2);
+        }
+
+        .table-note {
+            font-size: .85rem;
+            color: var(--teal);
+            margin-top: 14px;
+        }
+
+        /* ---- Quote Box ---- */
+        .quote-box {
+            background: var(--deep);
+            color: var(--sand);
+            padding: 40px 32px;
+            border-radius: 4px;
+            text-align: center;
+            margin: 48px 0 16px;
+        }
+
+        .quote-box p {
+            font-family: "Noto Serif Tamil", serif;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            line-height: 1.7;
+            color: var(--white);
+            margin: 0;
+        }
+
+        /* ---- Footer ---- */
+        footer {
+            background: var(--deep);
+            color: var(--sand);
+            padding: 56px 0 28px;
+        }
+
+        .foot-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 36px;
+            padding-bottom: 34px;
+            border-bottom: 1px solid rgba(255, 255, 255, .15);
+        }
+
+        .foot-brand img {
+            height: 46px;
+            margin-bottom: 14px;
+            filter: brightness(0) invert(1);
+        }
+
+        .foot-brand p {
+            font-size: .88rem;
+            color: #c9d8cf;
+            max-width: 32ch;
+        }
+
+        footer h4 {
+            font-family: "Noto Serif Tamil", serif;
+            color: var(--sand);
+            font-size: .95rem;
+            margin-bottom: 14px;
+            font-weight: 600;
+        }
+
+        footer p,
+        footer address {
+            font-size: .88rem;
+            color: #c9d8cf;
+            font-style: normal;
+            margin: 0 0 6px;
+        }
+
+        .foot-bottom {
+            padding-top: 22px;
+            font-size: .8rem;
+            color: #93a99c;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        @media (max-width:760px) {
+            .header-inner {
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .stat-row {
+                grid-template-columns: 1fr;
+            }
+
+            .dam,
+            .dam.rev {
+                grid-template-columns: 1fr;
+            }
+
+            .dam.rev .dam-media {
+                order: 0;
+            }
+
+            .flow-row {
+                grid-template-columns: 1fr;
+            }
+
+            .flow-cell {
+                border-left: none;
+                border-top: 1px solid var(--line);
+            }
+
+            .flow-cell:first-child {
+                border-top: none;
+            }
+
+            .foot-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav.nav-scroll {
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: 4px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+            </div>
+            <nav class="nav-scroll">
+                <div class="nav-dropdown">
+                    <a href="lakes.html" class="dropdown-toggle active">
+                        ஏரிகள்
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">அணைகள் (Dams)</a>
+                        <a href="rivers.html">ஆறுகள் (Rivers)</a>
+                        <a href="falls.html">அருவிகள் (Waterfalls)</a>
+                        <a href="forests.html">காடுகள் (Forests)</a>
+                        <a href="mountains.html">மலைகள் (Mountains)</a>
+                        <a href="lakes.html" class="active">ஏரிகள் (Lakes)</a>
+                        <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+                    </div>
+                </div>
+                <a href="#intro">அறிமுகம்</a>
+                <a href="#benefits">பயன்கள்</a>
+                <a href="#types">வகைகள்</a>
+                <a href="#profiles">ஏரிகள்</a>
+                <a href="#table">பட்டியல்</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="intro">
+        <div class="hero-media">
+            <img src="assets/hero-lakes.jpg" alt="தமிழ்நாட்டின் ஏரிகள் மற்றும் நீர்நிலைகள்">
+        </div>
+        <div class="hero-content">
+            <span class="eyebrow-tag">இயற்கை நீர்வளம்</span>
+            <h1>தமிழ்நாட்டின் ஏரிகள் மற்றும் நீர்நிலைகள்</h1>
+            <p class="lede">தமிழ்நாட்டின் நீர்வள அமைப்பில் ஏரிகள், குளங்கள், கண்மாய்கள், நீர்த்தேக்கங்கள் மற்றும் பிற
+                நீர்நிலைகள் முக்கிய பங்கு வகிக்கின்றன. மழைக்காலங்களில் கிடைக்கும் நீரைச் சேமித்து, வறட்சி காலங்களில்
+                குடிநீர், விவசாயம் மற்றும் பிற தேவைகளுக்குப் பயன்படுத்துவதற்கு இவை உதவுகின்றன.</p>
+        </div>
+        <svg class="wavecut" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,30 C 200,60 400,0 600,30 C 800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#f6f2e7"></path>
+        </svg>
+    </section>
+
+    <div class="stats">
+        <div class="stat-row">
+            <div>
+                <span class="stat-num">13,629</span>
+                <div class="stat-note">பதிவுசெய்யப்பட்ட நீர்நிலைகள்</div>
+            </div>
+            <div class="stat-text">
+                <p>இந்திய ஒன்றிய அரசின் <strong>ஜல் சக்தி அமைச்சகம்</strong> நடத்திய முதல் தேசிய நீர்நிலைகள்
+                    கணக்கெடுப்பின்படி, தமிழ்நாட்டில் <strong>13,629 நீர்நிலைகள்</strong> பதிவாகியுள்ளன. இந்த
+                    எண்ணிக்கையில் ஏரிகள் மட்டுமல்லாமல், குளங்கள், கண்மாய்கள், நீர்த்தேக்கங்கள் மற்றும் பல்வேறு வகையான
+                    நீர்நிலைகளும் அடங்கும்.</p>
+                <p>தமிழ்நாட்டின் நீர்நிலைகள் குடிநீர், பாசனம், நிலத்தடி நீர் நிரப்பு, மீன்வளம், சுற்றுச்சூழல் பாதுகாப்பு
+                    மற்றும் சுற்றுலா ஆகியவற்றில் முக்கிய பங்கு வகிக்கின்றன.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="benefits">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="idx">01</span>
+                <h2>நீர்நிலைகள் தமிழ்நாட்டிற்கு எவ்வாறு உதவுகின்றன?</h2>
+            </div>
+            <div class="func-grid">
+                <div class="func-card">
+                    <span class="ic">💧</span>
+                    <h3>1. குடிநீர் வழங்குகின்றன</h3>
+                    <p>பல பெரிய ஏரிகள் மற்றும் நீர்த்தேக்கங்கள் நகரங்கள் மற்றும் கிராமங்களுக்கான குடிநீர் ஆதாரமாக உள்ளன.
+                        சென்னையின் குடிநீர் தேவையில் புழல், பூண்டி, சோழவரம் மற்றும் செம்பரம்பாக்கம் போன்ற
+                        நீர்த்தேக்கங்கள் முக்கிய பங்கு வகிக்கின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🌾</span>
+                    <h3>2. விவசாயத்திற்கு உதவுகின்றன</h3>
+                    <p>ஏரிகள் மற்றும் கண்மாய்களில் சேமிக்கப்படும் நீர் விவசாய நிலங்களுக்கு பாசனமாகப்
+                        பயன்படுத்தப்படுகிறது. குறிப்பாக மழை சார்ந்த விவசாயப் பகுதிகளில் இவை மிகவும் முக்கியமான
+                        நீராதாரங்களாக உள்ளன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🌊</span>
+                    <h3>3. மழைநீரைச் சேமிக்கின்றன</h3>
+                    <p>மழைக்காலங்களில் கிடைக்கும் அதிகப்படியான நீரைச் சேமிப்பதன் மூலம் நீர்நிலைகள் வறட்சி காலங்களில்
+                        நீர் பற்றாக்குறையை குறைக்க உதவுகின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🌱</span>
+                    <h3>4. நிலத்தடி நீரை அதிகரிக்கின்றன</h3>
+                    <p>ஏரிகள் மற்றும் குளங்களில் தேங்கும் நீரின் ஒரு பகுதி நிலத்திற்குள் ஊடுருவி நிலத்தடி நீரை நிரப்ப
+                        உதவுகிறது.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🐦</span>
+                    <h3>5. பறவைகள் & உயிரினங்கள் வாழிடம்</h3>
+                    <p>கடலோர ஏரிகள், கழிமுகங்கள் மற்றும் ஈரநிலங்கள் பல்வேறு நீர்ப்பறவைகள் மற்றும் பிற உயிரினங்களுக்கு
+                        முக்கியமான வாழிடங்களாக உள்ளன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🏞️</span>
+                    <h3>6. சுற்றுலாவை வளர்க்கின்றன</h3>
+                    <p>ஊட்டி ஏரி, கொடைக்கானல் ஏரி, ஏற்காடு ஏரி போன்ற நீர்நிலைகள் சுற்றுலாப் பயணிகளை ஈர்க்கும் முக்கிய
+                        இடங்களாக உள்ளன.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="types">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="idx">02</span>
+                <h2>தமிழ்நாட்டின் நீர்நிலைகளின் முக்கிய வகைகள்</h2>
+            </div>
+            <div class="type-grid">
+                <div class="type-card">
+                    <h3>1. மலைப்பகுதி மற்றும் சுற்றுலா ஏரிகள்</h3>
+                    <div class="type-usage">சுற்றுலா, படகு சவாரி, இயற்கைப் பாதுகாப்பு</div>
+                    <ul>
+                        <li>ஊட்டி ஏரி</li>
+                        <li>கொடைக்கானல் ஏரி</li>
+                        <li>அவலாஞ்சி ஏரி</li>
+                        <li>ஏற்காடு ஏரி</li>
+                    </ul>
+                </div>
+
+                <div class="type-card">
+                    <h3>2. நகர்ப்புற குடிநீர் நீர்த்தேக்கங்கள்</h3>
+                    <div class="type-usage">நகரங்களுக்கான குடிநீர் மற்றும் நீர் மேலாண்மை</div>
+                    <ul>
+                        <li>செம்பரம்பாக்கம் ஏரி</li>
+                        <li>புழல் ஏரி</li>
+                        <li>பூண்டி நீர்த்தேக்கம்</li>
+                        <li>சோழவரம் ஏரி</li>
+                    </ul>
+                </div>
+
+                <div class="type-card">
+                    <h3>3. கடலோர ஏரிகள் மற்றும் ஈரநிலங்கள்</h3>
+                    <div class="type-usage">சுற்றுச்சூழல் பாதுகாப்பு, மீன்வளம், பறவைகள் வாழிடம்</div>
+                    <ul>
+                        <li>பழவேற்காடு ஏரி</li>
+                        <li>கழிவெளி ஏரி</li>
+                        <li>முட்டுக்காடு பின்நீர் பகுதி</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profiles">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="idx">03</span>
+                <h2>தமிழ்நாட்டின் முக்கிய ஏரிகள் மற்றும் நீர்நிலைகள்</h2>
+            </div>
+
+            <!-- 1. வீராணம் ஏரி -->
+            <div class="dam">
+                <div class="dam-media">
+                    <img src="assets/lake-veeranam.jpg" alt="வீராணம் ஏரி">
+                    <div class="dam-plate">வீராணம் ஏரி</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">கடலூர் மாவட்டம் · பெரிய பாசன ஏரி / நீர்த்தேக்கம்</div>
+                    <h3>1. வீராணம் ஏரி</h3>
+                    <div class="meta"><span>சோழர் காலம்</span><span>14 கி.மீ. நீளம்</span><span>சென்னை குடிநீர் &
+                            பாசனம்</span></div>
+                    <p>வீராணம் ஏரி தமிழ்நாட்டின் மிக முக்கியமான வரலாற்றுச் சிறப்புமிக்க நீர்நிலைகளில் ஒன்றாகும். சோழர்
+                        காலத்துடன் தொடர்புடைய இந்தப் பெரிய நீர்த்தேக்கம் கடலூர் மாவட்டத்தில் அமைந்துள்ளது. இது
+                        பாசனத்திற்கும், சென்னை நகரின் குடிநீர் தேவைக்கும் முக்கியமான நீராதாரமாகப் பயன்படுத்தப்படுகிறது.
+                        சுமார் 14 கிலோமீட்டர் நீளமுடைய இந்த ஏரி தமிழ்நாட்டின் பாரம்பரிய நீர் மேலாண்மையின் சிறந்த
+                        எடுத்துக்காட்டாகும்.</p>
+                </div>
+            </div>
+
+            <!-- 2. பழவேற்காடு ஏரி -->
+            <div class="dam rev">
+                <div class="dam-media">
+                    <img src="assets/lake-pulicat.jpg" alt="பழவேற்காடு ஏரி (Pulicat Lake)">
+                    <div class="dam-plate">பழவேற்காடு ஏரி</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">தமிழ்நாடு – ஆந்திரப் பிரதேச எல்லை · உவர்நீர் ஏரி / கடலோரக் கழிமுகம்</div>
+                    <h3>2. பழவேற்காடு ஏரி (Pulicat Lake)</h3>
+                    <div class="meta"><span>உவர்நீர் ஏரி</span><span>கடலோரக் கழிமுகம்</span><span>வலசைப் பறவைகள்</span>
+                    </div>
+                    <p>பழவேற்காடு ஏரி தமிழ்நாடு மற்றும் ஆந்திரப் பிரதேச எல்லையில் அமைந்துள்ள மிகப்பெரிய கடலோர
+                        நீர்நிலைகளில் ஒன்றாகும். இது உவர்நீர் மற்றும் கடல்நீருடன் தொடர்புடைய தனித்துவமான ஈரநிலச் சூழலைக்
+                        கொண்டுள்ளது. பல வகையான நீர்ப்பறவைகள் மற்றும் வலசைப் பறவைகள் இப்பகுதிக்கு வருவதால் சுற்றுச்சூழல்
+                        மற்றும் பறவைகள் பாதுகாப்பில் முக்கியத்துவம் பெற்றுள்ளது. (*குறிப்பு: பழவேற்காடு ஏரி இரண்டு
+                        மாநிலங்களிலும் பரவியுள்ளது).</p>
+                </div>
+            </div>
+
+            <!-- 3. மதுராந்தகம் ஏரி -->
+            <div class="dam">
+                <div class="dam-media">
+                    <img src="assets/lake-maduranthakam.jpg" alt="மதுராந்தகம் ஏரி">
+                    <div class="dam-plate">மதுராந்தகம் ஏரி</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">செங்கல்பட்டு மாவட்டம் · பாசன ஏரி</div>
+                    <h3>3. மதுராந்தகம் ஏரி</h3>
+                    <div class="meta"><span>செங்கல்பட்டு</span><span>பாசன ஏரி</span><span>விவசாயம் & நீர்
+                            சேமிப்பு</span></div>
+                    <p>மதுராந்தகம் ஏரி செங்கல்பட்டு மாவட்டத்தில் அமைந்துள்ள வரலாற்றுச் சிறப்புமிக்க பெரிய ஏரியாகும். இது
+                        பாரம்பரிய நீர் சேமிப்பு மற்றும் பாசன அமைப்பின் முக்கிய எடுத்துக்காட்டாகும். ஏரியில்
+                        சேமிக்கப்படும் நீர் சுற்றியுள்ள விவசாய நிலங்களுக்குப் பயன்படுகிறது. மதுராந்தகம் ஏரி அதன்
+                        நீர்ப்பிடிப்பு பகுதி மற்றும் விவசாயப் பயன்பாட்டால் உள்ளூர் மக்களின் வாழ்வில் முக்கிய பங்கு
+                        வகிக்கிறது.</p>
+                </div>
+            </div>
+
+            <!-- 4. ஊட்டி ஏரி -->
+            <div class="dam rev">
+                <div class="dam-media">
+                    <img src="assets/lake-ooty.jpg" alt="ஊட்டி ஏரி">
+                    <div class="dam-plate">ஊட்டி ஏரி</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">நீலகிரி மாவட்டம் · மலைப்பகுதி ஏரி</div>
+                    <h3>4. ஊட்டி ஏரி</h3>
+                    <div class="meta"><span>நீலகிரி</span><span>மலைப்பகுதி ஏரி</span><span>படகு சவாரி & சுற்றுலா</span>
+                    </div>
+                    <p>ஊட்டி ஏரி நீலகிரி மாவட்டத்தில் உள்ள புகழ்பெற்ற சுற்றுலா நீர்நிலையாகும். ஊட்டியின் குளிர்ந்த மலைச்
+                        சூழலுடன் இணைந்து அமைந்துள்ள இந்த ஏரி படகு சவாரி மற்றும் சுற்றுலா நடவடிக்கைகளுக்குப் பிரபலமானது.
+                        மலைப்பகுதியின் இயற்கை அழகை மேலும் சிறப்பிக்கும் முக்கிய இடமாக இது விளங்குகிறது.</p>
+                </div>
+            </div>
+
+            <!-- 5. கொடைக்கானல் ஏரி -->
+            <div class="dam">
+                <div class="dam-media">
+                    <img src="assets/lake-kodaikanal.jpg" alt="கொடைக்கானல் ஏரி">
+                    <div class="dam-plate">கொடைக்கானல் ஏரி</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">திண்டுக்கல் மாவட்டம் · மலைப்பகுதி ஏரி</div>
+                    <h3>5. கொடைக்கானல் ஏரி</h3>
+                    <div class="meta"><span>திண்டுக்கல்</span><span>நட்சத்திர வடிவ ஏரி</span><span>இயற்கை அழகு</span>
+                    </div>
+                    <p>கொடைக்கானல் ஏரி தமிழ்நாட்டின் மிகவும் புகழ்பெற்ற மலைப்பகுதி ஏரிகளில் ஒன்றாகும். கொடைக்கானல்
+                        நகரத்தின் மையப்பகுதியில் அமைந்துள்ள இந்த நட்சத்திர வடிவ ஏரி சுற்றுலாப் பயணிகளின் முக்கிய
+                        ஈர்ப்பாக உள்ளது. ஏரியைச் சுற்றியுள்ள இயற்கைச் சூழல் மற்றும் குளிர்ந்த காலநிலை கொடைக்கானலின்
+                        சுற்றுலா முக்கியத்துவத்தை அதிகரிக்கின்றன.</p>
+                </div>
+            </div>
+
+            <!-- 6. செம்பரம்பாக்கம் ஏரி -->
+            <div class="dam rev">
+                <div class="dam-media">
+                    <img src="assets/lake-chembarambakkam.jpg" alt="செம்பரம்பாக்கம் ஏரி">
+                    <div class="dam-plate">செம்பரம்பாக்கம் ஏரி</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">காஞ்சிபுரம் / சென்னை பெருநகரப் பகுதி · நீர்த்தேக்கம்</div>
+                    <h3>6. செம்பரம்பாக்கம் ஏரி</h3>
+                    <div class="meta"><span>சென்னை குடிநீர்</span><span>நீர்த்தேக்கம்</span><span>நீர் மேலாண்மை</span>
+                    </div>
+                    <p>செம்பரம்பாக்கம் ஏரி சென்னை நகரின் முக்கிய குடிநீர் ஆதாரங்களில் ஒன்றாகும். மழைக்காலங்களில் நீரைச்
+                        சேமித்து, சென்னை மற்றும் அதன் சுற்றுப்புறங்களின் நீர்வள மேலாண்மையில் இது முக்கிய பங்கு
+                        வகிக்கிறது. சென்னை நகரத்தின் நீர் பாதுகாப்பில் முக்கியமான நீர்த்தேக்கங்களில் இதுவும் ஒன்றாகும்.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="table">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="idx">04</span>
+                <h2>தமிழ்நாட்டின் முக்கிய ஏரிகள் — விரைவுப் பட்டியல்</h2>
+            </div>
+            <div style="overflow-x:auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>நீர்நிலை</th>
+                            <th>மாவட்டம் / பகுதி</th>
+                            <th>வகை</th>
+                            <th>முக்கிய சிறப்பு</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>வீராணம் ஏரி</strong></td>
+                            <td>கடலூர்</td>
+                            <td>பாசன ஏரி / நீர்த்தேக்கம்</td>
+                            <td>சோழர் காலம், குடிநீர் மற்றும் பாசனம்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>பழவேற்காடு ஏரி</strong></td>
+                            <td>திருவள்ளூர் / ஆந்திர எல்லை</td>
+                            <td>உவர்நீர் ஏரி</td>
+                            <td>வலசைப் பறவைகள், ஈரநிலம்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>மதுராந்தகம் ஏரி</strong></td>
+                            <td>செங்கல்பட்டு</td>
+                            <td>பாசன ஏரி</td>
+                            <td>விவசாயம், வரலாற்றுச் சிறப்பு</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ஊட்டி ஏரி</strong></td>
+                            <td>நீலகிரி</td>
+                            <td>மலைப்பகுதி ஏரி</td>
+                            <td>சுற்றுலா, படகு சவாரி</td>
+                        </tr>
+                        <tr>
+                            <td><strong>கொடைக்கானல் ஏரி</strong></td>
+                            <td>திண்டுக்கல்</td>
+                            <td>மலைப்பகுதி ஏரி</td>
+                            <td>சுற்றுலா, இயற்கை அழகு</td>
+                        </tr>
+                        <tr>
+                            <td><strong>செம்பரம்பாக்கம் ஏரி</strong></td>
+                            <td>சென்னை சுற்றுப்பகுதி</td>
+                            <td>நீர்த்தேக்கம்</td>
+                            <td>சென்னை குடிநீர்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>புழல் ஏரி</strong></td>
+                            <td>திருவள்ளூர்</td>
+                            <td>நீர்த்தேக்கம்</td>
+                            <td>சென்னை குடிநீர்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>பூண்டி நீர்த்தேக்கம்</strong></td>
+                            <td>திருவள்ளூர்</td>
+                            <td>நீர்த்தேக்கம்</td>
+                            <td>சென்னை குடிநீர்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>சோழவரம் ஏரி</strong></td>
+                            <td>திருவள்ளூர்</td>
+                            <td>நீர்த்தேக்கம்</td>
+                            <td>சென்னை நீர்வளம்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ஏற்காடு ஏரி</strong></td>
+                            <td>சேலம்</td>
+                            <td>மலைப்பகுதி ஏரி</td>
+                            <td>சுற்றுலா, படகு சவாரி</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="flow">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="idx">05</span>
+                <h2>தமிழ்நாட்டின் நீர்நிலைகள் — ஒரு பார்வை</h2>
+            </div>
+
+            <div class="flow">
+                <div class="flow-row">
+                    <div class="flow-cell">நீர்வள ஆதாரம்</div>
+                    <div class="flow-cell">மழை → ஏரிகள் + குளங்கள் + கண்மாய்கள் + நீர்த்தேக்கங்கள்</div>
+                    <div class="flow-cell">நீர் சேமிப்பு &amp; நீர்ப்பிடிப்பு மேலாண்மை</div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-cell">பயன்பாடு</div>
+                    <div class="flow-cell">நீர் சேமிப்பு → குடிநீர் + பாசனம் + நிலத்தடி நீர் நிரப்பு</div>
+                    <div class="flow-cell">விவசாயம் + மனித வாழ்வு + சுற்றுச்சூழல் பாதுகாப்பு</div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-cell">இறுதி இலக்கு</div>
+                    <div class="flow-cell">விவசாயம் &amp; இயற்கை நிலைத்தன்மை</div>
+                    <div class="flow-cell">தமிழ்நாட்டின் ஒட்டுமொத்த நீர்வள பாதுகாப்பு</div>
+                </div>
+            </div>
+
+            <div class="quote-box">
+                <p>“ஒரு ஏரி என்பது வெறும் நீரைத் தேக்கும் இடமல்ல; அது ஒரு கிராமத்தின் விவசாயத்தையும், ஒரு நகரத்தின்
+                    குடிநீரையும், ஒரு சூழலின் உயிரையும் தாங்கி நிற்கும் இயற்கையின் சேமிப்பகம்.”</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <img src="assets/hawwa-logo.png" alt="Hawwa PrintShop">
+                    <p>இந்தப் பக்கம் Hawwa PrintShop, Chennai சார்பாக தொகுக்கப்பட்டது.</p>
+                </div>
+                <div>
+                    <h4>முகவரி</h4>
+                    <address>67, Perianna Mudali Street,<br>Seven Wells North, George Town,<br>Chennai, Tamil Nadu
+                        600001</address>
+                </div>
+                <div>
+                    <h4>தொடர்பு</h4>
+                    <p>+91 98844 80801</p>
+                    <p>திங்கள்–சனி: 10:00 AM – 7:00 PM</p>
+                    <p>ஞாயிறு: விடுமுறை</p>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span>© Hawwa PrintShop</span>
+                <span>படங்கள்: Wikimedia Commons</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

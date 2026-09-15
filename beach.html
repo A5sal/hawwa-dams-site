@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>தமிழ்நாட்டின் கடற்கரைகள் — Hawwa PrintShop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;600;700&family=Noto+Sans+Tamil:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#20241f;
+    --deep:#123b36;
+    --teal:#2f6e62;
+    --green:#8dc63f;
+    --green-dark:#6ea82e;
+    --sand:#f6f2e7;
+    --sand-2:#efe8d8;
+    --line: rgba(18,59,54,0.16);
+    --white:#fffdf8;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--sand);
+    color:var(--ink);
+    font-family:"Noto Sans Tamil","Noto Sans",sans-serif;
+    line-height:1.7;
+    font-size:16px;
+  }
+  h1,h2,h3,.serif{
+    font-family:"Noto Serif Tamil","Noto Sans Tamil",serif;
+    color:var(--deep);
+    margin:0;
+    font-weight:600;
+  }
+  p{margin:0 0 1em 0;}
+  a{color:inherit;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  /* ---- Header ---- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    box-shadow:0 2px 10px rgba(18,59,54,0.05);
+  }
+  .header-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 24px;max-width:1080px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand img{height:54px;width:auto;}
+  nav.nav-scroll{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    overflow:visible;
+  }
+  nav a, .dropdown-toggle{
+    text-decoration:none;
+    color:var(--deep);
+    font-size:.95rem;
+    font-weight:500;
+    padding:6px 12px;
+    border-bottom:2px solid transparent;
+    display:inline-flex;
+    align-items:center;
+    gap:4px;
+    transition:all 0.2s ease;
+    cursor:pointer;
+  }
+  nav a:hover, .dropdown-toggle:hover, nav a.active, .dropdown-toggle.active, .nav-dropdown:hover .dropdown-toggle{
+    color:var(--teal);
+    border-bottom-color:var(--green);
+    background:rgba(141,198,63,0.1);
+    border-radius:4px 4px 0 0;
+  }
+
+  /* ---- Dropdown Menu ---- */
+  .nav-dropdown{
+    position:relative;
+    display:inline-block;
+  }
+  .dropdown-arrow{
+    transition:transform 0.2s ease;
+    fill:currentColor;
+  }
+  .nav-dropdown:hover .dropdown-arrow{
+    transform:rotate(180deg);
+  }
+  .dropdown-menu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:180px;
+    background:var(--white);
+    border:1px solid var(--line);
+    box-shadow:0 8px 24px rgba(18,59,54,0.14);
+    border-radius:0 6px 6px 6px;
+    padding:6px 0;
+    z-index:100;
+    margin-top:0;
+  }
+  .nav-dropdown::after{
+    content:"";
+    position:absolute;
+    top:100%;
+    left:0;
+    width:100%;
+    height:10px;
+  }
+  .nav-dropdown:hover .dropdown-menu{
+    display:block;
+    animation:navDropdownFade 0.2s ease-out;
+  }
+  .dropdown-menu a{
+    display:block;
+    padding:9px 16px;
+    color:var(--deep);
+    text-decoration:none;
+    font-size:.9rem;
+    border-bottom:none;
+    border-radius:0;
+    background:transparent;
+    transition:background 0.15s ease, color 0.15s ease;
+  }
+  .dropdown-menu a:hover, .dropdown-menu a.active{
+    background:var(--sand-2);
+    color:var(--teal);
+    border-bottom:none;
+  }
+
+  @keyframes navDropdownFade {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ---- Hero ---- */
+  .hero{
+    position:relative;
+    background:var(--deep);
+    color:var(--white);
+    overflow:hidden;
+  }
+  .hero-media{
+    position:absolute;inset:0;
+  }
+  .hero-media img{
+    width:100%;height:100%;object-fit:cover;opacity:.55;
+  }
+  .hero-media::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg, rgba(18,59,54,.55) 0%, rgba(18,59,54,.88) 78%, var(--sand) 100%);
+  }
+  .hero-content{
+    position:relative;padding:96px 24px 64px;max-width:1080px;margin:0 auto;
+  }
+  .eyebrow-tag{
+    display:inline-block;font-size:.85rem;color:var(--sand);
+    border:1px solid rgba(255,255,255,.4);padding:4px 12px;border-radius:2px;
+    margin-bottom:22px;
+  }
+  .hero h1{
+    color:var(--white);
+    font-size:clamp(2.1rem, 5vw, 3.4rem);
+    line-height:1.25;
+    max-width:18ch;
+  }
+  .hero p.lede{
+    margin-top:22px;max-width:58ch;color:#e7f0ea;font-size:1.05rem;
+  }
+  .wavecut{
+    display:block;width:100%;height:56px;margin-top:-2px;
+  }
+
+  /* ---- Stat strip ---- */
+  .stats{
+    background:var(--sand);
+    padding:8px 24px 48px;
+  }
+  .stat-row{
+    max-width:1080px;margin:0 auto;
+    display:grid;grid-template-columns: 1.1fr 2fr;
+    gap:40px;align-items:end;
+    border-bottom:1px solid var(--line);
+    padding-bottom:40px;
+  }
+  .stat-num{
+    font-family:"Noto Serif Tamil",serif;
+    font-size:clamp(2.8rem,7vw,4.2rem);
+    color:var(--teal);
+    line-height:1;
+    position:relative;
+    display:inline-block;
+  }
+  .stat-num::after{
+    content:"";display:block;width:64px;height:5px;background:var(--green);margin-top:14px;
+  }
+  .stat-note{color:var(--teal);font-size:.9rem;margin-top:8px;}
+  .stat-text p{color:#334;}
+
+  /* ---- Section shell ---- */
+  section{padding:64px 0;}
+  .section-head{
+    display:flex;align-items:baseline;gap:18px;margin-bottom:34px;
+    border-top:1px solid var(--line);padding-top:18px;
+  }
+  .section-head .idx{
+    font-family:"Noto Serif Tamil",serif;color:var(--green-dark);font-size:1rem;
+    white-space:nowrap;
+  }
+  .section-head h2{font-size:clamp(1.4rem,3vw,1.9rem);}
+
+  /* ---- Benefit Grid ---- */
+  .func-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:1px;background:var(--line);
+    border:1px solid var(--line);
+  }
+  .func-card{
+    background:var(--white);padding:26px 22px;
+  }
+  .func-card .ic{
+    font-size:1.8rem;margin-bottom:12px;line-height:1;display:block;
+  }
+  .func-card h3{font-size:1.05rem;margin-bottom:8px;color:var(--deep);}
+  .func-card p{font-size:.93rem;color:#3c473f;margin:0;}
+
+  /* ---- Type Cards Grid ---- */
+  .type-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:24px;
+  }
+  .type-card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:26px 22px;
+    border-top:4px solid var(--teal);
+  }
+  .type-card h3{font-size:1.1rem;color:var(--deep);margin-bottom:10px;}
+  .type-card p{font-size:.92rem;color:#33403a;margin-bottom:12px;}
+  .type-card .type-eg{font-size:.88rem;color:var(--green-dark);font-weight:600;}
+
+  /* ---- Flow / Chain ---- */
+  .flow{
+    display:flex;flex-direction:column;gap:0;
+  }
+  .flow-row{
+    display:grid;grid-template-columns:repeat(3,1fr);
+    border-top:1px solid var(--line);
+  }
+  .flow-row:last-child{border-bottom:1px solid var(--line);}
+  .flow-cell{
+    padding:18px 20px;font-size:.95rem;
+    border-left:1px solid var(--line);
+  }
+  .flow-cell:first-child{border-left:none;font-family:"Noto Serif Tamil",serif;color:var(--deep);font-weight:600;}
+  .flow-cell:nth-child(2){color:var(--teal);}
+  .flow-cell:nth-child(3){color:#3c473f;}
+
+  /* ---- Profiles ---- */
+  .dam{
+    display:grid;grid-template-columns: 1fr 1fr;gap:44px;
+    align-items:center;
+    padding:38px 0;
+    border-top:1px solid var(--line);
+  }
+  .dam:last-child{border-bottom:1px solid var(--line);}
+  .dam.rev .dam-media{order:2;}
+  .dam-media{
+    position:relative;
+  }
+  .dam-media img{
+    width:100%;height:280px;object-fit:cover;
+    border:1px solid var(--line);
+    background:var(--sand-2);
+  }
+  .dam-plate{
+    position:absolute;bottom:-16px;left:16px;
+    background:var(--deep);color:var(--sand);
+    padding:8px 16px;font-size:.82rem;
+    border-left:4px solid var(--green);
+  }
+  .dam-body .tag{
+    font-size:.82rem;color:var(--green-dark);letter-spacing:.02em;margin-bottom:6px;
+  }
+  .dam-body h3{font-size:1.4rem;margin-bottom:6px;}
+  .dam-body .meta{
+    display:flex;gap:14px;flex-wrap:wrap;
+    font-size:.85rem;color:var(--teal);margin-bottom:14px;
+  }
+  .dam-body .meta span{
+    background:rgba(47,110,98,0.08);
+    padding:2px 10px;border-radius:3px;
+  }
+  .dam-body p{font-size:.96rem;color:#33403a;}
+  .dam-quote{
+    font-style:italic;
+    color:var(--teal);
+    font-weight:600;
+    margin-top:10px;
+    font-size:.92rem;
+  }
+
+  /* ---- Table ---- */
+  table{
+    width:100%;border-collapse:collapse;font-size:.92rem;
+    background:var(--white);
+  }
+  thead th{
+    text-align:left;font-family:"Noto Serif Tamil",serif;font-weight:600;
+    color:var(--deep);border-bottom:2px solid var(--deep);
+    padding:12px 14px;
+  }
+  tbody td{
+    padding:11px 14px;border-bottom:1px solid var(--line);color:#333f38;
+  }
+  tbody tr:hover{background:var(--sand-2);}
+  .table-note{font-size:.85rem;color:var(--teal);margin-top:14px;}
+
+  /* ---- Quote Box ---- */
+  .quote-box{
+    background:var(--deep);color:var(--sand);
+    padding:40px 32px;border-radius:4px;text-align:center;
+    margin:48px 0 16px;
+  }
+  .quote-box p{
+    font-family:"Noto Serif Tamil",serif;
+    font-size:clamp(1.1rem, 2.5vw, 1.4rem);
+    line-height:1.7;color:var(--white);margin:0;
+  }
+
+  /* ---- Footer ---- */
+  footer{
+    background:var(--deep);color:var(--sand);padding:56px 0 28px;
+  }
+  .foot-grid{
+    display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px;
+    padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.15);
+  }
+  .foot-brand img{height:46px;margin-bottom:14px;filter:brightness(0) invert(1);}
+  .foot-brand p{font-size:.88rem;color:#c9d8cf;max-width:32ch;}
+  footer h4{
+    font-family:"Noto Serif Tamil",serif;color:var(--sand);font-size:.95rem;
+    margin-bottom:14px;font-weight:600;
+  }
+  footer p, footer address{font-size:.88rem;color:#c9d8cf;font-style:normal;margin:0 0 6px;}
+  .foot-bottom{
+    padding-top:22px;font-size:.8rem;color:#93a99c;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+  }
+
+  @media (max-width:760px){
+    .header-inner{flex-wrap:wrap;gap:12px;}
+    .stat-row{grid-template-columns:1fr;}
+    .dam, .dam.rev{grid-template-columns:1fr;}
+    .dam.rev .dam-media{order:0;}
+    .flow-row{grid-template-columns:1fr;}
+    .flow-cell{border-left:none;border-top:1px solid var(--line);}
+    .flow-cell:first-child{border-top:none;}
+    .foot-grid{grid-template-columns:1fr;}
+    nav.nav-scroll{width:100%;overflow-x:auto;padding-bottom:4px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+    </div>
+    <nav class="nav-scroll">
+      <div class="nav-dropdown">
+        <a href="beach.html" class="dropdown-toggle active">
+          கடற்கரைகள்
+          <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14"><path d="M7 10l5 5 5-5z"/></svg>
+        </a>
+        <div class="dropdown-menu">
+          <a href="index.html">அணைகள் (Dams)</a>
+          <a href="rivers.html">ஆறுகள் (Rivers)</a>
+          <a href="falls.html">அருவிகள் (Waterfalls)</a>
+          <a href="forests.html">காடுகள் (Forests)</a>
+          <a href="mountains.html">மலைகள் (Mountains)</a>
+          <a href="lakes.html">ஏரிகள் (Lakes)</a>
+          <a href="beach.html" class="active">கடற்கரைகள் (Beaches)</a>
+        </div>
+      </div>
+      <a href="#intro">அறிமுகம்</a>
+      <a href="#benefits">பயன்கள்</a>
+      <a href="#types">வகைகள்</a>
+      <a href="#profiles">கடற்கரைகள்</a>
+      <a href="#table">பட்டியல்</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="intro">
+  <div class="hero-media">
+    <img src="assets/hero-beach.jpg" alt="தமிழ்நாட்டின் கடற்கரைகள்">
+  </div>
+  <div class="hero-content">
+    <span class="eyebrow-tag">இயற்கைக் கடலோர வளம்</span>
+    <h1>தமிழ்நாட்டின் கடற்கரைகள்</h1>
+    <p class="lede">தமிழ்நாட்டின் கடற்கரைகள் இயற்கை அழகுடன், மீன்பிடி, சுற்றுலா, கடல்சார் வாழ்வாதாரம் மற்றும் உயிரியல் வளங்களுடன் நெருங்கிய தொடர்புடையவை. மெரினா முதல் கன்னியாகுமரி வரை, ஒவ்வொரு கடற்கரையும் தனித்துவமான இயற்கை மற்றும் பண்பாட்டு சிறப்பைக் கொண்டுள்ளது.</p>
+  </div>
+  <svg class="wavecut" viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,30 C 200,60 400,0 600,30 C 800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#f6f2e7"></path></svg>
+</section>
+
+<div class="stats">
+  <div class="stat-row">
+    <div>
+      <span class="stat-num">1,076</span>
+      <div class="stat-note">கி.மீ. கடற்கரை நீளம் (80+ கடற்கரைகள்)</div>
+    </div>
+    <div class="stat-text">
+      <p>தமிழ்நாட்டில் <strong>80-க்கும் மேற்பட்ட முக்கியமான / அங்கீகரிக்கப்பட்ட கடற்கரைகள்</strong> உள்ளன. 14 கடலோர மாவட்டங்களில் பரவியுள்ள 1,076 கி.மீ. கடற்கரை நீளமும் சுமார் 57% மணற்பரப்பும் தமிழ்நாட்டின் கடல்சார் வளத்திற்கு முக்கிய சான்றுகளாகும்.</p>
+      <p class="table-note"><strong>“தமிழ்நாட்டின் கடற்கரைகள் — இயற்கையும், வாழ்வாதாரமும், சுற்றுலாவும் சந்திக்கும் இடங்கள்.”</strong></p>
+    </div>
+  </div>
+</div>
+
+<section id="benefits">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="idx">01</span>
+      <h2>தமிழ்நாட்டின் கடற்கரைகள் எவ்வாறு பயனளிக்கின்றன?</h2>
+    </div>
+    <div class="func-grid">
+      <div class="func-card">
+        <span class="ic">🎣</span>
+        <h3>1. மீன்பிடி</h3>
+        <p>ஆயிரக்கணக்கான மீனவ குடும்பங்களுக்கு நேரடியாகவும் மறைமுகமாகவும் வாழ்வாதாரம் வழங்குகின்றன.</p>
+      </div>
+      <div class="func-card">
+        <span class="ic">🏖️</span>
+        <h3>2. சுற்றுலா</h3>
+        <p>உள்நாட்டு மற்றும் வெளிநாட்டு சுற்றுலாப் பயணிகளை ஈர்த்து மாநிலத்தின் பொருளாதாரத்திற்குப் பங்களிக்கின்றன.</p>
+      </div>
+      <div class="func-card">
+        <span class="ic">🌊</span>
+        <h3>3. நீர்விளையாட்டுகள்</h3>
+        <p>சர்ஃபிங், நீச்சல், படகு சவாரி போன்ற சாகச பொழுதுபோக்கு செயல்களுக்கு சிறந்த வாய்ப்பளிக்கின்றன.</p>
+      </div>
+      <div class="func-card">
+        <span class="ic">🐢</span>
+        <h3>4. உயிரியல் பாதுகாப்பு</h3>
+        <p>கடல் ஆமைகள், பறவைகள் மற்றும் பல்வேறு கடல்சார் உயிரினங்களின் இயற்கையான வாழிடமாக உள்ளன.</p>
+      </div>
+      <div class="func-card">
+        <span class="ic">🌱</span>
+        <h3>5. இயற்கை பாதுகாப்பு</h3>
+        <p>மணற்கரைகள், கடற்கரைத் தாவரங்கள் மற்றும் சதுப்புநிலங்கள் கடற்கரைச் சூழலை புயல் மற்றும் அலை தாக்கம் தடுத்து பாதுகாக்கின்றன.</p>
+      </div>
+      <div class="func-card">
+        <span class="ic">💰</span>
+        <h3>6. உள்ளூர் பொருளாதாரம்</h3>
+        <p>உணவகங்கள், சிறு வணிகங்கள், மீன்பிடி மற்றும் சுற்றுலா சார்ந்த தொழில்களுக்கு வலுவான ஆதரவளிக்கின்றன.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="types">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="idx">02</span>
+      <h2>தமிழ்நாட்டின் கடற்கரைகளின் முக்கிய வகைகள்</h2>
+    </div>
+    <div class="type-grid">
+      <div class="type-card">
+        <h3>1. நகர்ப்புற கடற்கரைகள்</h3>
+        <p>சென்னை போன்ற நகரங்களுடன் இணைந்துள்ள பரபரப்பான கடற்கரைகள்.</p>
+        <div class="type-eg">உதாரணம்: மெரினா, எலியட்ஸ்</div>
+      </div>
+
+      <div class="type-card">
+        <h3>2. சுற்றுலா &amp; வரலாற்றுச் சிறப்பு கடற்கரைகள்</h3>
+        <p>இயற்கை அழகுடன் வரலாற்று நினைவுச்சின்னங்களையும் கொண்ட சிறப்பு இடங்கள்.</p>
+        <div class="type-eg">உதாரணம்: மகாபலிபுரம், கன்னியாகுமரி</div>
+      </div>
+
+      <div class="type-card">
+        <h3>3. நீர்விளையாட்டு கடற்கரைகள்</h3>
+        <p>சர்ஃபிங் மற்றும் பிற அலைச் சாகச நீர்விளையாட்டுகளுக்கு ஏற்றவை.</p>
+        <div class="type-eg">உதாரணம்: கோவளம்</div>
+      </div>
+
+      <div class="type-card">
+        <h3>4. அமைதியான &amp; இயற்கைச் சூழல் கடற்கரைகள்</h3>
+        <p>குறைந்த கூட்டத்துடன் அமைதியான இயற்கை அழகை அனுபவிக்க ஏற்றவை.</p>
+        <div class="type-eg">உதாரணம்: தனுஷ்கோடி</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="profiles">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="idx">03</span>
+      <h2>தமிழ்நாட்டின் முக்கியமான கடற்கரைகள்</h2>
+    </div>
+
+    <!-- 5.1 மெரினா கடற்கரை -->
+    <div class="dam">
+      <div class="dam-media">
+        <img src="assets/beach-marina.jpg" alt="மெரினா கடற்கரை — சென்னை">
+        <div class="dam-plate">மெரினா கடற்கரை</div>
+      </div>
+      <div class="dam-body">
+        <div class="tag">சென்னை · சுமார் 13 கி.மீ. நீளம் · நகர்ப்புற கடற்கரை</div>
+        <h3>5.1 மெரினா கடற்கரை — சென்னை</h3>
+        <div class="meta"><span>13 கி.மீ. நீளம்</span><span>சென்னை அடையாளம்</span><span>பரந்த மணற்பரப்பு</span></div>
+        <p>மெரினா கடற்கரை தமிழ்நாட்டின் மிகவும் பிரபலமான மற்றும் நீளமான நகர்ப்புற கடற்கரையாகும். சுமார் 13 கி.மீ. நீளமுடைய இது, சென்னையின் முக்கியமான அடையாளங்களில் ஒன்றாக விளங்குகிறது. கடற்கரையோர உணவகங்கள், நடைபாதைகள், கலங்கரை விளக்கம் மற்றும் பரந்த மணற்பரப்பு ஆகியவை இதன் சிறப்புகளாகும்.</p>
+        <div class="dam-quote">“மெரினா — சென்னையின் கடலோர இதயம்.”</div>
+      </div>
+    </div>
+
+    <!-- 5.2 எலியட்ஸ் கடற்கரை -->
+    <div class="dam rev">
+      <div class="dam-media">
+        <img src="assets/beach-elliots.jpg" alt="எலியட்ஸ் கடற்கரை — சென்னை">
+        <div class="dam-plate">எலியட்ஸ் கடற்கரை</div>
+      </div>
+      <div class="dam-body">
+        <div class="tag">சென்னை · பெசன்ட் நகர் · அமைதியான சூழல்</div>
+        <h3>5.2 எலியட்ஸ் கடற்கரை — சென்னை</h3>
+        <div class="meta"><span>பெசன்ட் நகர்</span><span>கார்ல் ஷ்மிட் நினைவகம்</span><span>அமைதியான சூழல்</span></div>
+        <p>எலியட்ஸ் கடற்கரை, பெசன்ட் நகரில் அமைந்துள்ள அமைதியான மற்றும் பிரபலமான கடற்கரையாகும். மெரினாவுடன் ஒப்பிடும்போது குறைவான கூட்டத்துடன், நடைப்பயிற்சி மற்றும் ஓய்வுக்கு ஏற்ற சூழலை வழங்குகிறது. இங்கு அமைந்துள்ள கார்ல் ஷ்மிட் நினைவகம் முக்கியமான அடையாளமாகும்.</p>
+        <div class="dam-quote">“எலியட்ஸ் — நகரத்தின் நடுவே அமைதியான கடற்கரை.”</div>
+      </div>
+    </div>
+
+    <!-- 5.3 கோவளம் கடற்கரை -->
+    <div class="dam">
+      <div class="dam-media">
+        <img src="assets/beach-kovalam.jpg" alt="கோவளம் கடற்கரை — செங்கல்பட்டு">
+        <div class="dam-plate">கோவளம் கடற்கரை</div>
+      </div>
+      <div class="dam-body">
+        <div class="tag">செங்கல்பட்டு மாவட்டம் · சென்னை புறநகர் · சர்ஃபிங் மையம்</div>
+        <h3>5.3 கோவளம் கடற்கரை — செங்கல்பட்டு</h3>
+        <div class="meta"><span>சர்ஃபிங்</span><span>நீர்விளையாட்டுகள்</span><span>சாகச சுற்றுலா</span></div>
+        <p>கோவளம் கடற்கரை சென்னையின் புறநகர்ப் பகுதியில் அமைந்துள்ள பிரபலமான கடற்கரையாகும். இது குறிப்பாக சர்ஃபிங் மற்றும் நீர்விளையாட்டுகளுக்காக அறியப்படுகிறது. இளைஞர்கள் மற்றும் சாகசப் பயணிகளை ஈர்க்கும் முக்கிய சுற்றுலாத் தலம்.</p>
+        <div class="dam-quote">“கோவளம் — அலைகளுடன் சாகசம் தொடங்கும் கடற்கரை.”</div>
+      </div>
+    </div>
+
+    <!-- 5.4 மகாபலிபுரம் கடற்கரை -->
+    <div class="dam rev">
+      <div class="dam-media">
+        <img src="assets/beach-mahabalipuram.jpg" alt="மகாபலிபுரம் கடற்கரை — செங்கல்பட்டு">
+        <div class="dam-plate">மகாபலிபுரம் கடற்கரை</div>
+      </div>
+      <div class="dam-body">
+        <div class="tag">செங்கல்பட்டு மாவட்டம் · பல்லவர் வரலாற்றுத் தலம்</div>
+        <h3>5.4 மகாபலிபுரம் கடற்கரை — செங்கல்பட்டு</h3>
+        <div class="meta"><span>Shore Temple</span><span>UNESCO பாரம்பரியம்</span><span>வரலாறு & இயற்கை</span></div>
+        <p>மகாபலிபுரம் கடற்கரை இயற்கை அழகையும் பல்லவர் கால வரலாற்றையும் ஒருங்கிணைக்கும் முக்கியமான கடற்கரையாகும். கடற்கரைக்கு அருகில் அமைந்துள்ள கடற்கரை கோயில் (Shore Temple) இதன் மிக முக்கியமான சிறப்பாகும். வரலாற்றுச் சிறப்பும் கடற்கரையின் அழகும் இணைந்து இதை முக்கிய சுற்றுலாத் தலமாக மாற்றுகின்றன.</p>
+        <div class="dam-quote">“மகாபலிபுரம் — கடலும் கல்லும் சொல்லும் வரலாறு.”</div>
+      </div>
+    </div>
+
+    <!-- 5.5 கன்னியாகுமரி கடற்கரை -->
+    <div class="dam">
+      <div class="dam-media">
+        <img src="assets/beach-kanyakumari.jpg" alt="கன்னியாகுமரி கடற்கரை — கன்னியாகுமரி">
+        <div class="dam-plate">கன்னியாகுமரி கடற்கரை</div>
+      </div>
+      <div class="dam-body">
+        <div class="tag">கன்னியாகுமரி · இந்தியத் துணைக்கண்டத்தின் தென்முனை</div>
+        <h3>5.5 கன்னியாகுமரி கடற்கரை — கன்னியாகுமரி</h3>
+        <div class="meta"><span>முக்கடல் சந்திப்பு</span><span>சூரிய உதயம் & அஸ்தமனம்</span><span>தென்முனை</span></div>
+        <p>கன்னியாகுமரி கடற்கரை இந்தியத் துணைக்கண்டத்தின் தென்முனையில் அமைந்துள்ள தனித்துவமான கடற்கரையாகும். இங்கு வங்காள விரிகுடா, அரபிக்கடல் மற்றும் இந்தியப் பெருங்கடல் சந்திக்கும் பகுதி அமைந்துள்ளது. சூரிய உதயம் மற்றும் சூரிய அஸ்தமனத்தை ஒரே இடத்தில் காண முடிவதால் இது மிகவும் பிரபலமான சுற்றுலாத் தலமாகும்.</p>
+        <div class="dam-quote">“கன்னியாகுமரி — மூன்று கடல்கள் சந்திக்கும் தென்முனை.”</div>
+      </div>
+    </div>
+
+    <!-- 5.6 தனுஷ்கோடி கடற்கரை -->
+    <div class="dam rev">
+      <div class="dam-media">
+        <img src="assets/beach-dhanushkodi.jpg" alt="தனுஷ்கோடி கடற்கரை — இராமநாதபுரம்">
+        <div class="dam-plate">தனுஷ்கோடி கடற்கரை</div>
+      </div>
+      <div class="dam-body">
+        <div class="tag">இராமநாதபுரம் மாவட்டம் · இராமேஸ்வரம் அருகில்</div>
+        <h3>5.6 தனுஷ்கோடி கடற்கரை — இராமநாதபுரம்</h3>
+        <div class="meta"><span>இராமேஸ்வரம்</span><span>தனிமையான கடற்கரை</span><span>இருபுறமும் கடல்</span></div>
+        <p>தனுஷ்கோடி கடற்கரை இராமேஸ்வரத்தின் கிழக்குப் பகுதியில் அமைந்துள்ள தனிமையான மற்றும் இயற்கை அழகு நிறைந்த கடற்கரைப் பகுதியாகும். இப்பகுதி ஒரு குறுகிய நிலப்பரப்பாக நீண்டு காணப்படுவதால், இருபுறமும் கடல் காட்சிகளை காண முடிகிறது. தனிமையான சூழல் மற்றும் வரலாற்றுப் பின்னணி கொண்ட பகுதி.</p>
+        <div class="dam-quote">“தனுஷ்கோடி — கடலும் அமைதியும் சந்திக்கும் எல்லை.”</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="table">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="idx">04</span>
+      <h2>முக்கியமான கடற்கரைகள் — விரைவுப் பட்டியல்</h2>
+    </div>
+    <div style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr><th>கடற்கரை</th><th>முக்கிய சிறப்பு</th><th>சூழல்</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>மெரினா</strong></td><td>நீளமான நகர்ப்புற கடற்கரை, உணவு, நகரக் கலாச்சாரம்</td><td>பரபரப்பானது</td></tr>
+        <tr><td><strong>எலியட்ஸ்</strong></td><td>நடைப்பயிற்சி, ஓய்வு, கஃபேக்கள்</td><td>அமைதியானது</td></tr>
+        <tr><td><strong>மகாபலிபுரம்</strong></td><td>கடற்கரை கோயில், வரலாறு, சர்ஃபிங்</td><td>சுற்றுலா + வரலாறு</td></tr>
+        <tr><td><strong>கன்னியாகுமரி</strong></td><td>மூன்று கடல் பகுதிகளின் சந்திப்பு, சூரிய உதயம்/அஸ்தமனம்</td><td>ஆன்மிகம் + இயற்கை</td></tr>
+        <tr><td><strong>கோவளம்</strong></td><td>சர்ஃபிங், நீர்விளையாட்டுகள்</td><td>சாகசம்</td></tr>
+        <tr><td><strong>தனுஷ்கோடி</strong></td><td>தனிமையான கடற்கரை, வரலாற்றுச் சிறப்பு</td><td>இயற்கை + அமைதி</td></tr>
+        <tr><td><strong>புலிக்காட்</strong></td><td>உவர்நீர் ஏரி, பறவைகள்</td><td>இயற்கை</td></tr>
+        <tr><td><strong>கலிவேலி</strong></td><td>ஈரநிலம், பறவைகள்</td><td>சூழலியல்</td></tr>
+        <tr><td><strong>முட்டுக்காடு</strong></td><td>படகு சவாரி, நீர்விளையாட்டு</td><td>பொழுதுபோக்கு</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="idx">05</span>
+      <h2>தமிழ்நாட்டின் கடற்கரைகள் — ஒரு பார்வையில்</h2>
+    </div>
+
+    <div class="flow">
+      <div class="flow-row">
+        <div class="flow-cell">கடற்கரை நீளம்</div>
+        <div class="flow-cell">1,076 கி.மீ. கடற்கரை → 80+ முக்கியமான கடற்கரைகள்</div>
+        <div class="flow-cell">14 கடலோர மாவட்டங்களில் பரவியுள்ள கடலோரம்</div>
+      </div>
+      <div class="flow-row">
+        <div class="flow-cell">பயன்பாடுகள்</div>
+        <div class="flow-cell">மீன்பிடி + சுற்றுலா + நீர்விளையாட்டு</div>
+        <div class="flow-cell">ஆயிரக்கணக்கான குடும்பங்களின் வாழ்வாதார ஆதரவு</div>
+      </div>
+      <div class="flow-row">
+        <div class="flow-cell">சுற்றுச்சூழல் &amp; பொருளாதாரம்</div>
+        <div class="flow-cell">கடல்சார் உயிரினங்கள் &amp; இயற்கை பாதுகாப்பு</div>
+        <div class="flow-cell">தமிழ்நாட்டின் பொருளாதாரம் மற்றும் வாழ்வாதாரத்திற்கு ஆதரவு</div>
+      </div>
+    </div>
+
+    <div class="quote-box">
+      <p>“கடற்கரை என்பது வெறும் மணலும் கடலும் அல்ல — அது ஒரு மாநிலத்தின் வாழ்வாதாரமும் இயற்கைச் செல்வமும் ஆகும்.”</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/hawwa-logo.png" alt="Hawwa PrintShop">
+        <p>இந்தப் பக்கம் Hawwa PrintShop, Chennai சார்பாக தொகுக்கப்பட்டது.</p>
+      </div>
+      <div>
+        <h4>முகவரி</h4>
+        <address>67, Perianna Mudali Street,<br>Seven Wells North, George Town,<br>Chennai, Tamil Nadu 600001</address>
+      </div>
+      <div>
+        <h4>தொடர்பு</h4>
+        <p>+91 98844 80801</p>
+        <p>திங்கள்–சனி: 10:00 AM – 7:00 PM</p>
+        <p>ஞாயிறு: விடுமுறை</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Hawwa PrintShop</span>
+      <span>படங்கள்: Wikimedia Commons</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
