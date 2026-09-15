@@ -1482,10 +1482,12 @@ footer a:hover {
     padding: 24px;
     gap: 16px;
   }
+
   .palace-hero-stat-num {
     font-size: 3.5rem;
     text-align: left;
   }
+
   .palace-hero-stat-label {
     text-align: left;
   }
@@ -1614,19 +1616,24 @@ footer a:hover {
 }
 
 @media (max-width: 860px) {
+
   .palace-card,
   .palace-card.rev {
     grid-template-columns: 1fr;
   }
+
   .palace-card.rev .palace-card-media {
     order: 1;
   }
+
   .palace-card.rev .palace-card-content {
     order: 2;
   }
+
   .palace-card-content {
     padding: 24px;
   }
+
   .palace-card-media {
     min-height: 220px;
   }
@@ -1710,4 +1717,4 @@ footer a:hover {
   line-height: 1.7;
   color: #3b4d45;
   margin: 0;
-}
+}
