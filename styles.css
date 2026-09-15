@@ -1408,4 +1408,306 @@ footer a:hover {
   .port-hero-stat {
     padding: 24px;
   }
+}
+
+/* ==========================================================================
+   Palaces Custom UI Design System
+   ========================================================================== */
+
+.palace-hero-banner {
+  background: linear-gradient(135deg, #123b36 0%, #1e4d46 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 36px 40px;
+  margin: 0 auto 36px;
+  max-width: 1120px;
+  box-shadow: 0 10px 30px rgba(18, 59, 54, 0.15);
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 32px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.palace-hero-banner::after {
+  content: "🏰";
+  position: absolute;
+  right: -15px;
+  bottom: -20px;
+  font-size: 130px;
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.palace-hero-stat-num {
+  font-family: "Noto Serif Tamil", Georgia, serif;
+  font-size: 4.2rem;
+  font-weight: 700;
+  color: #f7d070;
+  line-height: 1;
+  text-align: center;
+  background: linear-gradient(180deg, #ffe89e 0%, #e5b23d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.palace-hero-stat-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #d2e4db;
+  text-align: center;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+}
+
+.palace-hero-info p {
+  color: #e2ede7;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 10px;
+}
+
+.palace-hero-info .table-note {
+  color: #b3d1c3;
+  font-size: 0.88rem;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .palace-hero-banner {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 16px;
+  }
+  .palace-hero-stat-num {
+    font-size: 3.5rem;
+    text-align: left;
+  }
+  .palace-hero-stat-label {
+    text-align: left;
+  }
+}
+
+/* Palace Showcase Cards Grid */
+.palace-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.palace-card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.palace-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(18, 59, 54, 0.12);
+  border-color: #d4af37;
+}
+
+.palace-card.rev {
+  grid-template-columns: 1.3fr 1.1fr;
+}
+
+.palace-card.rev .palace-card-media {
+  order: 2;
+}
+
+.palace-card.rev .palace-card-content {
+  order: 1;
+}
+
+.palace-card-media {
+  position: relative;
+  min-height: 280px;
+  overflow: hidden;
+}
+
+.palace-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.palace-card:hover .palace-card-media img {
+  transform: scale(1.04);
+}
+
+.palace-card-badge {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(18, 59, 54, 0.88);
+  color: #ffe89e;
+  backdrop-filter: blur(8px);
+  font-family: "Noto Serif Tamil", Georgia, serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 232, 158, 0.3);
+}
+
+.palace-card-content {
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.palace-tag {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #123b36;
+  background: #f0f6f3;
+  padding: 4px 12px;
+  border-radius: 14px;
+  align-self: flex-start;
+  margin-bottom: 12px;
+  border: 1px solid rgba(18, 59, 54, 0.1);
+}
+
+.palace-card-content h3 {
+  font-family: "Noto Serif Tamil", Georgia, serif;
+  font-size: 1.45rem;
+  color: #123b36;
+  margin: 0 0 12px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.palace-meta-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.palace-meta-pill {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #4a5d55;
+  background: #f7f4ec;
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+
+.palace-card-content p {
+  color: #384740;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin: 0 0 10px;
+}
+
+@media (max-width: 860px) {
+  .palace-card,
+  .palace-card.rev {
+    grid-template-columns: 1fr;
+  }
+  .palace-card.rev .palace-card-media {
+    order: 1;
+  }
+  .palace-card.rev .palace-card-content {
+    order: 2;
+  }
+  .palace-card-content {
+    padding: 24px;
+  }
+  .palace-card-media {
+    min-height: 220px;
+  }
+}
+
+/* Architecture Features Cards */
+.arch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.arch-card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  padding: 26px;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.arch-card:hover {
+  transform: translateY(-4px);
+  border-color: #123b36;
+  box-shadow: 0 8px 24px rgba(18, 59, 54, 0.08);
+}
+
+.arch-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #f7f3e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  border: 1px solid rgba(18, 59, 54, 0.1);
+}
+
+.arch-card h3 {
+  font-family: "Noto Serif Tamil", Georgia, serif;
+  font-size: 1.18rem;
+  color: #123b36;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.arch-card p {
+  color: #4a5d55;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Heritage Highlight Box for History */
+.heritage-box {
+  background: linear-gradient(135deg, #fbf9f3 0%, #f4eee0 100%);
+  border-left: 5px solid #123b36;
+  border-radius: 0 16px 16px 0;
+  padding: 32px 36px;
+  margin: 24px 0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.heritage-box p.heritage-quote {
+  font-family: "Noto Serif Tamil", Georgia, serif;
+  font-size: 1.15rem;
+  line-height: 1.75;
+  color: #123b36;
+  font-weight: 600;
+  margin: 0 0 16px;
+  position: relative;
+}
+
+.heritage-box p.heritage-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #3b4d45;
+  margin: 0;
 }

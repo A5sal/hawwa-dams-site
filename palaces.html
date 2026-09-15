@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>தமிழ்நாட்டின் அரண்மனைகள் — Hawwa PrintShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;600;700&family=Noto+Sans+Tamil:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+            </div>
+
+            <nav class="desktop-nav">
+                <div class="nav-dropdown">
+                    <a href="palaces.html" class="dropdown-toggle active">
+                        அரண்மனைகள்
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">அணைகள் (Dams)</a>
+                        <a href="rivers.html">ஆறுகள் (Rivers)</a>
+                        <a href="falls.html">அருவிகள் (Waterfalls)</a>
+                        <a href="forests.html">காடுகள் (Forests)</a>
+                        <a href="mountains.html">மலைகள் (Mountains)</a>
+                        <a href="lakes.html">ஏரிகள் (Lakes)</a>
+                        <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+                        <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+                        <a href="islands.html">தீவுகள் (Islands)</a>
+                        <a href="ports.html">துறைமுகங்கள் (Ports)</a>
+                        <a href="palaces.html" class="active">அரண்மனைகள் (Palaces)</a>
+                        <a href="forts.html">கோட்டைகள் (Forts)</a>
+                    </div>
+                </div>
+                <a href="#intro">அறிமுகம்</a>
+                <a href="#profiles">அரண்மனைகள்</a>
+                <a href="#british">பிரிட்டிஷ் கட்டிடங்கள்</a>
+                <a href="#architecture">கட்டிடக்கலை</a>
+                <a href="#table">பட்டியல்</a>
+            </nav>
+
+            <button class="mobile-toggle" aria-label="பட்டி திற" aria-expanded="false">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="drawer-backdrop"></div>
+    <div class="mobile-drawer" role="dialog" aria-modal="true">
+        <div class="drawer-header">
+            <div class="brand">
+                <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+            </div>
+            <button class="drawer-close" aria-label="மூடு">&times;</button>
+        </div>
+        <div class="drawer-nav">
+            <div class="drawer-section-title">பிரிவுகள்</div>
+            <div class="mobile-cat-accordion">
+                <button class="mobile-cat-toggle" aria-expanded="false">
+                    <span>வகைகள் (Categories)</span>
+                    <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </button>
+                <div class="mobile-cat-content">
+                    <a href="index.html">அணைகள் (Dams)</a>
+                    <a href="rivers.html">ஆறுகள் (Rivers)</a>
+                    <a href="falls.html">அருவிகள் (Waterfalls)</a>
+                    <a href="forests.html">காடுகள் (Forests)</a>
+                    <a href="mountains.html">மலைகள் (Mountains)</a>
+                    <a href="lakes.html">ஏரிகள் (Lakes)</a>
+                    <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+                    <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+                    <a href="islands.html">தீவுகள் (Islands)</a>
+                    <a href="ports.html">துறைமுகங்கள் (Ports)</a>
+                    <a href="palaces.html" class="active">அரண்மனைகள் (Palaces)</a>
+                    <a href="forts.html">கோட்டைகள் (Forts)</a>
+                </div>
+            </div>
+            <div class="drawer-section-title">பக்கத்தின் பகுதிகள்</div>
+            <a href="#intro">அறிமுகம்</a>
+            <a href="#profiles">அரண்மனைகள்</a>
+            <a href="#british">பிரிட்டிஷ் கட்டிடங்கள்</a>
+            <a href="#architecture">கட்டிடக்கலை</a>
+            <a href="#table">பட்டியல்</a>
+        </div>
+    </div>
+
+    <section class="hero" id="intro">
+        <div class="hero-media">
+            <img src="assets/hero-palace.jpg" alt="தமிழ்நாட்டின் அரண்மனைகள்">
+        </div>
+        <div class="hero-content">
+            <span class="eyebrow-tag">வரலாறு & கட்டிடக்கலை</span>
+            <h1>தமிழ்நாட்டின் அரண்மனைகள்</h1>
+            <p class="lede">தமிழ்நாடு பிரம்மாண்டமான திராவிடக் கோயில்களுக்கு மட்டுமல்லாமல், பல்வேறு அரச மரபுகளையும்
+                கட்டிடக்கலைச் சிறப்புகளையும் எடுத்துக்காட்டும் வரலாற்றுச் சிறப்புமிக்க அரண்மனைகளுக்கும் புகழ்பெற்றது.
+                நாயக்கர்,
+                மராட்டியர், சேதுபதி, ஜமீன்தார் மற்றும் செட்டிநாட்டு மரபுகளுடன் தொடர்புடைய இவ்வரண்மனைகள், அக்கால அரசியல்,
+                கலை,
+                பண்பாடு மற்றும் வாழ்க்கை முறையை அறிந்துகொள்ள உதவுகின்றன.</p>
+        </div>
+        <svg class="wavecut" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,30 C 200,60 400,0 600,30 C 800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#f6f2e7"></path>
+        </svg>
+    </section>
+
+    <!-- Premium Hero Stat Banner (No map-box) -->
+    <div class="wrap" style="margin-top: 2rem;">
+        <div class="palace-hero-banner">
+            <div>
+                <div class="palace-hero-stat-num">20+</div>
+                <div class="palace-hero-stat-label">வரலாற்று அரண்மனைகள்</div>
+            </div>
+            <div class="palace-hero-info">
+                <p>தமிழ்நாட்டில் 20-க்கும் மேற்பட்ட வரலாற்றுச் சிறப்புமிக்க அரண்மனைகள் உள்ளன. இவை பல்வேறு அரச மரபுகளின்
+                    வரலாற்றையும், அக்கால கட்டிடக்கலையின் சிறப்பையும் எடுத்துக்காட்டுகின்றன. மதுரை, தஞ்சாவூர்,
+                    கன்னியாகுமரி,
+                    ராமநாதபுரம், புதுக்கோட்டை மற்றும் செட்டிநாடு போன்ற பகுதிகளில் குறிப்பிடத்தக்க அரண்மனைகள்
+                    அமைந்துள்ளன.</p>
+                <p class="table-note">குறிப்பு: இங்கு குறிப்பிடப்படும் 15 பகுதிகள், இந்தப் பக்கத்தில் விரிவாகக்
+                    குறிப்பிடப்படும்
+                    முக்கியமான அரண்மனைகள் மற்றும் வரலாற்றுக் கட்டிடங்களின் பட்டியல் மட்டுமே. இது தமிழ்நாட்டில் உள்ள
+                    அனைத்து
+                    அரண்மனைகளின் மொத்த எண்ணிக்கை அல்ல.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="profiles">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>புகழ்பெற்ற அரண்மனைகள்</h2>
+            </div>
+
+            <div class="palace-grid">
+                <!-- 1. திருமலை நாயக்கர் மகால் -->
+                <div class="palace-card">
+                    <div class="palace-card-media">
+                        <img src="assets/palace-thirumalai-nayakkar.jpg" alt="திருமலை நாயக்கர் மகால் — மதுரை">
+                        <div class="palace-card-badge">திருமலை நாயக்கர் மகால்</div>
+                    </div>
+                    <div class="palace-card-content">
+                        <span class="palace-tag">மதுரை மாவட்டம்</span>
+                        <h3>திருமலை நாயக்கர் மகால் — மதுரை</h3>
+                        <div class="palace-meta-pills">
+                            <span class="palace-meta-pill">மதுரை</span>
+                            <span class="palace-meta-pill">நாயக்கர் கட்டிடக்கலை</span>
+                            <span class="palace-meta-pill">1636</span>
+                        </div>
+                        <p>மதுரையில் அமைந்துள்ள திருமலை நாயக்கர் மகால், நாயக்கர் கால கட்டிடக்கலையின் மிகச்சிறந்த
+                            எடுத்துக்காட்டுகளில்
+                            ஒன்றாகும். இது <strong>1636ஆம் ஆண்டு மன்னர் திருமலை நாயக்கரால்</strong> கட்டப்பட்டது.</p>
+                        <p>பிரம்மாண்டமான வெள்ளை நிறத் தூண்கள், உயரமான குவிமாடங்கள் மற்றும் விசாலமான முற்றங்கள் இதன்
+                            முக்கிய
+                            சிறப்புகளாகும். தற்போதுள்ள பகுதி, அசல் அரண்மனை வளாகத்தின் ஒரு பகுதி மட்டுமே.</p>
+                    </div>
+                </div>
+
+                <!-- 2. பத்மநாபபுரம் அரண்மனை -->
+                <div class="palace-card rev">
+                    <div class="palace-card-media">
+                        <img src="assets/palace-padmanabhapuram.jpg" alt="பத்மநாபபுரம் அரண்மனை — கன்னியாகுமரி">
+                        <div class="palace-card-badge">பத்மநாபபுரம் அரண்மனை</div>
+                    </div>
+                    <div class="palace-card-content">
+                        <span class="palace-tag">கன்னியாகுமரி மாவட்டம்</span>
+                        <h3>பத்மநாபபுரம் அரண்மனை — கன்னியாகுமரி</h3>
+                        <div class="palace-meta-pills">
+                            <span class="palace-meta-pill">கன்னியாகுமரி</span>
+                            <span class="palace-meta-pill">பாரம்பரிய கேரளக் கட்டிடக்கலை</span>
+                            <span class="palace-meta-pill">1601</span>
+                        </div>
+                        <p>கன்னியாகுமரி மாவட்டத்தில் அமைந்துள்ள பத்மநாபபுரம் அரண்மனை, பாரம்பரிய கேரளக் கட்டிடக்கலையின்
+                            சிறப்பை
+                            வெளிப்படுத்தும் முக்கியமான வரலாற்றுச் சின்னமாகும். இதன் கட்டுமானம் சுமார் <strong>1601ஆம்
+                                ஆண்டைச்</strong>
+                            சேர்ந்ததாகக் கருதப்படுகிறது.</p>
+                        <p>மரத்தால் செய்யப்பட்ட நுணுக்கமான கூரைகள், அலங்கார வேலைப்பாடுகள், மெருகூட்டப்பட்ட கருநிறத்
+                            தரைகள் மற்றும்
+                            பழமையான கடிகாரக் கோபுரம் ஆகியவை இதன் சிறப்புகளாகும்.</p>
+                    </div>
+                </div>
+
+                <!-- 3. தஞ்சாவூர் மராட்டிய அரண்மனை -->
+                <div class="palace-card">
+                    <div class="palace-card-media">
+                        <img src="assets/palace-thanjavur.jpg" alt="தஞ்சாவூர் மராட்டிய அரண்மனை — தஞ்சாவூர்">
+                        <div class="palace-card-badge">தஞ்சாவூர் மராட்டிய அரண்மனை</div>
+                    </div>
+                    <div class="palace-card-content">
+                        <span class="palace-tag">தஞ்சாவூர் மாவட்டம்</span>
+                        <h3>தஞ்சாவூர் மராட்டிய அரண்மனை — தஞ்சாவூர்</h3>
+                        <div class="palace-meta-pills">
+                            <span class="palace-meta-pill">தஞ்சாவூர்</span>
+                            <span class="palace-meta-pill">நாயக்கர் & மராட்டியர்</span>
+                            <span class="palace-meta-pill">சரஸ்வதி மகால் நூலகம்</span>
+                        </div>
+                        <p>தஞ்சாவூரில் அமைந்துள்ள தஞ்சாவூர் மராட்டிய அரண்மனை, நாயக்கர் மற்றும் மராட்டியர் ஆட்சிக் கால
+                            வரலாற்றுடன்
+                            தொடர்புடையது. இது முதலில் தஞ்சாவூர் நாயக்கர்களால் உருவாக்கப்பட்டு, பின்னர் மராட்டிய
+                            ஆட்சியாளர்களால்
+                            மேம்படுத்தப்பட்டது.</p>
+                        <p>இங்கு சர்தார் மஹால், சரஸ்வதி மகால் நூலகம் மற்றும் பல்வேறு வரலாற்றுப் பொருட்கள்
+                            காணப்படுகின்றன.</p>
+                    </div>
+                </div>
+
+                <!-- 4. செட்டிநாடு அரண்மனை -->
+                <div class="palace-card rev">
+                    <div class="palace-card-media">
+                        <img src="assets/palace-chettinad.jpg" alt="செட்டிநாடு அரண்மனை — கானாடுகாத்தான்">
+                        <div class="palace-card-badge">செட்டிநாடு அரண்மனை</div>
+                    </div>
+                    <div class="palace-card-content">
+                        <span class="palace-tag">கானாடுகாத்தான்</span>
+                        <h3>செட்டிநாடு அரண்மனை — கானாடுகாத்தான்</h3>
+                        <div class="palace-meta-pills">
+                            <span class="palace-meta-pill">கானாடுகாத்தான்</span>
+                            <span class="palace-meta-pill">செட்டிநாட்டு மரபு</span>
+                            <span class="palace-meta-pill">பர்மிய தேக்கு</span>
+                        </div>
+                        <p>கானாடுகாத்தான் பகுதியில் அமைந்துள்ள செட்டிநாடு அரண்மனைகள், செட்டியார் சமூகத்தின் செழிப்பையும்
+                            தனித்துவமான கட்டிடக்கலை மரபையும் வெளிப்படுத்துகின்றன.</p>
+                        <p>பர்மிய தேக்கு மரத் தூண்கள், இத்தாலிய பளிங்குக் கற்கள், வண்ணக் கண்ணாடி வேலைப்பாடுகள் மற்றும்
+                            திறந்த முற்றங்கள்
+                            ஆகியவை இவற்றின் முக்கிய அம்சங்களாகும்.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="british">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>பிரிட்டிஷ் கால கட்டிடங்கள் மற்றும் அரண்மனைத் தன்மை கொண்ட வரலாற்றுச் சின்னங்கள்</h2>
+            </div>
+
+            <div class="palace-grid">
+                <!-- 5. ரிப்பன் கட்டிடம் -->
+                <div class="palace-card">
+                    <div class="palace-card-media">
+                        <img src="assets/palace-ripon.jpg" alt="ரிப்பன் கட்டிடம் — சென்னை">
+                        <div class="palace-card-badge">ரிப்பன் கட்டிடம்</div>
+                    </div>
+                    <div class="palace-card-content">
+                        <span class="palace-tag">சென்னை மாவட்டம்</span>
+                        <h3>ரிப்பன் கட்டிடம் — சென்னை</h3>
+                        <div class="palace-meta-pills">
+                            <span class="palace-meta-pill">சென்னை</span>
+                            <span class="palace-meta-pill">பிரிட்டிஷ் காலம்</span>
+                            <span class="palace-meta-pill">1913</span>
+                            <span class="palace-meta-pill">நியோகிளாசிக்கல்</span>
+                        </div>
+                        <p>சென்னையில் அமைந்துள்ள <strong>ரிப்பன் கட்டிடம்</strong>, பிரிட்டிஷ் காலத்தின் முக்கியமான
+                            கட்டிடக்கலைச்
+                            சின்னங்களில் ஒன்றாகும். இது <strong>1913ஆம் ஆண்டு</strong> திறக்கப்பட்டது.</p>
+                        <p>வெள்ளை நிற வெளிப்புறத் தோற்றம், நியோகிளாசிக்கல் கட்டிடக்கலை மற்றும் அழகிய கடிகாரக் கோபுரம்
+                            ஆகியவை இதன்
+                            சிறப்புகளாகும். இது சென்னை மாநகராட்சியின் வரலாற்றுடன் நெருங்கிய தொடர்புடையது.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>அரண்மனைகளின் கட்டிடக்கலைச் சிறப்புகள்</h2>
+            </div>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--color-muted);">தமிழ்நாட்டின் அரண்மனைகள் ஒரே
+                மாதிரியான கட்டிடக்கலை முறையில் அமைந்தவை அல்ல. அவை கட்டப்பட்ட காலம், ஆட்சி செய்த அரச மரபு மற்றும் உள்ளூர்
+                பண்பாட்டைப் பொறுத்து வெவ்வேறு கட்டிடக்கலை அம்சங்களைக் கொண்டுள்ளன.</p>
+
+            <div class="arch-grid">
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">🏛️</div>
+                    <h3>பிரம்மாண்டமான தூண்கள் மற்றும் குவிமாடங்கள்</h3>
+                    <p>நாயக்கர் காலக் கட்டிடக்கலையின் சிறப்பு.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">🪵</div>
+                    <h3>மர வேலைப்பாடுகள்</h3>
+                    <p>பத்மநாபபுரம் போன்ற அரண்மனைகளில் காணப்படுகின்றன.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">🎨</div>
+                    <h3>சுவர் ஓவியங்கள்</h3>
+                    <p>அரச வாழ்க்கை, போர்கள் மற்றும் சமயக் காட்சிகளை வெளிப்படுத்துகின்றன.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">🏡</div>
+                    <h3>பெரிய திறந்த முற்றங்கள்</h3>
+                    <p>காற்றோட்டம் மற்றும் சமூக நிகழ்வுகளுக்குப் பயன்படுத்தப்பட்டன.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">💎</div>
+                    <h3>பளிங்கு, மரம் மற்றும் வண்ணக் கண்ணாடி வேலைப்பாடுகள்</h3>
+                    <p>செட்டிநாட்டு அரண்மனைகளில் குறிப்பிடத்தக்கவை.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">🏢</div>
+                    <h3>நியோகிளாசிக்கல் மற்றும் இந்தோ-சாரசெனிக் பாணிகள்</h3>
+                    <p>பிரிட்டிஷ் கால கட்டிடங்களில் காணப்படும் முக்கிய அம்சங்கள்.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="history">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>அரண்மனைகளின் வரலாற்று முக்கியத்துவம்</h2>
+            </div>
+            <div class="heritage-box">
+                <p class="heritage-quote">“தமிழ்நாட்டின் அரண்மனைகள் பழைய அரசர்களின் வசிப்பிடங்களாக மட்டுமல்லாமல், ஆட்சி
+                    மற்றும் நிர்வாக
+                    மையங்களாகவும் செயல்பட்டன. இவற்றின் மூலம் பழைய அரச மரபுகள், கட்டிடக்கலை, ஓவியம், சிற்பம், இலக்கியம்
+                    மற்றும் சமூக
+                    வாழ்க்கை குறித்து பல தகவல்களை அறிந்துகொள்ள முடிகிறது.”</p>
+                <p class="heritage-desc">பிரிட்டிஷ் கால கட்டிடங்களும் தமிழ்நாட்டின் நவீன நிர்வாக மற்றும் நகர்ப்புற
+                    வரலாற்றின்
+                    முக்கிய பகுதியாக விளங்குகின்றன.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="table">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>தமிழ்நாட்டின் அரண்மனைகள் — விரைவுப் பார்வை</h2>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>அரண்மனை / வரலாற்றுக் கட்டிடம்</th>
+                            <th>அமைந்துள்ள இடம்</th>
+                            <th>சிறப்பு</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>திருமலை நாயக்கர் மகால்</strong></td>
+                            <td>மதுரை</td>
+                            <td>பிரம்மாண்டமான தூண்கள் மற்றும் குவிமாடங்கள்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>பத்மநாபபுரம் அரண்மனை</strong></td>
+                            <td>கன்னியாகுமரி</td>
+                            <td>பாரம்பரிய மரக் கட்டிடக்கலை</td>
+                        </tr>
+                        <tr>
+                            <td><strong>தஞ்சாவூர் மராட்டிய அரண்மனை</strong></td>
+                            <td>தஞ்சாவூர்</td>
+                            <td>மராட்டியர் வரலாறு மற்றும் சரஸ்வதி மகால்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>செட்டிநாடு அரண்மனை</strong></td>
+                            <td>கானாடுகாத்தான்</td>
+                            <td>தனித்துவமான செட்டிநாட்டு கட்டிடக்கலை</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ராமலிங்க விலாசம்</strong></td>
+                            <td>ராமநாதபுரம்</td>
+                            <td>சுவர் ஓவியங்கள் மற்றும் சேதுபதி வரலாறு</td>
+                        </tr>
+                        <tr>
+                            <td><strong>புதுக்கோட்டை அரண்மனை</strong></td>
+                            <td>புதுக்கோட்டை</td>
+                            <td>அரச மரபு மற்றும் வரலாற்றுக் கட்டிடக்கலை</td>
+                        </tr>
+                        <tr>
+                            <td><strong>எட்டயபுரம் அரண்மனை</strong></td>
+                            <td>எட்டயபுரம்</td>
+                            <td>எட்டப்ப நாயக்கர் அரச மரபு</td>
+                        </tr>
+                        <tr>
+                            <td><strong>சேத்தூர் அரண்மனை</strong></td>
+                            <td>சேத்தூர்</td>
+                            <td>பழமையான அரச குடும்ப வரலாறு</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ஊத்துமலை அரண்மனை</strong></td>
+                            <td>ஊத்துமலை</td>
+                            <td>ஜமீன்தார் கால வரலாறு</td>
+                        </tr>
+                        <tr>
+                            <td><strong>சிவகிரி அரண்மனை</strong></td>
+                            <td>சிவகிரி</td>
+                            <td>ஜமீன்தார் மரபு</td>
+                        </tr>
+                        <tr>
+                            <td><strong>சிங்கம்பட்டி அரண்மனை</strong></td>
+                            <td>சிங்கம்பட்டி</td>
+                            <td>பழமையான ஜமீன்தார் வரலாறு</td>
+                        </tr>
+                        <tr>
+                            <td><strong>குற்றாலம் அரண்மனை</strong></td>
+                            <td>குற்றாலம்</td>
+                            <td>அரச மரபு மற்றும் வரலாற்றுக் கட்டிடக்கலை</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ரிப்பன் கட்டிடம்</strong></td>
+                            <td>சென்னை</td>
+                            <td>பிரிட்டிஷ் கால நியோகிளாசிக்கல் கட்டிடக்கலை</td>
+                        </tr>
+                        <tr>
+                            <td><strong>பனகல் மாளிகை</strong></td>
+                            <td>சென்னை</td>
+                            <td>காலனித்துவ கால கட்டிடக்கலை</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <img src="assets/hawwa-logo.png" alt="Hawwa PrintShop">
+                    <p>இந்தப் பக்கம் Hawwa PrintShop, Chennai சார்பாக தொகுக்கப்பட்டது.</p>
+                </div>
+                <div>
+                    <h4>முகவரி</h4>
+                    <address>67, Perianna Mudali Street,<br>Seven Wells North, George Town,<br>Chennai, Tamil Nadu
+                        600001
+                    </address>
+                </div>
+                <div>
+                    <h4>தொடர்பு</h4>
+                    <p>+91 98844 80801</p>
+                    <p>திங்கள்–சனி: 10:00 AM – 7:00 PM</p>
+                    <p>ஞாயிறு: விடுமுறை</p>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span>© Hawwa PrintShop</span>
+                <span>படங்கள்: Wikimedia Commons</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>தமிழ்நாட்டின் கோட்டைகள் — Hawwa PrintShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;600;700&family=Noto+Sans+Tamil:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+            </div>
+
+            <nav class="desktop-nav">
+                <div class="nav-dropdown">
+                    <a href="forts.html" class="dropdown-toggle active">
+                        கோட்டைகள்
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">அணைகள் (Dams)</a>
+                        <a href="rivers.html">ஆறுகள் (Rivers)</a>
+                        <a href="falls.html">அருவிகள் (Waterfalls)</a>
+                        <a href="forests.html">காடுகள் (Forests)</a>
+                        <a href="mountains.html">மலைகள் (Mountains)</a>
+                        <a href="lakes.html">ஏரிகள் (Lakes)</a>
+                        <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+                        <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+                        <a href="islands.html">தீவுகள் (Islands)</a>
+                        <a href="ports.html">துறைமுகங்கள் (Ports)</a>
+                        <a href="palaces.html">அரண்மனைகள் (Palaces)</a>
+                        <a href="forts.html" class="active">கோட்டைகள் (Forts)</a>
+                    </div>
+                </div>
+                <a href="#intro">அறிமுகம்</a>
+                <a href="#profiles">கோட்டைகள்</a>
+                <a href="#architecture">கட்டிடக்கலை</a>
+                <a href="#history">வரலாறு</a>
+                <a href="#table">பட்டியல்</a>
+            </nav>
+
+            <button class="mobile-toggle" aria-label="பட்டி திற" aria-expanded="false">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="drawer-backdrop"></div>
+    <div class="mobile-drawer" role="dialog" aria-modal="true">
+        <div class="drawer-header">
+            <div class="brand">
+                <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+            </div>
+            <button class="drawer-close" aria-label="மூடு">&times;</button>
+        </div>
+        <div class="drawer-nav">
+            <div class="drawer-section-title">பிரிவுகள்</div>
+            <div class="mobile-cat-accordion">
+                <button class="mobile-cat-toggle" aria-expanded="false">
+                    <span>வகைகள் (Categories)</span>
+                    <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </button>
+                <div class="mobile-cat-content">
+                    <a href="index.html">அணைகள் (Dams)</a>
+                    <a href="rivers.html">ஆறுகள் (Rivers)</a>
+                    <a href="falls.html">அருவிகள் (Waterfalls)</a>
+                    <a href="forests.html">காடுகள் (Forests)</a>
+                    <a href="mountains.html">மலைகள் (Mountains)</a>
+                    <a href="lakes.html">ஏரிகள் (Lakes)</a>
+                    <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+                    <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+                    <a href="islands.html">தீவுகள் (Islands)</a>
+                    <a href="ports.html">துறைமுகங்கள் (Ports)</a>
+                    <a href="palaces.html">அரண்மனைகள் (Palaces)</a>
+                    <a href="forts.html" class="active">கோட்டைகள் (Forts)</a>
+                </div>
+            </div>
+            <div class="drawer-section-title">பக்கத்தின் பகுதிகள்</div>
+            <a href="#intro">அறிமுகம்</a>
+            <a href="#profiles">கோட்டைகள்</a>
+            <a href="#architecture">கட்டிடக்கலை</a>
+            <a href="#history">வரலாறு</a>
+            <a href="#table">பட்டியல்</a>
+        </div>
+    </div>
+
+    <section class="hero" id="intro">
+        <div class="hero-media">
+            <img src="assets/hero-fort.jpg" alt="தமிழ்நாட்டின் கோட்டைகள்">
+        </div>
+        <div class="hero-content">
+            <span class="eyebrow-tag">இராணுவம் & பாதுகாப்பு</span>
+            <h1>தமிழ்நாட்டின் கோட்டைகள்</h1>
+            <p class="lede">தமிழ்நாடு பழமையான அரச மரபுகளையும், போர் மற்றும் பாதுகாப்பு முறைகளையும் எடுத்துக்காட்டும் பல வரலாற்றுச் சிறப்புமிக்க கோட்டைகளைக் கொண்டுள்ளது. சோழர், பாண்டியர், நாயக்கர், விஜயநகரப் பேரரசு, மராட்டியர் மற்றும் ஐரோப்பிய காலனித்துவ ஆட்சியாளர்களின் காலங்களில் இக்கோட்டைகள் முக்கியத்துவம் பெற்றன.</p>
+            <p class="lede" style="margin-top: 10px;">இக்கோட்டைகள் அக்கால இராணுவத் திட்டமிடல், கட்டிடக்கலை, அரசியல் வரலாறு மற்றும் பாதுகாப்பு முறைகளை அறிந்துகொள்ள உதவுகின்றன.</p>
+        </div>
+        <svg class="wavecut" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,30 C 200,60 400,0 600,30 C 800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#f6f2e7"></path>
+        </svg>
+    </section>
+
+    <!-- Premium Stat Highlight Banner -->
+    <div class="wrap" style="margin-top: 2rem;">
+        <div class="palace-hero-banner">
+            <div>
+                <div class="palace-hero-stat-num">30+</div>
+                <div class="palace-hero-stat-label">வரலாற்றுக் கோட்டைகள்</div>
+            </div>
+            <div class="palace-hero-info">
+                <p>தமிழ்நாட்டில் <strong>30-க்கும் மேற்பட்ட வரலாற்றுச் சிறப்புமிக்க கோட்டைகள்</strong> உள்ளதாகக் குறிப்பிடப்படுகிறது. அவற்றில் சுமார் <strong>10 முதல் 12 கோட்டைகள்</strong> முக்கியமான மற்றும் கட்டிடக்கலை ரீதியாக குறிப்பிடத்தக்க கோட்டைகளாகக் கருதப்படுகின்றன. செஞ்சி, வேலூர், திண்டுக்கல், திருமயம் மற்றும் தரங்கம்பாடி போன்ற கோட்டைகள் கட்டிடக்கலை மற்றும் வரலாற்று முக்கியத்துவம் வாய்ந்தவையாகும். சென்னையின் செயின்ட் ஜார்ஜ் கோட்டை, தமிழ்நாட்டின் காலனித்துவ வரலாற்றிலும் முக்கிய இடம் பெற்றுள்ளது.</p>
+                <p class="table-note">குறிப்பு: இங்கு குறிப்பிடப்படும் 10 பகுதிகள், இந்தப் பக்கத்தில் விரிவாகக் குறிப்பிடப்படும் முக்கியமான கோட்டைகளின் பட்டியல் மட்டுமே. இது தமிழ்நாட்டில் உள்ள அனைத்து கோட்டைகளின் மொத்த எண்ணிக்கை அல்ல.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="profiles">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>புகழ்பெற்ற கோட்டைகள்</h2>
+            </div>
+
+            <div class="palace-grid">
+                <!-- 1. செஞ்சி கோட்டை -->
+                <div class="palace-card">
+                    <div class="palace-card-media">
+                        <img src="assets/fort-gingee.jpg" alt="செஞ்சி கோட்டை — விழுப்புரம்">
+                        <div class="palace-card-badge">செஞ்சி கோட்டை</div>
+                    </div>
+                    <div class="palace-card-content">
+                        <span class="palace-tag">விழுப்புரம் மாவட்டம்</span>
+                        <h3>செஞ்சி கோட்டை — விழுப்புரம்</h3>
+                        <div class="palace-meta-pills">
+                            <span class="palace-meta-pill">விழுப்புரம்</span>
+                            <span class="palace-meta-pill">சோழர் & விஜயநகரம்</span>
+                            <span class="palace-meta-pill">3 மலைக் கோட்டை</span>
+                        </div>
+                        <p>விழுப்புரம் மாவட்டத்தில் அமைந்துள்ள செஞ்சி கோட்டை, தமிழ்நாட்டின் மிகப் பிரம்மாண்டமான வரலாற்றுக் கோட்டைகளில் ஒன்றாகும். இது முதலில் சோழர்களால் உருவாக்கப்பட்டு, பின்னர் விஜயநகரப் பேரரசால் வலுப்படுத்தப்பட்டது.</p>
+                        <p>மூன்று மலைகளைச் சுற்றி அமைந்துள்ள இக்கோட்டையின் ராஜகிரி, கிருஷ்ணகிரி மற்றும் சந்திரயான்துர்கம் ஆகிய பகுதிகள் குறிப்பிடத்தக்கவை. கல்யாண மஹால், தானியக் களஞ்சியங்கள், மதில்கள் மற்றும் அகழி ஆகியவை இதன் முக்கிய சிறப்புகளாகும்.</p>
+                    </div>
+                </div>
+
+                <!-- 2. வேலூர் கோட்டை -->
+                <div class="palace-card rev">
+                    <div class="palace-card-media">
+                        <img src="assets/fort-vellore.jpg" alt="வேலூர் கோட்டை — வேலூர்">
+                        <div class="palace-card-badge">வேலூர் கோட்டை</div>
+                    </div>
+                    <div class="palace-card-content">
+                        <span class="palace-tag">வேலூர் மாவட்டம்</span>
+                        <h3>வேலூர் கோட்டை — வேலூர்</h3>
+                        <div class="palace-meta-pills">
+                            <span class="palace-meta-pill">வேலூர்</span>
+                            <span class="palace-meta-pill">16-ஆம் நூற்றாண்டு</span>
+                            <span class="palace-meta-pill">1806 சிப்பாய் கிளர்ச்சி</span>
+                        </div>
+                        <p>வேலூரில் அமைந்துள்ள வேலூர் கோட்டை, 16ஆம் நூற்றாண்டில் விஜயநகர ஆட்சிக் காலத்தில் கட்டப்பட்ட முக்கியமான கோட்டையாகும். பின்னர் பல்வேறு ஆட்சியாளர்களின் கட்டுப்பாட்டில் இருந்த இக்கோட்டை, 1806ஆம் ஆண்டு நடைபெற்ற <strong>வேலூர் சிப்பாய் கிளர்ச்சியுடன்</strong> தொடர்புடையது.</p>
+                        <p>பெரிய கிரானைட் கற்களால் அமைக்கப்பட்ட மதில்கள், அகழி மற்றும் வலுவான பாதுகாப்பு அமைப்புகள் இதன் சிறப்புகளாகும். ஜலகண்டேஸ்வரர் கோயில், தேவாலயம் மற்றும் மசூதி ஆகியவையும் கோட்டை வளாகத்தில் அமைந்துள்ளன.</p>
+                    </div>
+                </div>
+
+                <!-- 3. செயின்ட் ஜார்ஜ் கோட்டை -->
+                <div class="palace-card">
+                    <div class="palace-card-media">
+                        <img src="assets/fort-st-george.jpg" alt="செயின்ட் ஜார்ஜ் கோட்டை — சென்னை">
+                        <div class="palace-card-badge">செயின்ட் ஜார்ஜ் கோட்டை</div>
+                    </div>
+                    <div class="palace-card-content">
+                        <span class="palace-tag">சென்னை மாவட்டம்</span>
+                        <h3>செயின்ட் ஜார்ஜ் கோட்டை — சென்னை</h3>
+                        <div class="palace-meta-pills">
+                            <span class="palace-meta-pill">சென்னை</span>
+                            <span class="palace-meta-pill">1640</span>
+                            <span class="palace-meta-pill">காலனித்துவக் கோட்டை</span>
+                        </div>
+                        <p>சென்னையில் அமைந்துள்ள செயின்ட் ஜார்ஜ் கோட்டை, ஆங்கிலேயர்களால் <strong>1640ஆம் ஆண்டு</strong> நிறுவப்பட்ட முக்கியமான காலனித்துவக் கோட்டையாகும். சென்னையின் ஆரம்பகால நகர வளர்ச்சியுடன் இக்கோட்டை நெருங்கிய தொடர்புடையது.</p>
+                        <p>வலுவான மதில்கள் மற்றும் பாதுகாப்பு அமைப்புகளைக் கொண்ட இக்கோட்டை, காலனித்துவ காலத்தில் நிர்வாக மற்றும் இராணுவ மையமாகச் செயல்பட்டது. கோட்டை அருங்காட்சியகம் மற்றும் செயின்ட் மேரிஸ் தேவாலயம் ஆகியவை இங்குள்ள முக்கிய வரலாற்றுச் சின்னங்களாகும்.</p>
+                    </div>
+                </div>
+
+                <!-- 4. டான்ஸ்போர்க் கோட்டை -->
+                <div class="palace-card rev">
+                    <div class="palace-card-media">
+                        <img src="assets/fort-dansborg.jpg" alt="டான்ஸ்போர்க் கோட்டை — தரங்கம்பாடி">
+                        <div class="palace-card-badge">டான்ஸ்போர்க் கோட்டை</div>
+                    </div>
+                    <div class="palace-card-content">
+                        <span class="palace-tag">மயிலாடுதுறை மாவட்டம்</span>
+                        <h3>டான்ஸ்போர்க் கோட்டை — தரங்கம்பாடி</h3>
+                        <div class="palace-meta-pills">
+                            <span class="palace-meta-pill">தரங்கம்பாடி</span>
+                            <span class="palace-meta-pill">1620</span>
+                            <span class="palace-meta-pill">டேனிஷ் கட்டிடக்கலை</span>
+                        </div>
+                        <p>மயிலாடுதுறை மாவட்டத்தின் தரங்கம்பாடியில் அமைந்துள்ள டான்ஸ்போர்க் கோட்டை, டேனிஷ் ஆட்சிக் காலத்தின் முக்கியமான வரலாற்றுச் சின்னமாகும். இது <strong>1620ஆம் ஆண்டு</strong> கட்டப்பட்டதாகும்.</p>
+                        <p>கடலை நோக்கிய அமைப்பு, உயரமான மதில்கள் மற்றும் தனித்துவமான ஐரோப்பிய கட்டிடக்கலை ஆகியவை இதன் சிறப்புகளாகும். கோட்டைக்குள் அமைந்துள்ள அருங்காட்சியகத்தில் டேனிஷ் ஆட்சிக் காலத்தைச் சேர்ந்த பல வரலாற்றுப் பொருட்கள் காணப்படுகின்றன.</p>
+                    </div>
+                </div>
+
+                <!-- 5. திண்டுக்கல் கோட்டை -->
+                <div class="palace-card">
+                    <div class="palace-card-media">
+                        <img src="assets/fort-dindigul.jpg" alt="திண்டுக்கல் கோட்டை — திண்டுக்கல்">
+                        <div class="palace-card-badge">திண்டுக்கல் கோட்டை</div>
+                    </div>
+                    <div class="palace-card-content">
+                        <span class="palace-tag">திண்டுக்கல் மாவட்டம்</span>
+                        <h3>திண்டுக்கல் கோட்டை — திண்டுக்கல்</h3>
+                        <div class="palace-meta-pills">
+                            <span class="palace-meta-pill">திண்டுக்கல்</span>
+                            <span class="palace-meta-pill">நாயக்கர் & திப்பு சுல்தான்</span>
+                            <span class="palace-meta-pill">பாறைமலைக் கோட்டை</span>
+                        </div>
+                        <p>திண்டுக்கல் நகரின் நடுப்பகுதியில் உள்ள உயரமான பாறைமலையின் மீது அமைந்துள்ள திண்டுக்கல் கோட்டை, நாயக்கர் காலத்தைச் சேர்ந்த முக்கியமான கோட்டையாகும். பின்னர் ஹைதர் அலி மற்றும் திப்பு சுல்தான் காலத்தில் இது மேலும் வலுப்படுத்தப்பட்டது.</p>
+                        <p>தடித்த மதில்கள், பாதுகாப்பு அரண் பகுதிகள் மற்றும் பீரங்கி அமைப்புகள் இதன் முக்கிய அம்சங்களாகும். கோட்டையின் உயரமான பகுதிகளில் இருந்து திண்டுக்கல் நகரையும் சுற்றியுள்ள பகுதிகளையும் காண முடியும்.</p>
+                    </div>
+                </div>
+
+                <!-- 6. திருமயம் கோட்டை -->
+                <div class="palace-card rev">
+                    <div class="palace-card-media">
+                        <img src="assets/fort-thirumayam.jpg" alt="திருமயம் கோட்டை — புதுக்கோட்டை">
+                        <div class="palace-card-badge">திருமயம் கோட்டை</div>
+                    </div>
+                    <div class="palace-card-content">
+                        <span class="palace-tag">புதுக்கோட்டை மாவட்டம்</span>
+                        <h3>திருமயம் கோட்டை — புதுக்கோட்டை</h3>
+                        <div class="palace-meta-pills">
+                            <span class="palace-meta-pill">புதுக்கோட்டை</span>
+                            <span class="palace-meta-pill">1687</span>
+                            <span class="palace-meta-pill">சேதுபதி மன்னர்</span>
+                        </div>
+                        <p>புதுக்கோட்டை மாவட்டத்தில் அமைந்துள்ள திருமயம் கோட்டை, <strong>1687ஆம் ஆண்டு</strong> ராமநாதபுரம் சேதுபதி மன்னரால் கட்டப்பட்டதாகக் கருதப்படுகிறது. இது அக்காலத்தில் முக்கியமான இராணுவத் தளமாக விளங்கியது.</p>
+                        <p>இயற்கையான பாறை அமைப்பின் மீது கட்டப்பட்டுள்ள இக்கோட்டையில் மதில்கள், பாதுகாப்புக் கோபுரங்கள் மற்றும் பாறைக்குடைவரைக் கோயில்கள் காணப்படுகின்றன. சிவன் மற்றும் விஷ்ணுவுக்கான குடைவரைக் கோயில்கள் இதன் குறிப்பிடத்தக்க அம்சங்களாகும்.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>கோட்டைகளின் கட்டிடக்கலைச் சிறப்புகள்</h2>
+            </div>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--color-muted);">தமிழ்நாட்டின் கோட்டைகள் அவை அமைந்துள்ள நிலப்பரப்பு மற்றும் கட்டப்பட்ட காலத்தைப் பொறுத்து வெவ்வேறு கட்டிடக்கலை அம்சங்களைக் கொண்டுள்ளன.</p>
+
+            <div class="arch-grid">
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">🛡️</div>
+                    <h3>பிரம்மாண்டமான மதில்கள்</h3>
+                    <p>எதிரிகளின் தாக்குதலைத் தடுப்பதற்காக அமைக்கப்பட்டன.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">🌊</div>
+                    <h3>ஆழமான அகழிகள்</h3>
+                    <p>கோட்டையைச் சுற்றி கூடுதல் பாதுகாப்பை வழங்கின.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">🗼</div>
+                    <h3>காவல் கோபுரங்கள்</h3>
+                    <p>எதிரிகளின் நடமாட்டத்தைத் தொலைவிலிருந்தே கண்காணிக்கப் பயன்படுத்தப்பட்டன.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">💣</div>
+                    <h3>பீரங்கி மேடைகள்</h3>
+                    <p>பின்னர் காலங்களில் நவீன ஆயுதங்களைப் பயன்படுத்துவதற்காக அமைக்கப்பட்டன.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">⛰️</div>
+                    <h3>இயற்கையான மலை மற்றும் பாறைகள்</h3>
+                    <p>செஞ்சி, திண்டுக்கல் போன்ற கோட்டைகளில் இயற்கை அமைப்பே பாதுகாப்பின் ஒரு பகுதியாக பயன்படுத்தப்பட்டது.</p>
+                </div>
+                <div class="arch-card">
+                    <div class="arch-icon-wrap">🛕</div>
+                    <h3>கோயில்கள் மற்றும் அரண்மனைப் பகுதிகள்</h3>
+                    <p>சில கோட்டை வளாகங்களில் வழிபாடு மற்றும் நிர்வாகத்திற்கான கட்டிடங்களும் அமைந்திருந்தன.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="history">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>கோட்டைகளின் வரலாற்று முக்கியத்துவம்</h2>
+            </div>
+            <div class="heritage-box">
+                <p class="heritage-quote">“தமிழ்நாட்டின் கோட்டைகள் வெறும் பாதுகாப்பு அமைப்புகளாக மட்டுமல்லாமல், அரசியல் மற்றும் இராணுவ நடவடிக்கைகளின் முக்கிய மையங்களாகவும் விளங்கின. பல்வேறு அரச மரபுகளின் ஆட்சி மாற்றங்கள், போர்கள் மற்றும் காலனித்துவ வரலாற்றுடன் இவை தொடர்புடையவை.”</p>
+                <p class="heritage-desc">இக்கோட்டைகள் மூலம் பழைய இராணுவத் தொழில்நுட்பம், கட்டிடக்கலை, அரசாட்சி முறைகள் மற்றும் அக்கால சமூக வாழ்க்கை குறித்து பல தகவல்களை அறிந்துகொள்ள முடிகிறது.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="table">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>தமிழ்நாட்டின் கோட்டைகள் — விரைவுப் பார்வை</h2>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>கோட்டை</th>
+                            <th>அமைந்துள்ள இடம்</th>
+                            <th>சிறப்பு</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>செஞ்சி கோட்டை</strong></td>
+                            <td>விழுப்புரம்</td>
+                            <td>மூன்று மலைகளை உள்ளடக்கிய பிரம்மாண்ட கோட்டை</td>
+                        </tr>
+                        <tr>
+                            <td><strong>வேலூர் கோட்டை</strong></td>
+                            <td>வேலூர்</td>
+                            <td>கிரானைட் மதில்கள் மற்றும் அகழி</td>
+                        </tr>
+                        <tr>
+                            <td><strong>செயின்ட் ஜார்ஜ் கோட்டை</strong></td>
+                            <td>சென்னை</td>
+                            <td>காலனித்துவ கால முக்கிய கோட்டை</td>
+                        </tr>
+                        <tr>
+                            <td><strong>டான்ஸ்போர்க் கோட்டை</strong></td>
+                            <td>தரங்கம்பாடி</td>
+                            <td>டேனிஷ் கால கட்டிடக்கலை</td>
+                        </tr>
+                        <tr>
+                            <td><strong>திண்டுக்கல் கோட்டை</strong></td>
+                            <td>திண்டுக்கல்</td>
+                            <td>பாறைமலையின் மீது அமைந்த கோட்டை</td>
+                        </tr>
+                        <tr>
+                            <td><strong>திருமயம் கோட்டை</strong></td>
+                            <td>புதுக்கோட்டை</td>
+                            <td>பாறைக்குடைவரைக் கோயில்கள் மற்றும் மதில்கள்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>சத்தியமங்கலம் கோட்டை</strong></td>
+                            <td>ஈரோடு</td>
+                            <td>வரலாற்று இராணுவ முக்கியத்துவம்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>சங்ககிரி கோட்டை</strong></td>
+                            <td>சேலம்</td>
+                            <td>மலைக்கோட்டை மற்றும் பல அடுக்கு மதில்கள்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>தர்மபுரி கோட்டை</strong></td>
+                            <td>தர்மபுரி</td>
+                            <td>பழமையான கோட்டை அமைப்பு</td>
+                        </tr>
+                        <tr>
+                            <td><strong>மணோரா கோட்டை</strong></td>
+                            <td>தஞ்சாவூர்</td>
+                            <td>கடற்கரைக்கு அருகிலுள்ள தனித்துவமான கோட்டை</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <img src="assets/hawwa-logo.png" alt="Hawwa PrintShop">
+                    <p>இந்தப் பக்கம் Hawwa PrintShop, Chennai சார்பாக தொகுக்கப்பட்டது.</p>
+                </div>
+                <div>
+                    <h4>முகவரி</h4>
+                    <address>67, Perianna Mudali Street,<br>Seven Wells North, George Town,<br>Chennai, Tamil Nadu 600001
+                    </address>
+                </div>
+                <div>
+                    <h4>தொடர்பு</h4>
+                    <p>+91 98844 80801</p>
+                    <p>திங்கள்–சனி: 10:00 AM – 7:00 PM</p>
+                    <p>ஞாயிறு: விடுமுறை</p>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span>© Hawwa PrintShop</span>
+                <span>படங்கள்: Wikimedia Commons</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
