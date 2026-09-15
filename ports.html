@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>தமிழ்நாட்டின் துறைமுகங்கள் — Hawwa PrintShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;600;700&family=Noto+Sans+Tamil:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+            </div>
+
+            <nav class="desktop-nav">
+                <div class="nav-dropdown">
+                    <a href="ports.html" class="dropdown-toggle active">
+                        துறைமுகங்கள்
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">அணைகள் (Dams)</a>
+                        <a href="rivers.html">ஆறுகள் (Rivers)</a>
+                        <a href="falls.html">அருவிகள் (Waterfalls)</a>
+                        <a href="forests.html">காடுகள் (Forests)</a>
+                        <a href="mountains.html">மலைகள் (Mountains)</a>
+                        <a href="lakes.html">ஏரிகள் (Lakes)</a>
+                        <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+                        <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+                        <a href="islands.html">தீவுகள் (Islands)</a>
+                        <a href="ports.html" class="active">துறைமுகங்கள் (Ports)</a>
+                    </div>
+                </div>
+                <a href="#intro">அறிமுகம்</a>
+                <a href="#benefits">முக்கியத்துவம்</a>
+                <a href="#major-ports">முக்கிய துறைமுகங்கள்</a>
+                <a href="#minor-ports">சிறு துறைமுகங்கள்</a>
+                <a href="#table">பட்டியல்</a>
+            </nav>
+
+            <button class="mobile-toggle" aria-label="பட்டி திற" aria-expanded="false">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="drawer-backdrop"></div>
+    <div class="mobile-drawer" role="dialog" aria-modal="true">
+        <div class="drawer-header">
+            <div class="brand">
+                <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+            </div>
+            <button class="drawer-close" aria-label="மூடு">&times;</button>
+        </div>
+        <div class="drawer-nav">
+            <div class="drawer-section-title">பிரிவுகள்</div>
+            <div class="mobile-cat-accordion">
+                <button class="mobile-cat-toggle" aria-expanded="false">
+                    <span>வகைகள் (Categories)</span>
+                    <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </button>
+                <div class="mobile-cat-content">
+                    <a href="index.html">அணைகள் (Dams)</a>
+                    <a href="rivers.html">ஆறுகள் (Rivers)</a>
+                    <a href="falls.html">அருவிகள் (Waterfalls)</a>
+                    <a href="forests.html">காடுகள் (Forests)</a>
+                    <a href="mountains.html">மலைகள் (Mountains)</a>
+                    <a href="lakes.html">ஏரிகள் (Lakes)</a>
+                    <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+                    <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+                    <a href="islands.html">தீவுகள் (Islands)</a>
+                    <a href="ports.html" class="active">துறைமுகங்கள் (Ports)</a>
+                </div>
+            </div>
+            <div class="drawer-section-title">பக்கத்தின் பகுதிகள்</div>
+            <a href="#intro">அறிமுகம்</a>
+            <a href="#benefits">முக்கியத்துவம்</a>
+            <a href="#major-ports">முக்கிய துறைமுகங்கள்</a>
+            <a href="#minor-ports">சிறு துறைமுகங்கள்</a>
+            <a href="#table">பட்டியல்</a>
+        </div>
+    </div>
+
+    <section class="hero" id="intro">
+        <div class="hero-media">
+            <img src="assets/hero-port.jpg" alt="தமிழ்நாட்டின் துறைமுகங்கள்">
+        </div>
+        <div class="hero-content">
+            <span class="eyebrow-tag">கடல்சார் வணிகம் & துறைமுகங்கள்</span>
+            <h1>தமிழ்நாட்டின் துறைமுகங்கள்</h1>
+            <p>தமிழ்நாடு இந்தியாவின் முக்கிய கடல்சார் மாநிலங்களில் ஒன்றாகும். சுமார் <strong>1,069 கி.மீ. நீளமான
+                    கடற்கரையைக்</strong> கொண்ட தமிழ்நாட்டில் மொத்தம் <strong>20 செயல்பாட்டில் உள்ள துறைமுகங்கள்</strong>
+                உள்ளன. இதில் <strong>3 முக்கிய துறைமுகங்கள்</strong> இடம்பெற்றுள்ளன; <strong>இந்தியாவின் எந்த ஒரு
+                    மாநிலத்திலும் உள்ள அதிகபட்ச முக்கிய துறைமுகங்களின் எண்ணிக்கை இதுவாகும்</strong>. இத்துறைமுகங்கள்
+                வர்த்தகம், ஏற்றுமதி, இறக்குமதி மற்றும் சரக்கு போக்குவரத்தில் முக்கிய பங்கு வகிக்கின்றன.</p>
+        </div>
+    </section>
+
+    <div class="wrap" style="margin-top: 2rem; margin-bottom: 2.5rem;">
+        <!-- Hero Stat Highlight (Only 20 as stat num) -->
+        <div class="port-hero-stat">
+            <div class="port-stat-main">
+                <span class="port-stat-number">20</span>
+                <div class="port-stat-info">
+                    <h3>செயல்பாட்டில் உள்ள துறைமுகங்கள்</h3>
+                    <p>தமிழ்நாட்டின் 1,069 கி.மீ. நீளமுள்ள கடற்கரையில் அமைந்துள்ள மொத்தம் 20 செயல்பாட்டில் உள்ள
+                        துறைமுகங்கள் மாநிலத்தின் கடல்சார் வணிகத்தைத் தாங்கி நிற்கின்றன.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breakdown Details in a modern Feature Cards format -->
+        <div class="port-details-grid">
+            <div class="port-detail-card">
+                <span class="port-badge">இந்தியாவில் அதிகபட்சம்</span>
+                <div class="port-detail-header">
+                    <div class="port-detail-icon">⚓</div>
+                    <h4>3 முக்கிய துறைமுகங்கள்</h4>
+                </div>
+                <p>சென்னை, காமராஜர் (எண்ணூர்), மற்றும் வ.உ. சிதம்பரனார் (தூத்துக்குடி) துறைமுகங்கள்.</p>
+            </div>
+
+            <div class="port-detail-card">
+                <span class="port-badge">வணிக & தொழில்துறை</span>
+                <div class="port-detail-header">
+                    <div class="port-detail-icon">🛥️</div>
+                    <h4>17 சிறு துறைமுகங்கள்</h4>
+                </div>
+                <p>காட்டுப்பள்ளி, கடலூர், நாகப்பட்டினம், குடங்குளம், உடன்குடி உள்ளிட்ட 17 சிறு துறைமுகங்கள்.</p>
+            </div>
+
+            <div class="port-detail-card">
+                <span class="port-badge">கடல்சார் எல்லை</span>
+                <div class="port-detail-header">
+                    <div class="port-detail-icon">🌊</div>
+                    <h4>1,069 கி.மீ. கடற்கரை நீளம்</h4>
+                </div>
+                <p>இந்தியாவின் 2-வது மிக நீண்ட கடற்கரையைக் கொண்ட முதன்மை கடல்சார் மாநிலம்.</p>
+            </div>
+        </div>
+    </div>
+
+    <section id="benefits">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>தமிழ்நாட்டின் துறைமுகங்கள் எவ்வாறு முக்கியத்துவம் பெறுகின்றன?</h2>
+            </div>
+            <div class="func-grid">
+                <div class="func-card">
+                    <div class="icon-wrap">🌍</div>
+                    <h3>சர்வதேச மற்றும் உள்நாட்டு வர்த்தகம்</h3>
+                    <p>உலக நாடுகளுடனும் இந்தியாவின் இதர கடலோர மாநிலங்களுடனும் வணிகப் பாதைகளை இணைக்கும் முதன்மை
+                        அமைப்பாகத் திகழ்கின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <div class="icon-wrap">🚢</div>
+                    <h3>சரக்கு & கண்டெய்னர் போக்குவரத்து</h3>
+                    <p>லட்சக்கணக்கான டன் எடையுள்ள கண்டெய்னர்கள் மற்றும் மொத்த சரக்குகளை அதிநவீன தொழில்நுட்பத்துடன்
+                        கையாளுகின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <div class="icon-wrap">📦</div>
+                    <h3>ஏற்றுமதி மற்றும் இறக்குமதி</h3>
+                    <p>தமிழ்நாட்டின் ஆட்டோமொபைல், ஜவுளி, இயந்திரங்கள் மற்றும் விவசாய விளைபொருட்களின் சர்வதேச வர்த்தக
+                        நுழைவாயிலாக உள்ளன.</p>
+                </div>
+                <div class="func-card">
+                    <div class="icon-wrap">⛏️</div>
+                    <h3>நிலக்கரி & மொத்த சரக்கு கையாளுதல்</h3>
+                    <p>மின்சார உற்பத்தி நிலையங்களுக்கும் கனரக தொழிலகங்களுக்கும் தேவையான நிலக்கரி மற்றும் கனிமங்களைக்
+                        கையாளுதல்.</p>
+                </div>
+                <div class="func-card">
+                    <div class="icon-wrap">🏭</div>
+                    <h3>தொழில்துறை மூலப்பொருட்கள்</h3>
+                    <p>தொழிற்சாலைகளின் தொடர்ச்சியான இயங்குதளத்திற்குத் தேவையான கச்சா பொருட்கள் மற்றும் எரிபொருட்களை
+                        தடையின்றி விநியோகித்தல்.</p>
+                </div>
+                <div class="func-card">
+                    <div class="icon-wrap">🛠️</div>
+                    <h3>கப்பல் போக்குவரத்து & கட்டமைப்பு</h3>
+                    <p>கப்பல் கட்டும் தளம், பழுதுபார்ப்பு மற்றும் கடல்சார் வேலைவாய்ப்புகளை உருவாக்கி பொருளாதாரத்தை
+                        பலப்படுத்துதல்.</p>
+                </div>
+                <div class="func-card">
+                    <div class="icon-wrap">⚡</div>
+                    <h3>மின் உற்பத்தி திட்ட தேவைகள்</h3>
+                    <p>அனல் மின் நிலையங்கள் மற்றும் அணுமின் நிலையங்களுக்கான கனரக உபகரணங்கள் மற்றும் எரிபொருள்
+                        சரக்குகளைக் கொண்டு சேர்த்தல்.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="major-ports">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>தமிழ்நாட்டின் முக்கிய துறைமுகங்கள்</h2>
+            </div>
+
+            <div class="dams-list">
+                <!-- 1. சென்னை துறைமுகம் -->
+                <div class="dam">
+                    <div class="dam-media">
+                        <img src="assets/port-chennai.jpg" alt="சென்னை துறைமுகம்">
+                        <div class="dam-plate">சென்னை துறைமுகம்</div>
+                    </div>
+                    <div class="dam-body">
+                        <div class="tag">சென்னை மாவட்டம் · வங்காள விரிகுடா</div>
+                        <h3>சென்னை துறைமுகம் (Chennai Port)</h3>
+                        <div class="meta">
+                            <span>சென்னை</span>
+                            <span>செயற்கை துறைமுகம்</span>
+                            <span>கண்டெய்னர் போக்குவரத்து</span>
+                            <span>ஆழம்: ~17m</span>
+                        </div>
+                        <p><strong>சென்னை துறைமுகம்</strong> தமிழ்நாட்டின் முக்கியமான செயற்கை துறைமுகமாகும். கிழக்குக்
+                            கடற்கரையில் அமைந்துள்ள இது இந்தியாவின் பழமையான முக்கிய துறைமுகங்களில் ஒன்றாகும். கண்டெய்னர்
+                            மற்றும் பல்வேறு வகையான சரக்குகளைக் கையாள்வதில் முக்கிய பங்கு வகிக்கிறது.</p>
+                        <p>பெரிய சரக்கு மற்றும் கண்டெய்னர் கப்பல்களைக் கையாளும் திறன் கொண்டது. இத்துறைமுகத்தின் சராசரி
+                            ஆழம் <strong>சுமார் 17 மீட்டர்</strong> ஆகும்.</p>
+                    </div>
+                </div>
+
+                <!-- 2. காமராஜர் துறைமுகம் (எண்ணூர்) -->
+                <div class="dam rev">
+                    <div class="dam-media">
+                        <img src="assets/port-kamarajar.jpg" alt="காமராஜர் துறைமுகம் (எண்ணூர்)">
+                        <div class="dam-plate">காமராஜர் துறைமுகம்</div>
+                    </div>
+                    <div class="dam-body">
+                        <div class="tag">திருவள்ளூர் / சென்னை வடக்கு · எண்ணூர்</div>
+                        <h3>காமராஜர் துறைமுகம் (எண்ணூர்)</h3>
+                        <div class="meta">
+                            <span>எண்ணூர், சென்னை</span>
+                            <span>முக்கிய துறைமுகம்</span>
+                            <span>நிலக்கரி & தொழில்துறை</span>
+                            <span>முதல் கார்ப்பரேட் துறைமுகம்</span>
+                        </div>
+                        <p><strong>காமராஜர் துறைமுகம்</strong> சென்னை துறைமுகத்திற்கு வடக்கே, எண்ணூரில் அமைந்துள்ளது.
+                            சென்னை துறைமுகத்தின் நெரிசலைக் குறைக்கும் நோக்கத்துடன் உருவாக்கப்பட்ட இது, நிலக்கரி மற்றும்
+                            பல்வேறு தொழில்துறை சரக்குகளைக் கையாளும் முக்கிய துறைமுகமாகும்.</p>
+                        <p>இது <strong>இந்தியாவின் முதல் நிறுவனமயமாக்கப்பட்ட (Corporatised) முக்கிய துறைமுகம்</strong>
+                            என்ற பெருமையைப் பெற்றது. சென்னை துறைமுகத்திலிருந்து இதன் தூரம் <strong>சுமார் 18
+                                கி.மீ.</strong> ஆகும்.</p>
+                    </div>
+                </div>
+
+                <!-- 3. வ.உ. சிதம்பரனார் துறைமுகம் (தூத்துக்குடி) -->
+                <div class="dam">
+                    <div class="dam-media">
+                        <img src="assets/port-voc.jpg" alt="வ.உ. சிதம்பரனார் துறைமுகம் — தூத்துக்குடி">
+                        <div class="dam-plate">வ.உ. சிதம்பரனார் துறைமுகம்</div>
+                    </div>
+                    <div class="dam-body">
+                        <div class="tag">தூத்துக்குடி மாவட்டம் · மன்னார் வளைகுடா</div>
+                        <h3>வ.உ. சிதம்பரனார் துறைமுகம் (V.O. Chidambaranar Port)</h3>
+                        <div class="meta">
+                            <span>தூத்துக்குடி</span>
+                            <span>ஆழ்கடல் துறைமுகம்</span>
+                            <span>இலங்கை & ஆசிய நுழைவாயில்</span>
+                            <span>ஆழம்: ~12.8m</span>
+                        </div>
+                        <p>தூத்துக்குடியில் அமைந்துள்ள <strong>வ.உ. சிதம்பரனார் துறைமுகம்</strong> தமிழ்நாட்டின்
+                            தென்பகுதியில் உள்ள முக்கிய ஆழ்கடல் துறைமுகமாகும். மன்னார் வளைகுடாவிற்கு அருகில்
+                            அமைந்துள்ளதால் சர்வதேச கடல்வழி வர்த்தகத்தில் முக்கியத்துவம் பெறுகிறது.</p>
+                        <p>இலங்கை மற்றும் தென்கிழக்கு ஆசியாவை நோக்கிய கடல்வழி வர்த்தகத்திற்கு முக்கிய நுழைவாயிலாகச்
+                            செயல்படுகிறது. இதன் துறைமுக ஆழம் <strong>சுமார் 12.8 மீட்டர்</strong> ஆகும்.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="minor-ports">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>தமிழ்நாட்டின் சிறு துறைமுகங்கள்</h2>
+            </div>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--color-muted);">தமிழ்நாட்டில் உள்ள <strong>17
+                    சிறு துறைமுகங்கள்</strong> பல்வேறு வணிக, தொழில்துறை மற்றும் சிறப்பு பயன்பாடுகளுக்காக செயல்படுகின்றன.
+                அவற்றுள் சில முக்கியமான சிறு துறைமுகங்கள் கீழே தொகுக்கப்பட்டுள்ளன:</p>
+
+            <div class="dams-list">
+                <!-- 1. காட்டுப்பள்ளி துறைமுகம் -->
+                <div class="dam rev">
+                    <div class="dam-media">
+                        <img src="assets/port-kattupalli.jpg" alt="காட்டுப்பள்ளி துறைமுகம்">
+                        <div class="dam-plate">காட்டுப்பள்ளி துறைமுகம்</div>
+                    </div>
+                    <div class="dam-body">
+                        <div class="tag">வட சென்னை / திருவள்ளூர்</div>
+                        <h3>1. காட்டுப்பள்ளி துறைமுகம்</h3>
+                        <div class="meta">
+                            <span>வட சென்னை</span>
+                            <span>சிறு துறைமுகம்</span>
+                            <span>கப்பல் கட்டுமானம்</span>
+                        </div>
+                        <p>சென்னையின் வடக்குப் பகுதியில் அமைந்துள்ள <strong>காட்டுப்பள்ளி துறைமுகம்</strong> நவீன வணிகத்
+                            துறைமுகமாகவும் கப்பல் கட்டுமான வளாகமாகவும் செயல்படுகிறது. கண்டெய்னர் மற்றும் மொத்த
+                            சரக்குகளைக் கையாளும் திறன் கொண்டது.</p>
+                    </div>
+                </div>
+
+                <!-- 2. கடலூர் துறைமுகம் -->
+                <div class="dam">
+                    <div class="dam-media">
+                        <img src="assets/port-cuddalore.jpg" alt="கடலூர் துறைமுகம்">
+                        <div class="dam-plate">கடலூர் துறைமுகம்</div>
+                    </div>
+                    <div class="dam-body">
+                        <div class="tag">கடலூர் மாவட்டம் · உப்பனாறு-பரவனாறு</div>
+                        <h3>2. கடலூர் துறைமுகம்</h3>
+                        <div class="meta">
+                            <span>கடலூர்</span>
+                            <span>திறந்த கடல் துறைமுகம்</span>
+                            <span>பிராந்திய சரக்கு</span>
+                        </div>
+                        <p><strong>கடலூர் துறைமுகம்</strong> உப்பனாறு மற்றும் பரவனாறு ஆறுகள் சந்திக்கும் பகுதியில்
+                            அமைந்துள்ள திறந்த கடல் துறைமுகமாகும். கடலூர் மற்றும் சுற்றுப்புறப் பகுதிகளின் சரக்கு
+                            போக்குவரத்தில் முக்கிய பங்கு வகிக்கிறது.</p>
+                    </div>
+                </div>
+
+                <!-- 3. நாகப்பட்டினம் துறைமுகம் -->
+                <div class="dam rev">
+                    <div class="dam-media">
+                        <img src="assets/port-nagapattinam.jpg" alt="நாகப்பட்டினம் துறைமுகம்">
+                        <div class="dam-plate">நாகப்பட்டினம் துறைமுகம்</div>
+                    </div>
+                    <div class="dam-body">
+                        <div class="tag">நாகப்பட்டினம் மாவட்டம் · காவேரி படுகை</div>
+                        <h3>3. நாகப்பட்டினம் துறைமுகம்</h3>
+                        <div class="meta">
+                            <span>நாகப்பட்டினம்</span>
+                            <span>வரலாற்று துறைமுகம்</span>
+                            <span>பயணிகள் & சரக்கு</span>
+                        </div>
+                        <p><strong>நாகப்பட்டினம் துறைமுகம்</strong> நீண்டகால கடல்சார் வர்த்தக வரலாற்றைக் கொண்டது. சரக்கு
+                            மற்றும் பயணிகள் போக்குவரத்துடன் வரலாற்று முக்கியத்துவமும் பெற்றுள்ளது.</p>
+                    </div>
+                </div>
+
+                <!-- 4. குடங்குளம் துறைமுகம் -->
+                <div class="dam">
+                    <div class="dam-media">
+                        <img src="assets/port-kudankulam.jpg" alt="குடங்குளம் துறைமுகம்">
+                        <div class="dam-plate">குடங்குளம் துறைமுகம்</div>
+                    </div>
+                    <div class="dam-body">
+                        <div class="tag">திருநெல்வேலி மாவட்டம் · தென் கடற்கரை</div>
+                        <h3>4. குடங்குளம் துறைமுகம்</h3>
+                        <div class="meta">
+                            <span>குடங்குளம்</span>
+                            <span>மின் திட்ட தேவைகள்</span>
+                            <span>சிறப்பு பயன்பாடு</span>
+                        </div>
+                        <p><strong>குடங்குளம் பகுதியில் உள்ள துறைமுக வசதிகள்</strong> அருகிலுள்ள மின் உற்பத்தித்
+                            திட்டங்களுக்குத் தேவையான பொருட்கள் மற்றும் சரக்குகளைக் கையாள்வதில் பயன்படுத்தப்படுகின்றன.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 5. உடன்குடி துறைமுகம் -->
+                <div class="dam rev">
+                    <div class="dam-media">
+                        <img src="assets/port-udangudi.jpg" alt="உடன்குடி துறைமுகம்">
+                        <div class="dam-plate">உடன்குடி துறைமுகம்</div>
+                    </div>
+                    <div class="dam-body">
+                        <div class="tag">தூத்துக்குடி மாவட்டம் · தெற்குக் கடற்கரை</div>
+                        <h3>5. உடன்குடி துறைமுகம்</h3>
+                        <div class="meta">
+                            <span>உடன்குடி</span>
+                            <span>தொழில்துறை சரக்கு</span>
+                            <span>மின் உற்பத்தி தேவைகள்</span>
+                        </div>
+                        <p><strong>உடன்குடி பகுதியில் உள்ள துறைமுக வசதிகள்</strong> தொழில்துறை மற்றும் மின் உற்பத்தித்
+                            திட்டங்களுக்குத் தேவையான சரக்கு போக்குவரத்திற்குப் பயன்படுத்தப்படுகின்றன.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="table">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>தமிழ்நாட்டின் துறைமுகங்கள் — விரைவுப் பார்வை</h2>
+            </div>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>துறைமுகம்</th>
+                            <th>இடம்</th>
+                            <th>வகை</th>
+                            <th>முக்கியத்துவம்</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>சென்னை துறைமுகம்</strong></td>
+                            <td>சென்னை</td>
+                            <td><span class="badge badge-primary">முக்கிய துறைமுகம்</span></td>
+                            <td>கண்டெய்னர் மற்றும் சரக்கு போக்குவரத்து</td>
+                        </tr>
+                        <tr>
+                            <td><strong>காமராஜர் துறைமுகம்</strong></td>
+                            <td>எண்ணூர், சென்னை</td>
+                            <td><span class="badge badge-primary">முக்கிய துறைமுகம்</span></td>
+                            <td>நிலக்கரி மற்றும் தொழில்துறை சரக்குகள்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>வ.உ. சிதம்பரனார் துறைமுகம்</strong></td>
+                            <td>தூத்துக்குடி</td>
+                            <td><span class="badge badge-primary">முக்கிய துறைமுகம்</span></td>
+                            <td>கண்டெய்னர் மற்றும் மொத்த சரக்கு போக்குவரத்து</td>
+                        </tr>
+                        <tr>
+                            <td><strong>காட்டுப்பள்ளி துறைமுகம்</strong></td>
+                            <td>வட சென்னை</td>
+                            <td><span class="badge badge-secondary">சிறு துறைமுகம்</span></td>
+                            <td>கண்டெய்னர், சரக்கு மற்றும் கப்பல் கட்டுமானம்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>கடலூர் துறைமுகம்</strong></td>
+                            <td>கடலூர்</td>
+                            <td><span class="badge badge-secondary">சிறு துறைமுகம்</span></td>
+                            <td>பிராந்திய சரக்கு போக்குவரத்து</td>
+                        </tr>
+                        <tr>
+                            <td><strong>நாகப்பட்டினம் துறைமுகம்</strong></td>
+                            <td>நாகப்பட்டினம்</td>
+                            <td><span class="badge badge-secondary">சிறு துறைமுகம்</span></td>
+                            <td>சரக்கு மற்றும் பயணிகள் போக்குவரத்து</td>
+                        </tr>
+                        <tr>
+                            <td><strong>குடங்குளம் துறைமுகம்</strong></td>
+                            <td>குடங்குளம்</td>
+                            <td><span class="badge badge-secondary">சிறு துறைமுகம்</span></td>
+                            <td>மின் உற்பத்தித் திட்ட தேவைகள்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>உடன்குடி துறைமுகம்</strong></td>
+                            <td>உடன்குடி</td>
+                            <td><span class="badge badge-secondary">சிறு துறைமுகம்</span></td>
+                            <td>தொழில்துறை மற்றும் மின் உற்பத்தி தேவைகள்</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <img src="assets/hawwa-logo.png" alt="Hawwa PrintShop">
+                    <p>இந்தப் பக்கம் Hawwa PrintShop, Chennai சார்பாக தொகுக்கப்பட்டது.</p>
+                </div>
+                <div>
+                    <h4>முகவரி</h4>
+                    <address>67, Perianna Mudali Street,<br>Seven Wells North, George Town,<br>Chennai, Tamil Nadu
+                        600001
+                    </address>
+                </div>
+                <div>
+                    <h4>தொடர்பு</h4>
+                    <p>+91 98844 80801</p>
+                    <p>திங்கள்–சனி: 10:00 AM – 7:00 PM</p>
+                    <p>ஞாயிறு: விடுமுறை</p>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span>© Hawwa PrintShop</span>
+                <span>படங்கள்: Wikimedia Commons</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
