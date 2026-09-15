@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>தமிழ்நாட்டின் அருவிகள் — Hawwa PrintShop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;600;700&family=Noto+Sans+Tamil:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+      </div>
+
+      <nav class="desktop-nav">
+        <div class="nav-dropdown">
+          <a href="falls.html" class="dropdown-toggle active">
+            அருவிகள்
+            <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+              <path d="M7 10l5 5 5-5z" />
+            </svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="index.html">அணைகள் (Dams)</a>
+            <a href="rivers.html">ஆறுகள் (Rivers)</a>
+            <a href="falls.html" class="active">அருவிகள் (Waterfalls)</a>
+            <a href="forests.html">காடுகள் (Forests)</a>
+            <a href="mountains.html">மலைகள் (Mountains)</a>
+            <a href="lakes.html">ஏரிகள் (Lakes)</a>
+            <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+            <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+            <a href="islands.html">தீவுகள் (Islands)</a>
+          </div>
+        </div>
+        <a href="#intro">அறிமுகம்</a>
+        <a href="#functions">பயன்கள்</a>
+        <a href="#profiles">அருவிகள்</a>
+        <a href="#table">பட்டியல்</a>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="பட்டி திற" aria-expanded="false">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer-backdrop"></div>
+  <div class="mobile-drawer" role="dialog" aria-modal="true">
+    <div class="drawer-header">
+      <div class="brand">
+        <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+      </div>
+      <button class="drawer-close" aria-label="மூடு">&times;</button>
+    </div>
+    <div class="drawer-nav">
+      <div class="drawer-section-title">பிரிவுகள்</div>
+      <div class="mobile-cat-accordion">
+        <button class="mobile-cat-toggle" aria-expanded="false">
+          <span>வகைகள் (Categories)</span>
+          <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+            <path d="M7 10l5 5 5-5z" />
+          </svg>
+        </button>
+        <div class="mobile-cat-content">
+          <a href="index.html">அணைகள் (Dams)</a>
+          <a href="rivers.html">ஆறுகள் (Rivers)</a>
+          <a href="falls.html" class="active">அருவிகள் (Waterfalls)</a>
+          <a href="forests.html">காடுகள் (Forests)</a>
+          <a href="mountains.html">மலைகள் (Mountains)</a>
+          <a href="lakes.html">ஏரிகள் (Lakes)</a>
+          <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+          <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+          <a href="islands.html">தீவுகள் (Islands)</a>
+        </div>
+      </div>
+      <div class="drawer-section-title">பக்கத்தின் பகுதிகள்</div>
+      <a href="#intro">அறிமுகம்</a>
+      <a href="#functions">பயன்கள்</a>
+      <a href="#profiles">அருவிகள்</a>
+      <a href="#table">பட்டியல்</a>
+    </div>
+  </div>
+
+  <section class="hero" id="intro">
+    <div class="hero-media">
+      <img src="assets/hero-hogenakkal.jpg" alt="ஒகேனக்கல் அருவி">
+    </div>
+    <div class="hero-content">
+      <span class="eyebrow-tag">இயற்கை நீர்வளம்</span>
+      <h1>தமிழ்நாட்டின் அருவிகள்</h1>
+      <p class="lede">தமிழ்நாடு பல்வேறு மலைத்தொடர்கள், ஆறுகள், காடுகள் மற்றும் இயற்கை வளங்களைக் கொண்ட மாநிலமாகும்.
+        குறிப்பாக மேற்கு தொடர்ச்சி மலைகள், கிழக்குத் தொடர்ச்சி மலைகள் மற்றும் பிற மலைப்பகுதிகளில் பல அழகிய அருவிகள்
+        உருவாகியுள்ளன.</p>
+    </div>
+    <svg class="wavecut" viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,30 C 200,60 400,0 600,30 C 800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#f6f2e7"></path>
+    </svg>
+  </section>
+
+  <div class="stats">
+    <div class="stat-row">
+      <div>
+        <span class="stat-num">15</span>
+        <div class="stat-note">முக்கிய அருவிகள்</div>
+      </div>
+      <div class="stat-text">
+        <p>தமிழ்நாட்டின் முக்கியமான மற்றும் பிரபலமான அருவிகளில் ஒகேனக்கல், குற்றாலம், தலையாறு, ஆகாய கங்கை, சுருளி,
+          கும்பக்கரை, சிறுவாணி, கோவைக்குற்றாலம், கேத்தரின், பைக்காரா, மணிமுத்தாறு, பாபநாசம், திருப்பரப்பு,
+          குட்லாடம்பட்டி மற்றும் பஞ்சலிங்கம் ஆகியவை குறிப்பிடத்தக்கவை.</p>
+        <p class="table-note">குறிப்பு: இங்கு குறிப்பிடப்படும் 15 அருவிகள், இந்தப் பக்கத்தில் விரிவாகக் குறிப்பிடப்படும்
+          முக்கியமான அருவிகளின் பட்டியல் மட்டுமே. இது தமிழ்நாட்டில் உள்ள அனைத்து அருவிகளின் மொத்த எண்ணிக்கை அல்ல.</p>
+      </div>
+    </div>
+  </div>
+
+  <section id="functions">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx">01</span>
+        <h2>அருவிகள் என்ன செய்கின்றன?</h2>
+      </div>
+      <div class="func-grid">
+        <div class="func-card">
+          <span class="ic">💧</span>
+          <h3>இயற்கையான நீர்வீழ்ச்சி</h3>
+          <p>மலைப்பகுதிகளில் சேகரிக்கப்படும் மழைநீர் உயரமான பாறைகளிலிருந்து கீழ்நோக்கி விழுவதன் மூலம் அருவிகள்
+            உருவாகின்றன.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🌳</span>
+          <h3>சுற்றுச்சூழல் பாதுகாப்பு</h3>
+          <p>அருவிகளைச் சுற்றியுள்ள காடுகள், மலைகள் மற்றும் நீர்நிலைகள் பல்வேறு தாவரங்கள் மற்றும் விலங்குகளுக்கு
+            வாழிடமாக உள்ளன.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🏞️</span>
+          <h3>சுற்றுலாவை வளர்த்தல்</h3>
+          <p>அழகிய அருவிகள் தமிழ்நாட்டின் முக்கியமான இயற்கைச் சுற்றுலாத் தலங்களாக விளங்குகின்றன. உள்நாட்டு மற்றும்
+            வெளிமாநில சுற்றுலாப் பயணிகளை ஈர்க்கின்றன.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">💦</span>
+          <h3>நீர்வளத்திற்கு பங்களிப்பு</h3>
+          <p>அருவிகளில் இருந்து பாயும் நீர் கீழ்நோக்கிப் பாய்ந்து ஓடைகள் மற்றும் ஆறுகளுடன் இணைகிறது. இதன் மூலம் உள்ளூர்
+            நீர்வள அமைப்புக்கு பங்களிக்கிறது.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🌱</span>
+          <h3>உள்ளூர் மக்களுக்கு பயன்</h3>
+          <p>பல அருவிகளைச் சுற்றியுள்ள பகுதிகளில் சுற்றுலா தொடர்பான கடைகள், உணவகங்கள், வழிகாட்டுதல் மற்றும் போக்குவரத்து
+            மூலம் உள்ளூர் மக்களுக்கு வருமான வாய்ப்புகள் உருவாகின்றன.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx">02</span>
+        <h2>அருவிகள் தமிழ்நாட்டிற்கு எவ்வாறு உதவுகின்றன?</h2>
+      </div>
+      <div class="flow">
+        <div class="flow-row">
+          <div class="flow-cell">நீர்வளம்</div>
+          <div class="flow-cell">அருவிகள் → நீர்வளம்</div>
+          <div class="flow-cell">ஆறுகள் மற்றும் ஓடைகளுடன் இணைகிறது</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">இயற்கை வளம்</div>
+          <div class="flow-cell">அருவிகள் → இயற்கை வளம்</div>
+          <div class="flow-cell">காடுகள் மற்றும் உயிரினங்கள் பாதுகாப்பு</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">சுற்றுலா</div>
+          <div class="flow-cell">அருவிகள் → சுற்றுலா</div>
+          <div class="flow-cell">உள்ளூர் பொருளாதாரம் வளர்ச்சி பெறுகிறது</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">இயற்கை அழகு</div>
+          <div class="flow-cell">அருவிகள் → இயற்கை அழகு</div>
+          <div class="flow-cell">சுற்றுலாப் பயணிகளை ஈர்க்கிறது</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">சுற்றுச்சூழல்</div>
+          <div class="flow-cell">அருவிகள் → மலைச்சூழல்</div>
+          <div class="flow-cell">சுற்றுச்சூழல் சமநிலை பேணப்படுகிறது</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">பாதுகாப்பு</div>
+          <div class="flow-cell">அருவிகள் → இயற்கை வளப் பாதுகாப்பு</div>
+          <div class="flow-cell">எதிர்கால தலைமுறைகளுக்கு வளங்கள் சேமிப்பு</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="profiles">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx">03</span>
+        <h2>தமிழ்நாட்டின் முக்கிய அருவிகள்</h2>
+      </div>
+
+      <!-- 1. ஒகேனக்கல் அருவி -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/falls-hogenakkal.jpg" alt="ஒகேனக்கல் அருவி">
+          <div class="dam-plate">ஒகேனக்கல் அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">காவிரி ஆறு · தருமபுரி மாவட்டம் · பென்னாகரம்</div>
+          <h3>ஒகேனக்கல் அருவி</h3>
+          <div class="meta"><span>காவிரி ஆறு</span><span>இயற்கைச் சுற்றுலா</span></div>
+          <p>காவிரி ஆறு தமிழ்நாட்டிற்குள் நுழையும் முக்கியப் பகுதிகளில் ஒன்றான ஒகேனக்கல், அதன் பாறை அமைப்புகள் மற்றும்
+            அருவித் தொடர்களுக்காக புகழ்பெற்றது. இங்கு நீர் பாறைகளின் மீது விழும் காட்சி மிகவும் அழகாக காணப்படுகிறது.
+            சுற்றுலா மற்றும் உள்ளூர் பொருளாதாரத்திற்கு முக்கிய பங்கு வகிக்கிறது.</p>
+        </div>
+      </div>
+
+      <!-- 2. குற்றாலம் அருவி -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/falls-courtallam.jpg" alt="குற்றாலம் அருவி">
+          <div class="dam-plate">குற்றாலம் அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">சித்ரா ஆற்றுப் பகுதி · தென்காசி மாவட்டம் · மேற்கு தொடர்ச்சி மலை</div>
+          <h3>குற்றாலம் அருவி</h3>
+          <div class="meta"><span>தென்னிந்தியாவின் ஸ்பா</span><span>மூலிகை நீர்</span></div>
+          <p>குற்றாலம் தமிழ்நாட்டின் மிகவும் பிரபலமான அருவித் தலங்களில் ஒன்றாகும். மேற்கு தொடர்ச்சி மலைப் பகுதியில்
+            அமைந்துள்ள இப்பகுதி பல்வேறு அருவிகளைக் கொண்டுள்ளது. அருவிநீர் பல்வேறு மூலிகைத் தாவரங்கள் நிறைந்த
+            மலைப்பகுதிகள் வழியாக வருவதால், குற்றாலம் பாரம்பரியமாக "தென்னிந்தியாவின் ஸ்பா" என அழைக்கப்படுகிறது.</p>
+        </div>
+      </div>
+
+      <!-- 3. தலையாறு அருவி -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/falls-thalaiyar.jpg" alt="தலையாறு அருவி">
+          <div class="dam-plate">தலையாறு அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">திண்டுக்கல் மாவட்டம் · கொடைக்கானல் மலைப்பகுதி</div>
+          <h3>தலையாறு அருவி</h3>
+          <div class="meta"><span>Rat Tail Falls</span><span>உயரமான அருவி</span></div>
+          <p>தலையாறு அருவி உயரமான பாறைச் சரிவில் இருந்து நீர் கீழ்நோக்கி விழும் அழகிய இயற்கைக் காட்சிக்காக புகழ்பெற்றது.
+            இது கொடைக்கானல் மலைப்பகுதியின் முக்கிய இயற்கைச் சிறப்புகளில் ஒன்றாகும்.</p>
+        </div>
+      </div>
+
+      <!-- 4. ஆகாய கங்கை அருவி -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/falls-agayagangai.jpg" alt="ஆகாய கங்கை அருவி">
+          <div class="dam-plate">ஆகாய கங்கை அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">நாமக்கல் மாவட்டம் · கொல்லிமலை</div>
+          <h3>ஆகாய கங்கை அருவி</h3>
+          <div class="meta"><span>கொல்லிமலை</span><span>மலைச் சுற்றுலா</span></div>
+          <p>கொல்லிமலையில் அமைந்துள்ள ஆகாய கங்கை அருவி, உயரமான பாறைகளுக்கு இடையே நீர் விழும் அழகிய காட்சியைக் கொண்டது.
+            அருவியைச் சுற்றியுள்ள மலை மற்றும் வனப்பகுதி இயற்கை அழகை மேலும் அதிகரிக்கிறது.</p>
+        </div>
+      </div>
+
+      <!-- 5. சுருளி அருவி -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/falls-suruli.jpg" alt="சுருளி அருவி">
+          <div class="dam-plate">சுருளி அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">தேனி மாவட்டம் · கம்பம் அருகிலுள்ள மேற்கு தொடர்ச்சி மலை</div>
+          <h3>சுருளி அருவி</h3>
+          <div class="meta"><span>மேற்கு தொடர்ச்சி மலை</span><span>தேனி</span></div>
+          <p>சுருளி அருவி மேற்கு தொடர்ச்சி மலைப் பகுதியில் அமைந்துள்ள அழகிய அருவியாகும். பசுமையான மலைச்சூழலும்
+            நீர்வீழ்ச்சியும் இப்பகுதியின் இயற்கை அழகை வெளிப்படுத்துகின்றன.</p>
+        </div>
+      </div>
+
+      <!-- 6. கும்பக்கரை அருவி -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/falls-kumbakkarai.jpg" alt="கும்பக்கரை அருவி">
+          <div class="dam-plate">கும்பக்கரை அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">தேனி மாவட்டம் · பெரியகுளம் அருகில்</div>
+          <h3>கும்பக்கரை அருவி</h3>
+          <div class="meta"><span>கொடைக்கானல் அடிவாரம்</span><span>பாறை அமைப்புகள்</span></div>
+          <p>கொடைக்கானல் மலைப்பகுதியின் அடிவாரத்தில் அமைந்துள்ள கும்பக்கரை அருவி, இயற்கையான பாறை அமைப்புகளுடன் கூடிய
+            அழகிய அருவியாகும். பாறைகளுக்கு இடையே படிப்படியாகப் பாயும் நீர் சுற்றுலாப் பயணிகளைக் கவர்கிறது.</p>
+        </div>
+      </div>
+
+      <!-- 7. சிறுவாணி அருவி -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/falls-siruvani.jpg" alt="சிறுவாணி அருவி">
+          <div class="dam-plate">சிறுவாணி அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">கோயம்புத்தூர் மாவட்டம் · மேற்கு தொடர்ச்சி மலை</div>
+          <h3>சிறுவாணி அருவி</h3>
+          <div class="meta"><span>கோயம்புத்தூர்</span><span>அடர்ந்த காடு</span></div>
+          <p>சிறுவாணி மலைப்பகுதி அதன் பசுமையான காடுகள் மற்றும் நீர்வளத்திற்காக புகழ்பெற்றது. இப்பகுதியில் காணப்படும்
+            அருவிகள் இயற்கைச் சூழலின் முக்கிய அங்கமாக உள்ளன.</p>
+        </div>
+      </div>
+
+      <!-- 8. கோவைக்குற்றாலம் அருவி -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/falls-kovaikutralam.jpg" alt="கோவைக்குற்றாலம் அருவி">
+          <div class="dam-plate">கோவைக்குற்றாலம் அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">கோயம்புத்தூர் மாவட்டம் · சிறுவாணி மலைப்பகுதி அருகில்</div>
+          <h3>கோவைக்குற்றாலம் அருவி</h3>
+          <div class="meta"><span>கோயம்புத்தூர்</span><span>இயற்கை அருவி</span></div>
+          <p>கோவைக்குற்றாலம் அருவி கோயம்புத்தூர் மாவட்டத்தின் முக்கியமான இயற்கைச் சுற்றுலாத் தலமாகும். மேற்கு தொடர்ச்சி
+            மலைப் பகுதியின் பசுமையான சூழலுடன் இந்த அருவி அமைந்துள்ளது.</p>
+        </div>
+      </div>
+
+      <!-- 9. கேத்தரின் அருவி -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/falls-catherine.jpg" alt="கேத்தரின் அருவி">
+          <div class="dam-plate">கேத்தரின் அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">நீலகிரி மாவட்டம் · கோத்தகிரி</div>
+          <h3>கேத்தரின் அருவி</h3>
+          <div class="meta"><span>நீலகிரி</span><span>தேயிலைத் தோட்டம்</span></div>
+          <p>கேத்தரின் அருவி நீலகிரி மலைப்பகுதியின் முக்கியமான இயற்கைச் சிறப்புகளில் ஒன்றாகும். உயரமான
+            மலைப்பகுதியிலிருந்து கீழ்நோக்கி விழும் நீர், சுற்றியுள்ள பசுமையான தேயிலைத் தோட்டங்கள் மற்றும் காடுகளுடன்
+            அழகிய காட்சியை உருவாக்குகிறது.</p>
+        </div>
+      </div>
+
+      <!-- 10. பைக்காரா அருவி -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/falls-pykara.jpg" alt="பைக்காரா அருவி">
+          <div class="dam-plate">பைக்காரா அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">நீலகிரி மாவட்டம் · ஊட்டி அருகில்</div>
+          <h3>பைக்காரா அருவி</h3>
+          <div class="meta"><span>நீலகிரி</span><span>ஊட்டி</span></div>
+          <p>பைக்காரா நீர்வீழ்ச்சி நீலகிரி மலைப்பகுதியில் அமைந்துள்ளது. பைக்காரா ஆற்றின் நீரோட்டம் பாறைச் சரிவுகள்
+            வழியாகப் பாய்ந்து அருவியாக உருவாகிறது.</p>
+        </div>
+      </div>
+
+      <!-- 11. மணிமுத்தாறு அருவி -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/falls-manimuthar.jpg" alt="மணிமுத்தாறு அருவி">
+          <div class="dam-plate">மணிமுத்தாறு அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">மணிமுத்தாறு ஆறு · திருநெல்வேலி மாவட்டம் · மேற்கு தொடர்ச்சி மலை</div>
+          <h3>மணிமுத்தாறு அருவி</h3>
+          <div class="meta"><span>திருநெல்வேலி</span><span>மணிமுத்தாறு</span></div>
+          <p>மணிமுத்தாறு அருவி மேற்கு தொடர்ச்சி மலைப் பகுதியில் அமைந்துள்ள முக்கிய அருவியாகும். மலைகள் மற்றும் அடர்ந்த
+            பசுமை சூழலில் அமைந்திருப்பதால் இயற்கை ஆர்வலர்களை ஈர்க்கிறது.</p>
+        </div>
+      </div>
+
+      <!-- 12. பாபநாசம் அருவி -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/falls-papanasam.jpg" alt="பாபநாசம் அருவி">
+          <div class="dam-plate">பாபநாசம் அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">தாமிரபரணி ஆறு · திருநெல்வேலி மாவட்டம் · பாபநாசம்</div>
+          <h3>பாபநாசம் அருவி</h3>
+          <div class="meta"><span>தாமிரபரணி</span><span>திருநெல்வேலி</span></div>
+          <p>பாபநாசம் பகுதி தாமிரபரணி ஆற்றுடன் நெருங்கிய தொடர்புடையது. மேற்கு தொடர்ச்சி மலைகளில் இருந்து வரும் நீரோட்டம்
+            இப்பகுதியின் நீர்வளத்திற்கும் இயற்கைச் சூழலுக்கும் முக்கியமானது.</p>
+        </div>
+      </div>
+
+      <!-- 13. திருப்பரப்பு அருவி -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/falls-thirparappu.jpg" alt="திருப்பரப்பு அருவி">
+          <div class="dam-plate">திருப்பரப்பு அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">கோதையாறு · கன்னியாகுமரி மாவட்டம் · திருப்பரப்பு</div>
+          <h3>திருப்பரப்பு அருவி</h3>
+          <div class="meta"><span>கோதையாறு</span><span>கன்னியாகுமரி</span></div>
+          <p>கோதையாற்றின் நீர் பாறை அமைப்பின் மீது விழுவதால் திருப்பரப்பு அருவி உருவாகிறது. கன்னியாகுமரி மாவட்டத்தின்
+            முக்கியமான இயற்கைச் சுற்றுலாத் தலங்களில் இதுவும் ஒன்றாகும்.</p>
+        </div>
+      </div>
+
+      <!-- 14. குட்லாடம்பட்டி அருவி -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/falls-kutladampatti.jpg" alt="குட்லாடம்பட்டி அருவி">
+          <div class="dam-plate">குட்லாடம்பட்டி அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">மதுரை மாவட்டம் · வாடிப்பட்டி அருகில்</div>
+          <h3>குட்லாடம்பட்டி அருவி</h3>
+          <div class="meta"><span>மதுரை</span><span>மழைக்கால அருவி</span></div>
+          <p>குட்லாடம்பட்டி அருவி மதுரை மாவட்டத்தின் முக்கியமான இயற்கைச் சுற்றுலாத் தலமாகும். மழைக்காலங்களில் இங்கு
+            நீர்வரத்து அதிகரித்து அருவி சிறப்பாகக் காட்சியளிக்கும்.</p>
+        </div>
+      </div>
+
+      <!-- 15. பஞ்சலிங்கம் அருவி -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/falls-panchalinga.jpg" alt="பஞ்சலிங்கம் அருவி">
+          <div class="dam-plate">பஞ்சலிங்கம் அருவி</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">திருப்பூர் மாவட்டம் · உடுமலைப்பேட்டை அருகிலுள்ள மலைப்பகுதி</div>
+          <h3>பஞ்சலிங்கம் அருவி</h3>
+          <div class="meta"><span>திருப்பூர்</span><span>உடுமலைப்பேட்டை</span></div>
+          <p>பஞ்சலிங்கம் அருவி மலைப்பகுதியில் அமைந்துள்ள இயற்கை அருவியாகும். மழைக்காலங்களில் நீர்வரத்து அதிகரித்து,
+            சுற்றியுள்ள பசுமையான சூழலுடன் அழகிய காட்சியை உருவாக்குகிறது.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="table">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx">04</span>
+        <h2>முக்கிய அருவிகள் — விரைவான பட்டியல்</h2>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>எண்</th>
+              <th>அருவி</th>
+              <th>மாவட்டம்</th>
+              <th>முக்கியத்துவம்</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>ஒகேனக்கல்</td>
+              <td>தருமபுரி</td>
+              <td>காவிரி ஆற்றின் புகழ்பெற்ற அருவி</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>குற்றாலம்</td>
+              <td>தென்காசி</td>
+              <td>பல அருவிகள் கொண்ட முக்கிய சுற்றுலாத் தலம்</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>தலையாறு</td>
+              <td>திண்டுக்கல்</td>
+              <td>உயரமான அருவிச் சரிவு</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>ஆகாய கங்கை</td>
+              <td>நாமக்கல்</td>
+              <td>கொல்லிமலையின் முக்கிய அருவி</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>சுருளி</td>
+              <td>தேனி</td>
+              <td>மேற்கு தொடர்ச்சி மலை அருவி</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>கும்பக்கரை</td>
+              <td>தேனி</td>
+              <td>மலை அடிவார இயற்கை அருவி</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>சிறுவாணி</td>
+              <td>கோயம்புத்தூர்</td>
+              <td>காடு மற்றும் மலைச் சூழல்</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>கோவைக்குற்றாலம்</td>
+              <td>கோயம்புத்தூர்</td>
+              <td>கோயம்புத்தூரின் முக்கிய இயற்கைத் தலம்</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>கேத்தரின்</td>
+              <td>நீலகிரி</td>
+              <td>கோத்தகிரியின் முக்கிய அருவி</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>பைக்காரா</td>
+              <td>நீலகிரி</td>
+              <td>ஊட்டியின் புகழ்பெற்ற சுற்றுலாத் தலம்</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>மணிமுத்தாறு</td>
+              <td>திருநெல்வேலி</td>
+              <td>மேற்கு தொடர்ச்சி மலை அருவி</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>பாபநாசம்</td>
+              <td>திருநெல்வேலி</td>
+              <td>தாமிரபரணி ஆற்றுடன் தொடர்புடைய அருவிப் பகுதி</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>திருப்பரப்பு</td>
+              <td>கன்னியாகுமரி</td>
+              <td>கோதையாற்றின் புகழ்பெற்ற அருவி</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>குட்லாடம்பட்டி</td>
+              <td>மதுரை</td>
+              <td>மழைக்காலத்தில் சிறப்பாகக் காணப்படும் அருவி</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>பஞ்சலிங்கம்</td>
+              <td>திருப்பூர்</td>
+              <td>மலைப்பகுதி இயற்கை அருவி</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="quote-box">
+        <p>“மலையின் மடியில் பிறந்து, ஆறுகளுடன் இணைந்து, இயற்கையின் அழகையும் வாழ்வின் வளத்தையும் வழங்குவது —
+          தமிழ்நாட்டின் அருவிகள்.”</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img src="assets/hawwa-logo.png" alt="Hawwa PrintShop">
+          <p>இந்தப் பக்கம் Hawwa PrintShop, Chennai சார்பாக தொகுக்கப்பட்டது.</p>
+        </div>
+        <div>
+          <h4>முகவரி</h4>
+          <address>67, Perianna Mudali Street,<br>Seven Wells North, George Town,<br>Chennai, Tamil Nadu 600001
+          </address>
+        </div>
+        <div>
+          <h4>தொடர்பு</h4>
+          <p>+91 98844 80801</p>
+          <p>திங்கள்–சனி: 10:00 AM – 7:00 PM</p>
+          <p>ஞாயிறு: விடுமுறை</p>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© Hawwa PrintShop</span>
+        <span>படங்கள்: Wikimedia Commons</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

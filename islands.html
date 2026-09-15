@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>தமிழ்நாட்டின் தீவுகள் — Hawwa PrintShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;600;700&family=Noto+Sans+Tamil:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+            </div>
+
+            <nav class="desktop-nav">
+                <div class="nav-dropdown">
+                    <a href="islands.html" class="dropdown-toggle active">
+                        தீவுகள்
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">அணைகள் (Dams)</a>
+                        <a href="rivers.html">ஆறுகள் (Rivers)</a>
+                        <a href="falls.html">அருவிகள் (Waterfalls)</a>
+                        <a href="forests.html">காடுகள் (Forests)</a>
+                        <a href="mountains.html">மலைகள் (Mountains)</a>
+                        <a href="lakes.html">ஏரிகள் (Lakes)</a>
+                        <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+                        <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+                        <a href="islands.html" class="active">தீவுகள் (Islands)</a>
+                    </div>
+                </div>
+                <a href="#intro">அறிமுகம்</a>
+                <a href="#functions">முக்கியத்துவம்</a>
+                <a href="#profiles">தீவுகள்</a>
+                <a href="#table">பட்டியல்</a>
+            </nav>
+
+            <button class="mobile-toggle" aria-label="பட்டி திற" aria-expanded="false">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="drawer-backdrop"></div>
+    <div class="mobile-drawer" role="dialog" aria-modal="true">
+        <div class="drawer-header">
+            <div class="brand">
+                <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+            </div>
+            <button class="drawer-close" aria-label="மூடு">&times;</button>
+        </div>
+        <div class="drawer-nav">
+            <div class="drawer-section-title">பிரிவுகள்</div>
+            <div class="mobile-cat-accordion">
+                <button class="mobile-cat-toggle" aria-expanded="false">
+                    <span>வகைகள் (Categories)</span>
+                    <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </button>
+                <div class="mobile-cat-content">
+                    <a href="index.html">அணைகள் (Dams)</a>
+                    <a href="rivers.html">ஆறுகள் (Rivers)</a>
+                    <a href="falls.html">அருவிகள் (Waterfalls)</a>
+                    <a href="forests.html">காடுகள் (Forests)</a>
+                    <a href="mountains.html">மலைகள் (Mountains)</a>
+                    <a href="lakes.html">ஏரிகள் (Lakes)</a>
+                    <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+                    <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+                    <a href="islands.html" class="active">தீவுகள் (Islands)</a>
+                </div>
+            </div>
+            <div class="drawer-section-title">பக்கத்தின் பகுதிகள்</div>
+            <a href="#intro">அறிமுகம்</a>
+            <a href="#functions">முக்கியத்துவம்</a>
+            <a href="#profiles">தீவுகள்</a>
+            <a href="#table">பட்டியல்</a>
+        </div>
+    </div>
+
+    <section class="hero" id="intro">
+        <div class="hero-media">
+            <img src="assets/hero-island.jpg" alt="தமிழ்நாட்டின் தீவுகள்">
+        </div>
+        <div class="hero-content">
+            <span class="eyebrow-tag">கடல் & ஆற்றுத் தீவுகள்</span>
+            <h1>தமிழ்நாட்டின் தீவுகள்</h1>
+            <p class="lede">தமிழ்நாட்டின் தீவுகள் கடல் மற்றும் ஆறுகளுடன் தொடர்புடைய தனித்துவமான நிலப்பரப்புகளாகும். இவை
+                இயற்கை வளங்கள், கடல்சார் உயிரினங்கள், சுற்றுலா, ஆன்மிகம் மற்றும் வரலாற்று முக்கியத்துவம் கொண்டவை.
+                குறிப்பாக மன்னார் வளைகுடா பகுதியில் உள்ள தீவுகள் பவளப்பாறைகள் மற்றும் அரிய கடல்வாழ் உயிரினங்களுக்கான
+                முக்கிய வாழிடங்களாக உள்ளன.</p>
+        </div>
+        <svg class="wavecut" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,30 C 200,60 400,0 600,30 C 800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#f6f2e7"></path>
+        </svg>
+    </section>
+
+    <div class="stats">
+        <div class="stat-row">
+            <div>
+                <span class="stat-num">28</span>
+                <div class="stat-note">மொத்த தீவுகள்</div>
+            </div>
+            <div class="stat-text">
+                <p>தமிழ்நாட்டில் மொத்தம் 28 புவியியல் ரீதியான தீவுகள் உள்ளதாகக் குறிப்பிடப்படுகிறது. அவற்றில் சுமார் 10
+                    முக்கியமான தீவுகள் கடல் மற்றும் ஆற்று தீவுகளாக குறிப்பிடத்தக்கவை.</p>
+                <p class="table-note">குறிப்பு: மன்னார் வளைகுடா கடல் தேசியப் பூங்கா 21 தீவுகளைக் கொண்ட தீவுக்கூட்டமாக
+                    அமைந்து, டுகாங், கடல் ஆமைகள் மற்றும் பவளப்பாறை உயிரினங்களின் முக்கிய வாழிடமாக திகழ்கிறது.</p>
+            </div>
+        </div>
+
+        <div class="wrap" style="margin-top: 2rem;">
+            <div class="func-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                <div class="func-card" style="padding: 1.25rem;">
+                    <span class="ic">🏝️</span>
+                    <h3>மொத்த தீவுகள்</h3>
+                    <p><strong>28</strong> புவியியல் தீவுகள்</p>
+                </div>
+                <div class="func-card" style="padding: 1.25rem;">
+                    <span class="ic">🌊</span>
+                    <h3>முக்கிய தீவுகள்</h3>
+                    <p><strong>சுமார் 10</strong> முதன்மைத் தீவுகள்</p>
+                </div>
+                <div class="func-card" style="padding: 1.25rem;">
+                    <span class="ic">🪸</span>
+                    <h3>மன்னார் வளைகுடா</h3>
+                    <p><strong>21 தீவுகள்</strong> கொண்ட தேசியப் பூங்கா</p>
+                </div>
+                <div class="func-card" style="padding: 1.25rem;">
+                    <span class="ic">🐋</span>
+                    <h3>கடல்வாழ் உயிரினங்கள்</h3>
+                    <p>டுகாங், கடல் ஆமைகள் & பவளப்பாறைகள்</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap" style="margin-top: 2.5rem;">
+            <div class="map-box">
+                <img src="assets/island-map.jpg" alt="தமிழ்நாடு முக்கிய தீவுகள் வரைபடம்">
+                <div class="map-caption">படம்: தமிழ்நாடு வரைபடத்தில் முக்கிய கடல், ஆற்று மற்றும் பாறைத் தீவுகள்
+                    குறிக்கப்பட்ட காட்சி</div>
+            </div>
+        </div>
+    </div>
+
+    <section id="functions">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="idx">01</span>
+                <h2>தமிழ்நாட்டின் தீவுகள் எவ்வாறு முக்கியத்துவம் பெறுகின்றன?</h2>
+            </div>
+            <div class="func-grid">
+                <div class="func-card">
+                    <span class="ic">🪸</span>
+                    <h3>கடல்சார் உயிரியல் பாதுகாப்பு</h3>
+                    <p>பவளப்பாறைகள் மற்றும் அரிய கடல்வாழ் உயிரினங்களின் வாழிடமாக தீவுகள் செயல்படுகின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🐋</span>
+                    <h3>டுகாங் பாதுகாப்பு</h3>
+                    <p>மன்னார் வளைகுடா பகுதி டுகாங் போன்ற அரிய கடல்வாழ் பாலூட்டிகளுக்கு முக்கியமான பாதுகாப்பு
+                        வாழிடமாகும்.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🐦</span>
+                    <h3>பறவைகள் மற்றும் கடல்வாழ் உயிரினங்கள்</h3>
+                    <p>பல்வேறு உள்நாட்டு மற்றும் வலசை வரும் பறவைகள், கடல்வாழ் உயிரினங்களுக்கு பாதுகாப்பான சூழலை
+                        வழங்குகின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🏖️</span>
+                    <h3>சுற்றுலா வளர்ச்சி</h3>
+                    <p>ராமேஸ்வரம், கன்னியாகுமரி போன்ற பகுதிகளின் சுற்றுலா வளர்ச்சிக்கும் உள்ளூர் பொருளாதாரத்திற்கும்
+                        பெரும் பங்காற்றுகின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🛕</span>
+                    <h3>ஆன்மிக மற்றும் வரலாற்று முக்கியத்துவம்</h3>
+                    <p>வரலாற்றுச் சிறப்புமிக்க கோயில்கள், நினைவு மண்டபங்கள் மற்றும் வரலாற்றுச் சின்னங்களுடன் நெருங்கிய
+                        தொடர்புடையவை.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🌱</span>
+                    <h3>சுற்றுச்சூழல் பாதுகாப்பு</h3>
+                    <p>கடலோர மற்றும் கடல்சார் சூழல்களின் இயற்கை சமநிலையைப் பாதுகாக்கவும் மண் அரிப்பைத் தடுக்கவும்
+                        உதவுகின்றன.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <div class="section-head">
+                <span class="idx">02</span>
+                <h2>தமிழ்நாட்டின் தீவுகள் — ஒரு பார்வையில்</h2>
+            </div>
+            <div class="flow">
+                <div class="flow-row">
+                    <div class="flow-cell">தீவுகளின் கட்டமைப்பு</div>
+                    <div class="flow-cell">28 புவியியல் தீவுகள்</div>
+                    <div class="flow-cell">சுமார் 10 முக்கியமான தீவுகள்</div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-cell">தீவு வகைகள்</div>
+                    <div class="flow-cell">நிலப்பரப்பு அமைவிடம்</div>
+                    <div class="flow-cell">கடல் தீவுகள் + ஆற்று தீவுகள் + பாறைத் தீவுகள்</div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-cell">சமூக & பண்பாட்டு மதிப்பு</div>
+                    <div class="flow-cell">வரலாறு & ஆன்மிகம்</div>
+                    <div class="flow-cell">சுற்றுலா + ஆன்மிகம் + வரலாறு</div>
+                </div>
+                <div class="flow-row">
+                    <div class="flow-cell">இயற்கைப் பாதுகாப்பு</div>
+                    <div class="flow-cell">சுற்றுச்சூழல் வளம்</div>
+                    <div class="flow-cell">பவளப்பாறைகள் + கடல்வாழ் உயிரினங்கள் + இயற்கைப் பாதுகாப்பு</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profiles">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="idx">03</span>
+                <h2>தமிழ்நாட்டின் முக்கியமான தீவுகள்</h2>
+            </div>
+
+            <!-- 1. பாம்பன் தீவு -->
+            <div class="dam">
+                <div class="dam-media">
+                    <img src="assets/island-pamban.jpg" alt="பாம்பன் தீவு — ராமேஸ்வரம் மற்றும் பாம்பன் பாலம்">
+                    <div class="dam-plate">பாம்பன் தீவு</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">இராமநாதபுரம் மாவட்டம் · தென்கிழக்குக் கடற்கரை</div>
+                    <h3>1. பாம்பன் தீவு</h3>
+                    <div class="meta"><span>இராமநாதபுரம்</span><span>மிகப்பெரிய தீவு</span><span>பாம்பன் பாலம்</span>
+                    </div>
+                    <p><strong>பாம்பன் தீவு</strong> பரப்பளவில் தமிழ்நாட்டின் மிகப்பெரிய தீவாகும். இது தென்கிழக்குக்
+                        கடற்கரைக்கு அருகில் அமைந்துள்ளது. தீவில் அமைந்துள்ள <strong>ராமேஸ்வரம்</strong> முக்கியமான
+                        புனிதத் தலமாக விளங்குகிறது.</p>
+                    <p>வரலாற்றுச் சிறப்புமிக்க <strong>பாம்பன் பாலம்</strong> மூலம் இந்தத் தீவு இந்தியாவின்
+                        நிலப்பரப்புடன் இணைக்கப்பட்டுள்ளது. ஆன்மிகம் மற்றும் சுற்றுலாவில் முதன்மை இடம் வகிக்கிறது.</p>
+                    <div class="quote-box" style="margin-top: 1rem; padding: 1rem 1.25rem;">
+                        <p>“பாம்பன் — கடலும் ஆன்மிகமும் இணையும் தீவு.”</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. முயல் தீவு (Hare Island) -->
+            <div class="dam rev">
+                <div class="dam-media">
+                    <img src="assets/island-hare.jpg" alt="முயல் தீவு — தூத்துக்குடி கடற்கரை">
+                    <div class="dam-plate">முயல் தீவு (Hare Island)</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">தூத்துக்குடி மாவட்டம் · தூத்துக்குடி கடற்கரை</div>
+                    <h3>2. முயல் தீவு (Hare Island)</h3>
+                    <div class="meta"><span>தூத்துக்குடி</span><span>சுற்றுலாத் தலம்</span><span>மன்னார் வளைகுடா</span>
+                    </div>
+                    <p><strong>முயல் தீவு</strong> தூத்துக்குடி கடற்கரைக்கு அருகில் அமைந்துள்ள முக்கியமான தீவாகும். இது
+                        உள்ளூர் சுற்றுலாவிற்கு பிரபலமானது. தீவின் சில பகுதிகள் கடல்சார் பாதுகாப்பு விதிகளின் கீழ்
+                        வருகின்றன.</p>
+                    <p>மன்னார் வளைகுடா கடல்சார் சூழலுடன் இணைந்துள்ள இத்தீவு, இயற்கை விரும்பிகளுக்கு ஒரு சிறந்த தளமாகும்.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 3. கிருசடை தீவு -->
+            <div class="dam">
+                <div class="dam-media">
+                    <img src="assets/island-kurusadai.jpg" alt="கிருசடை தீவு — பவளப்பாறைகள் மற்றும் கடல்சார் வளம்">
+                    <div class="dam-plate">கிருசடை தீவு</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">இராமநாதபுரம் மாவட்டம் · மன்னார் வளைகுடா</div>
+                    <h3>3. கிருசடை தீவு</h3>
+                    <div class="meta"><span>மன்னார் வளைகுடா</span><span>பவளப்பாறைகள்</span><span>உயிரியல்
+                            பொக்கிஷம்</span></div>
+                    <p><strong>கிருசடை தீவு</strong> மன்னார் வளைகுடாவில் உள்ள முக்கியமான கடல் தீவுகளில் ஒன்றாகும். இது
+                        கடல்சார் உயிரியல் வளம், பவளப்பாறைகள் மற்றும் அரிய நுண்ணுயிரினங்களுக்காக முக்கியத்துவம்
+                        பெறுகிறது.</p>
+                    <p>சுற்றுச்சூழலைப் பாதுகாக்க பொதுமக்களின் அணுகல் பெரும்பாலும் கட்டுப்படுத்தப்பட்டு ஆராய்ச்சிகளுக்கு
+                        முக்கியத்துவம் அளிக்கப்படுகிறது.</p>
+                    <div class="quote-box" style="margin-top: 1rem; padding: 1rem 1.25rem;">
+                        <p>“கிருசடை — கடலுக்குள் மறைந்திருக்கும் உயிரியல் பொக்கிஷம்.”</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. நல்லதண்ணி தீவு -->
+            <div class="dam rev">
+                <div class="dam-media">
+                    <img src="assets/island-nallathanni.jpg" alt="நல்லதண்ணி தீவு — இராமநாதபுரம்">
+                    <div class="dam-plate">நல்லதண்ணி தீவு</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">இராமநாதபுரம் மாவட்டம் · கடலாடி வட்டாரம்</div>
+                    <h3>4. நல்லதண்ணி தீவு</h3>
+                    <div class="meta"><span>இராமநாதபுரம்</span><span>நன்னீர் நிலத்தடி நீர்</span><span>மக்கள்
+                            வசிப்பில்லாத தீவு</span></div>
+                    <p><strong>நல்லதண்ணி தீவு</strong> இராமநாதபுரம் மாவட்டத்தின் கடலாடி வட்டாரத்தில் அமைந்துள்ள மக்கள்
+                        வசிப்பில்லாத தீவாகும்.</p>
+                    <p>கடல்நீரால் சூழப்பட்டிருந்தாலும், தீவில் <strong>நன்னீர் நிலத்தடி நீர்</strong> காணப்படுவது இதன்
+                        தனிச்சிறப்பாகக் குறிப்பிடப்படுகிறது. மன்னார் வளைகுடா பாதுகாப்புப் பகுதிகளுடன் தொடர்புடையது.</p>
+                </div>
+            </div>
+
+            <!-- 5. ஸ்ரீரங்கம் தீவு -->
+            <div class="dam">
+                <div class="dam-media">
+                    <img src="assets/island-srirangam.jpg" alt="ஸ்ரீரங்கம் தீவு — காவிரி மற்றும் கொள்ளிடம் ஆற்று தீவு">
+                    <div class="dam-plate">ஸ்ரீரங்கம் தீவு</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">திருச்சிராப்பள்ளி மாவட்டம் · காவிரி–கொள்ளிடம் ஆறு</div>
+                    <h3>5. ஸ்ரீரங்கம் தீவு</h3>
+                    <div class="meta"><span>திருச்சிராப்பள்ளி</span><span>ஆற்று தீவு</span><span>ஸ்ரீரங்கநாதசுவாமி
+                            கோயில்</span></div>
+                    <p><strong>ஸ்ரீரங்கம் தீவு</strong> காவிரி மற்றும் அதன் கிளைநதியான கொள்ளிடம் ஆகியவற்றுக்கு இடையில்
+                        உருவான மிகப்பெரிய <strong>ஆற்று தீவாகும்</strong>. இது திருச்சிராப்பள்ளி நகரின் முக்கிய பகுதியாக
+                        விளங்குகிறது.</p>
+                    <p>தீவின் முக்கிய அடையாளமாக <strong>ஸ்ரீ ரங்கநாதசுவாமி கோயில்</strong> அமைந்துள்ளது. ஆன்மிக மற்றும்
+                        கலாச்சார வரலாற்றில் உலகப் புகழ்பெற்றது.</p>
+                    <div class="quote-box" style="margin-top: 1rem; padding: 1rem 1.25rem;">
+                        <p>“ஸ்ரீரங்கம் — இரண்டு ஆறுகளுக்கு நடுவே வாழும் ஆன்மிகத் தீவு.”</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. குவிபிள் தீவு -->
+            <div class="dam rev">
+                <div class="dam-media">
+                    <img src="assets/island-quibble.jpg" alt="குவிபிள் தீவு — சென்னை அடையாறு ஆற்று தீவு">
+                    <div class="dam-plate">குவிபிள் தீவு</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">சென்னை மாவட்டம் · அடையாறு ஆறு</div>
+                    <h3>6. குவிபிள் தீவு</h3>
+                    <div class="meta"><span>சென்னை</span><span>அடையாறு ஆற்று தீவு</span><span>வரலாற்றுப் பகுதி</span>
+                    </div>
+                    <p><strong>குவிபிள் தீவு</strong> சென்னை நகரப் பகுதியில் அடையாறு ஆற்றின் நீர்வழிகளால் சூழப்பட்டுள்ள
+                        சிறிய ஆற்று தீவாகும்.</p>
+                    <p>நகரத்தின் பரபரப்பான சூழலுக்கு மத்தியில் அமைதியான பகுதியாகவும், வரலாற்றுச் சிறப்புமிக்க கல்லறை
+                        அமைந்துள்ள இடமாகவும் இது குறிப்பிடப்படுகிறது.</p>
+                </div>
+            </div>
+
+            <!-- 7. விவேகானந்தர் பாறை -->
+            <div class="dam">
+                <div class="dam-media">
+                    <img src="assets/island-vivekananda.jpg" alt="விவேகானந்தர் பாறை — கன்னியாகுமரி">
+                    <div class="dam-plate">விவேகானந்தர் பாறை</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">கன்னியாகுமரி மாவட்டம் · குமரிக்கடல்</div>
+                    <h3>7. விவேகானந்தர் பாறை</h3>
+                    <div class="meta"><span>கன்னியாகுமரி</span><span>பாறைத் தீவு</span><span>விவேகானந்தர் நினைவு
+                            மண்டபம்</span></div>
+                    <p><strong>விவேகானந்தர் பாறை</strong> கன்னியாகுமரிக்கு அருகிலுள்ள கடலில் அமைந்துள்ள முக்கியமான
+                        பாறைத் தீவாகும். இங்கு அமைந்துள்ள <strong>விவேகானந்தர் நினைவு மண்டபம்</strong> கன்னியாகுமரியின்
+                        முக்கிய அடையாளங்களில் ஒன்றாகும்.</p>
+                    <p>ஆன்மிக மற்றும் சுற்றுலா முக்கியத்துவம் கொண்ட இத்தீவு, முக்கடல் சந்திக்கும் தென்முனைப் பகுதியுடன்
+                        இணைந்து சிறப்புப் பெறுகிறது.</p>
+                </div>
+            </div>
+
+            <!-- 8. காட்டுப்பள்ளி தீவு -->
+            <div class="dam rev">
+                <div class="dam-media">
+                    <img src="assets/island-kattupalli.jpg" alt="காட்டுப்பள்ளி தீவு — சென்னை வடக்கு கடலோர தீவு">
+                    <div class="dam-plate">காட்டுப்பள்ளி தீவு</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">சென்னை வடக்கு / திருவள்ளூர் · கடலோர பகுதி</div>
+                    <h3>8. காட்டுப்பள்ளி தீவு</h3>
+                    <div class="meta"><span>சென்னை வடக்கு</span><span>துறைமுகம்</span><span>தொழில்துறை</span></div>
+                    <p><strong>காட்டுப்பள்ளி தீவு</strong> சென்னை நகரத்திற்கு வடக்கே அமைந்துள்ள கடலோரத் தீவுப்
+                        பகுதியாகும்.</p>
+                    <p>இப்பகுதி தொழில்துறை வளர்ச்சியுடன் தொடர்புடையதாகவும், துறைமுகம் மற்றும் கப்பல் கட்டுமான வசதிகளைக்
+                        கொண்டதாகவும் விளங்குகிறது.</p>
+                </div>
+            </div>
+
+            <!-- 9. கச்சத்தீவு -->
+            <div class="dam">
+                <div class="dam-media">
+                    <img src="assets/island-kachchatheevu.jpg" alt="கச்சத்தீவு — பாக் நீரிணை">
+                    <div class="dam-plate">கச்சத்தீவு</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">பாக் நீரிணை · இந்தியா–இலங்கை கடல் எல்லை</div>
+                    <h3>9. கச்சத்தீவு</h3>
+                    <div class="meta"><span>பாக் நீரிணை</span><span>இலங்கை நிர்வாகம்</span><span>கடல்சார்
+                            முக்கியத்துவம்</span></div>
+                    <p><strong>கச்சத்தீவு</strong> பாக் நீரிணையில் அமைந்துள்ள சிறிய தீவாகும். இது தற்போது
+                        <strong>இலங்கையின் கட்டுப்பாட்டில் உள்ள தீவு</strong> ஆகும். 1974-ஆம் ஆண்டு இந்தியா–இலங்கை
+                        ஒப்பந்தத்தின் மூலம் அதன் நிர்வாக உரிமை இலங்கைக்கு வழங்கப்பட்டது.</p>
+                    <p>தமிழ்நாட்டின் மீனவர்கள் மற்றும் இந்தியா–இலங்கை கடல்சார் உறவுகள் தொடர்பான விவாதங்களில் கச்சத்தீவு
+                        முக்கிய இடம் பெறுகிறது.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="table">
+        <div class="wrap">
+            <div class="section-head">
+                <span class="idx">04</span>
+                <h2>முக்கியமான தீவுகள் — விரைவுப் பட்டியல்</h2>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>எண்</th>
+                            <th>தீவு</th>
+                            <th>அமைவிடம்</th>
+                            <th>முக்கிய சிறப்பு</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><strong>பாம்பன் தீவு</strong></td>
+                            <td>இராமநாதபுரம்</td>
+                            <td>தமிழ்நாட்டின் மிகப்பெரிய தீவு, ராமேஸ்வரம்</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td><strong>முயல் தீவு</strong></td>
+                            <td>தூத்துக்குடி</td>
+                            <td>சுற்றுலா மற்றும் கடல்சார் சூழல்</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td><strong>கிருசடை தீவு</strong></td>
+                            <td>மன்னார் வளைகுடா</td>
+                            <td>பவளப்பாறைகள் மற்றும் கடல்சார் உயிரினங்கள்</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td><strong>நல்லதண்ணி தீவு</strong></td>
+                            <td>இராமநாதபுரம்</td>
+                            <td>நன்னீர் நிலத்தடி நீர்</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td><strong>ஸ்ரீரங்கம் தீவு</strong></td>
+                            <td>திருச்சிராப்பள்ளி</td>
+                            <td>காவிரி–கொள்ளிடம் ஆற்று தீவு</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td><strong>குவிபிள் தீவு</strong></td>
+                            <td>சென்னை</td>
+                            <td>அடையாறு ஆற்று தீவு</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td><strong>விவேகானந்தர் பாறை</strong></td>
+                            <td>கன்னியாகுமரி</td>
+                            <td>விவேகானந்தர் நினைவு மண்டபம்</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td><strong>காட்டுப்பள்ளி தீவு</strong></td>
+                            <td>சென்னை வடக்கு</td>
+                            <td>துறைமுகம் மற்றும் தொழில்துறை</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td><strong>கச்சத்தீவு</strong></td>
+                            <td>பாக் நீரிணை</td>
+                            <td>இந்தியா–இலங்கை கடல்சார் முக்கியத்துவம்</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="quote-box">
+                <p>“தீவுகள் சிறிய நிலப்பரப்பாக இருந்தாலும், அவை தாங்கும் இயற்கை வளம் மிகப்பெரியது.”</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <img src="assets/hawwa-logo.png" alt="Hawwa PrintShop">
+                    <p>இந்தப் பக்கம் Hawwa PrintShop, Chennai சார்பாக தொகுக்கப்பட்டது.</p>
+                </div>
+                <div>
+                    <h4>முகவரி</h4>
+                    <address>67, Perianna Mudali Street,<br>Seven Wells North, George Town,<br>Chennai, Tamil Nadu
+                        600001
+                    </address>
+                </div>
+                <div>
+                    <h4>தொடர்பு</h4>
+                    <p>+91 98844 80801</p>
+                    <p>திங்கள்–சனி: 10:00 AM – 7:00 PM</p>
+                    <p>ஞாயிறு: விடுமுறை</p>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span>© Hawwa PrintShop</span>
+                <span>படங்கள்: Wikimedia Commons</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

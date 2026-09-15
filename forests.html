@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>தமிழ்நாட்டின் காடுகள் — Hawwa PrintShop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;600;700&family=Noto+Sans+Tamil:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+      </div>
+
+      <nav class="desktop-nav">
+        <div class="nav-dropdown">
+          <a href="forests.html" class="dropdown-toggle active">
+            காடுகள்
+            <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+              <path d="M7 10l5 5 5-5z" />
+            </svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="index.html">அணைகள் (Dams)</a>
+            <a href="rivers.html">ஆறுகள் (Rivers)</a>
+            <a href="falls.html">அருவிகள் (Waterfalls)</a>
+            <a href="forests.html" class="active">காடுகள் (Forests)</a>
+            <a href="mountains.html">மலைகள் (Mountains)</a>
+            <a href="lakes.html">ஏரிகள் (Lakes)</a>
+            <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+            <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+            <a href="islands.html">தீவுகள் (Islands)</a>
+          </div>
+        </div>
+        <a href="#intro">அறிமுகம்</a>
+        <a href="#types">காட்டு வகைகள்</a>
+        <a href="#functions">பயன்கள்</a>
+        <a href="#profiles">காடுகள்</a>
+        <a href="#table">பட்டியல்</a>
+      </nav>
+
+      <button class="mobile-toggle" aria-label="பட்டி திற" aria-expanded="false">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="drawer-backdrop"></div>
+  <div class="mobile-drawer" role="dialog" aria-modal="true">
+    <div class="drawer-header">
+      <div class="brand">
+        <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+      </div>
+      <button class="drawer-close" aria-label="மூடு">&times;</button>
+    </div>
+    <div class="drawer-nav">
+      <div class="drawer-section-title">பிரிவுகள்</div>
+      <div class="mobile-cat-accordion">
+        <button class="mobile-cat-toggle" aria-expanded="false">
+          <span>வகைகள் (Categories)</span>
+          <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+            <path d="M7 10l5 5 5-5z" />
+          </svg>
+        </button>
+        <div class="mobile-cat-content">
+          <a href="index.html">அணைகள் (Dams)</a>
+          <a href="rivers.html">ஆறுகள் (Rivers)</a>
+          <a href="falls.html">அருவிகள் (Waterfalls)</a>
+          <a href="forests.html" class="active">காடுகள் (Forests)</a>
+          <a href="mountains.html">மலைகள் (Mountains)</a>
+          <a href="lakes.html">ஏரிகள் (Lakes)</a>
+          <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+          <a href="sanctuaries.html">சரணாலயங்கள் (Sanctuaries)</a>
+          <a href="islands.html">தீவுகள் (Islands)</a>
+        </div>
+      </div>
+      <div class="drawer-section-title">பக்கத்தின் பகுதிகள்</div>
+      <a href="#intro">அறிமுகம்</a>
+      <a href="#types">காட்டு வகைகள்</a>
+      <a href="#functions">பயன்கள்</a>
+      <a href="#profiles">காடுகள்</a>
+      <a href="#table">பட்டியல்</a>
+    </div>
+  </div>
+
+  <section class="hero" id="intro">
+    <div class="hero-media">
+      <img src="assets/hero-forest.jpg" alt="தமிழ்நாட்டின் காடுகள்">
+    </div>
+    <div class="hero-content">
+      <span class="eyebrow-tag">இயற்கை வனவளம்</span>
+      <h1>தமிழ்நாட்டின் காடுகள்</h1>
+      <p class="lede">தமிழ்நாடு பல்வேறு மலைத்தொடர்கள், சமவெளிகள், கடற்கரைப் பகுதிகள் மற்றும் இயற்கை வளங்களைக் கொண்ட
+        மாநிலமாகும். மேற்கு தொடர்ச்சி மலைகளின் அடர்ந்த காடுகள் முதல் கடற்கரையோரச் சதுப்புநிலக் காடுகள் வரை,
+        தமிழ்நாட்டின் காடுகள் உயிரினப் பன்மை மற்றும் நீர்வளப் பாதுகாப்பிற்கு மிக முக்கியமானவை.</p>
+    </div>
+    <svg class="wavecut" viewBox="0 0 1200 60" preserveAspectRatio="none">
+      <path d="M0,30 C 200,60 400,0 600,30 C 800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#f6f2e7"></path>
+    </svg>
+  </section>
+
+  <div class="stats">
+    <div class="stat-row">
+      <div>
+        <span class="stat-num">31,821</span>
+        <div class="stat-note">ச.கி.மீ பசுமைப் பரப்பு (24.47%)</div>
+      </div>
+      <div class="stat-text">
+        <p>தமிழ்நாட்டின் மொத்த பசுமைப் பரப்பு சுமார் 31,821 சதுர கிலோமீட்டர் ஆகும் (24.47%). இதில் 5 தேசியப்
+          பூங்காக்கள், 5 புலிகள் காப்பகங்கள், 18 வனவிலங்கு சரணாலயங்கள் மற்றும் 18 பறவைகள் சரணாலயங்கள் உள்ளன.
+          தமிழ்நாட்டில் இந்தியாவின் 16 முக்கிய வன வகைக் குழுக்களில் 9 வகைக் குழுக்கள் காணப்படுகின்றன.</p>
+        <p class="table-note">குறிப்பு: இங்கு குறிப்பிடப்படும் 15 பகுதிகள், இந்தப் பக்கத்தில் விரிவாகக் குறிப்பிடப்படும்
+          முக்கியமான காடுகள் மற்றும் வனப்பகுதிகளின் பட்டியல் மட்டுமே. இது தமிழ்நாட்டில் உள்ள அனைத்து காடுகளின் மொத்த
+          எண்ணிக்கை அல்ல.</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="map-box">
+        <img src="assets/forest-map.jpg" alt="தமிழ்நாடு 15 முக்கிய காடுகள் வரைபடம்">
+        <div class="map-caption">படம்: தமிழ்நாடு வரைபடத்தில் இந்த 15 முக்கிய காடுகள் மற்றும் வனப்பகுதிகள் குறிக்கப்பட்ட
+          காட்சி</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="types">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx">01</span>
+        <h2>தமிழ்நாட்டில் காணப்படும் முக்கிய காட்டு வகைகள்</h2>
+      </div>
+      <div class="func-grid">
+        <div class="func-card">
+          <span class="ic">🌳</span>
+          <h3>சோலைக் காடுகள் & மலைப் புல்வெளிகள்</h3>
+          <p>உயரமான மலைப்பகுதிகளில் காணப்படும் சிறிய பசுமையான அடர்ந்த காடுகள். நீலகிரி, கொடைக்கானல், ஆனைமலை மற்றும்
+            மேற்கு தொடர்ச்சி மலைகளில் காணப்படுகின்றன. பல அரிய தாவரங்கள் மற்றும் நீர்வளப் பாதுகாப்பிற்கு முக்கியமானது.
+          </p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🌲</span>
+          <h3>ஈரப்பசை பசுமைமாறா காடுகள்</h3>
+          <p>அதிக மழைப்பொழிவு பெறும் மேற்கு தொடர்ச்சி மலைப் பகுதிகளில் ஆண்டு முழுவதும் பசுமையாகக் காணப்படும் அடர்ந்த
+            காடுகள். திருநெல்வேலி, கன்னியாகுமரி, கோயம்புத்தூர் மாவட்டங்களில் காணப்படுகின்றன.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🍂</span>
+          <h3>இலையுதிர் காடுகள்</h3>
+          <p>ஈரப்பதமான மற்றும் வறண்ட காலநிலைகளுக்கு ஏற்ப வளரும் காடுகள். சத்தியமங்கலம், தருமபுரி மற்றும் உள்நாட்டு
+            மலைப்பகுதிகளில் யானைகள், புலிகள் மற்றும் வனவிலங்குகளின் முக்கிய வாழிடமாக உள்ளன.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🌊</span>
+          <h3>அலையாத்தி காடுகள் (மாங்குரோவ்)</h3>
+          <p>கடல் அலைகள் மற்றும் உப்புநீருக்கு ஏற்ப வளரக்கூடிய சிறப்பு காடுகள். பிச்சாவரம், முத்துப்பேட்டை கடற்கரைப்
+            பகுதிகளில் சுமார் 9,039 ஹெக்டேர் பரப்பில் அமைந்து கடற்கரை பேரிடர்களின் தாக்கத்தைக் குறைக்கின்றன.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="functions">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx">02</span>
+        <h2>காடுகள் என்ன செய்கின்றன?</h2>
+      </div>
+      <div class="func-grid">
+        <div class="func-card">
+          <span class="ic">💧</span>
+          <h3>நீர்வளத்தை பாதுகாக்கின்றன</h3>
+          <p>மழைநீரைச் சேகரித்து மண்ணுக்குள் ஊடுருவ உதவுகின்றன. நிலத்தடி நீர் மற்றும் நீர்ப்பிடிப்பு பகுதிகளைப்
+            பாதுகாத்து பல முக்கிய ஆறுகளுக்கு நீர்வளம் வழங்குகின்றன.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🌳</span>
+          <h3>இயற்கை வளங்களை பாதுகாக்கின்றன</h3>
+          <p>பல்வேறு மரங்கள், செடிகள், கொடிகள் மற்றும் பிற தாவரங்களுக்கு இயற்கையான வாழிடமாக அமைந்து இயற்கைச் சூழலின்
+            சமநிலையைப் பாதுகாக்கின்றன.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🐘</span>
+          <h3>வனவிலங்குகளுக்கு வாழிடம்</h3>
+          <p>யானைகள், புலிகள், சிறுத்தைகள், மான்கள், காட்டு மாடுகள், கரடிகள் மற்றும் பல்வேறு பறவைகள் உள்ளிட்ட
+            உயிரினங்களுக்கு காடுகள் வாழிடமாக உள்ளன.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🌍</span>
+          <h3>காலநிலையை சமநிலைப்படுத்துகின்றன</h3>
+          <p>மரங்கள் வளிமண்டல கார்பன் டை ஆக்சைடை உறிஞ்சுவதன் மூலம் கார்பன் உறிஞ்சும் அமைப்பாக செயல்பட்டு காலநிலை
+            மாற்றத்தின் தாக்கத்தைக் குறைக்கின்றன.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🌱</span>
+          <h3>மண் அரிப்பைத் தடுக்கின்றன</h3>
+          <p>மரங்கள் மற்றும் தாவரங்களின் வேர்கள் மண்ணை உறுதியாகப் பிடித்துக் கொள்வதால் மழை மற்றும் நீரோட்டத்தால்
+            ஏற்படும் மண் அரிப்பு குறைகிறது.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🌊</span>
+          <h3>கடற்கரையை பாதுகாக்கின்றன</h3>
+          <p>அலையாத்திக் காடுகள் கடற்கரைப் பகுதிகளை புயல், கடல் அலை மற்றும் சுனாமி போன்ற இயற்கைப் பேரிடர்களின்
+            தாக்கத்திலிருந்து பாதுகாக்கின்றன.</p>
+        </div>
+        <div class="func-card">
+          <span class="ic">🏞️</span>
+          <h3>சுற்றுலாவை வளர்க்கின்றன</h3>
+          <p>முதுமலை, ஆனைமலை, நீலகிரி, கொடைக்கானல் மற்றும் பிச்சாவரம் போன்ற பகுதிகள் இயற்கைச் சுற்றுலாவை வளர்க்கின்றன.
+          </p>
+        </div>
+        <div class="func-card">
+          <span class="ic">👨‍🌾</span>
+          <h3>உள்ளூர் வாழ்வாதாரத்திற்கு உதவி</h3>
+          <p>சுற்றுலா, இயற்கை வழிகாட்டுதல் மற்றும் வன வளங்கள் சார்ந்த செயல்பாடுகள் மூலம் உள்ளூர் மக்களுக்கு வாழ்வாதார
+            வாய்ப்புகள் உருவாகின்றன.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx">03</span>
+        <h2>காடுகள் தமிழ்நாட்டிற்கு எவ்வாறு உதவுகின்றன?</h2>
+      </div>
+      <div class="flow">
+        <div class="flow-row">
+          <div class="flow-cell">நீர்வளம்</div>
+          <div class="flow-cell">காடுகள் → மழைநீர் சேகரிப்பு</div>
+          <div class="flow-cell">நிலத்தடி நீர் மற்றும் நீர்ப்பிடிப்பு பகுதிகள்</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">ஆறுகளின் நீர்வளம்</div>
+          <div class="flow-cell">மலைக்காடுகள் → நீரோடைகள்</div>
+          <div class="flow-cell">காவிரி, பவானி, தாமிரபரணி போன்ற ஆறுகளின் நீர்வளம்</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">காலநிலை</div>
+          <div class="flow-cell">காடுகள் → மரங்கள் & தாவரங்கள்</div>
+          <div class="flow-cell">கார்பன் உறிஞ்சுதல் மற்றும் காலநிலை சமநிலை</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">வனவிலங்கு</div>
+          <div class="flow-cell">காடுகள் → வனவிலங்குகள்</div>
+          <div class="flow-cell">உயிரினப் பன்மை பாதுகாப்பு</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">மண் பாதுகாப்பு</div>
+          <div class="flow-cell">காடுகள் → மரங்களின் வேர்கள்</div>
+          <div class="flow-cell">மண் அரிப்பு தடுத்தல்</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">கடற்கரை</div>
+          <div class="flow-cell">அலையாத்திக் காடுகள் → கடற்கரை பாதுகாப்பு</div>
+          <div class="flow-cell">புயல் மற்றும் கடலலை தாக்கம் குறைப்பு</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">சுற்றுலா</div>
+          <div class="flow-cell">காடுகள் → இயற்கை அழகு</div>
+          <div class="flow-cell">சுற்றுலா மற்றும் உள்ளூர் பொருளாதாரம் வளர்ச்சி</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">வாழ்வாதாரம்</div>
+          <div class="flow-cell">காடுகள் → சுற்றுலா & வன வளங்கள்</div>
+          <div class="flow-cell">உள்ளூர் மக்களின் வாழ்வாதார வாய்ப்புகள்</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-cell">எதிர்காலம்</div>
+          <div class="flow-cell">காடுகள் → இயற்கைச் சமநிலை</div>
+          <div class="flow-cell">எதிர்கால தலைமுறைகளுக்கான சுற்றுச்சூழல் பாதுகாப்பு</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="profiles">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx">04</span>
+        <h2>தமிழ்நாட்டின் முக்கிய காடுகள் மற்றும் வனப்பகுதிகள்</h2>
+      </div>
+
+      <!-- 1. முதுமலை காடுகள் -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/forest-mudumalai.jpg" alt="முதுமலை காடு — யானைகள் மற்றும் அடர்ந்த பசுமையான வனப்பகுதி">
+          <div class="dam-plate">முதுமலை காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">நீலகிரி மாவட்டம் · முதுமலை, நீலகிரி மலைப்பகுதி</div>
+          <h3>1. முதுமலை காடுகள்</h3>
+          <div class="meta"><span>நீலகிரி</span><span>புலிகள் காப்பகம்</span><span>யானைகள் வாழிடம்</span></div>
+          <p>முதுமலை தமிழ்நாட்டின் மிகவும் முக்கியமான வனப்பகுதிகளில் ஒன்றாகும். இது மேற்கு தொடர்ச்சி மலைகளின் வளமான
+            உயிரினப் பன்மைப் பகுதியில் அமைந்துள்ளது. இப்பகுதியில் யானைகள், புலிகள், மான்கள், காட்டு மாடுகள் மற்றும்
+            பல்வேறு பறவைகள் காணப்படுகின்றன.</p>
+        </div>
+      </div>
+
+      <!-- 2. சத்தியமங்கலம் காடுகள் -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/forest-sathyamangalam.jpg" alt="சத்தியமங்கலம் காடு — அடர்ந்த வனப்பகுதி மற்றும் வனவிலங்குகள்">
+          <div class="dam-plate">சத்தியமங்கலம் காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">ஈரோடு மாவட்டம் · சத்தியமங்கலம்</div>
+          <h3>2. சத்தியமங்கலம் காடுகள்</h3>
+          <div class="meta"><span>ஈரோடு</span><span>உயிரினப் பன்மை</span><span>இயற்கை இணைப்பு</span></div>
+          <p>சத்தியமங்கலம் காடுகள் தமிழ்நாட்டின் மிகப்பெரிய மற்றும் முக்கியமான வனப்பகுதிகளில் ஒன்றாகும். இப்பகுதி மேற்கு
+            தொடர்ச்சி மலைகளுக்கும் கிழக்குத் தொடர்ச்சி மலைகளுக்கும் இடையிலான முக்கியமான இயற்கை இணைப்புப் பகுதியாக
+            விளங்குகிறது. புலிகள், யானைகள் மற்றும் பல்வேறு வனவிலங்குகளின் முக்கிய வாழிடம்.</p>
+        </div>
+      </div>
+
+      <!-- 3. ஆனைமலை காடுகள் -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/forest-anaimalai.jpg" alt="ஆனைமலை காடு — அடர்ந்த பசுமை மற்றும் மலைப்பகுதி">
+          <div class="dam-plate">ஆனைமலை காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">கோயம்புத்தூர் மற்றும் திருப்பூர் பகுதிகள் · ஆனைமலை மலைப்பகுதி</div>
+          <h3>3. ஆனைமலை காடுகள்</h3>
+          <div class="meta"><span>கோயம்புத்தூர் / திருப்பூர்</span><span>புலிகள் காப்பகம்</span></div>
+          <p>ஆனைமலை காடுகள் மேற்கு தொடர்ச்சி மலைகளின் முக்கியமான வனப்பகுதிகளில் ஒன்றாகும். அடர்ந்த காடுகள், மலைகள்
+            மற்றும் பல்வேறு உயிரினங்கள் இப்பகுதியின் முக்கிய இயற்கைச் சிறப்புகளாகும். யானைகள், புலிகள், சிறுத்தைகள்
+            மற்றும் பல்வேறு உயிரினங்கள் வாழும் பகுதி.</p>
+        </div>
+      </div>
+
+      <!-- 4. களக்காடு–முண்டந்துறை காடுகள் -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/forest-kalakad.jpg" alt="களக்காடு–முண்டந்துறை — அடர்ந்த மேற்கு தொடர்ச்சி மலைக்காடு">
+          <div class="dam-plate">களக்காடு–முண்டந்துறை</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">திருநெல்வேலி மற்றும் தென்காசி · மேற்கு தொடர்ச்சி மலை</div>
+          <h3>4. களக்காடு–முண்டந்துறை காடுகள்</h3>
+          <div class="meta"><span>திருநெல்வேலி</span><span>நீர்வளம் & பன்மை</span></div>
+          <p>களக்காடு–முண்டந்துறை பகுதி தென் தமிழ்நாட்டின் மிக முக்கியமான வனப்பகுதிகளில் ஒன்றாகும். அடர்ந்த
+            மலைக்காடுகள், பல்வேறு தாவரங்கள் மற்றும் அரிய வனவிலங்குகள் இப்பகுதியில் காணப்படுகின்றன. நீர்வளம், வனவிலங்கு
+            பாதுகாப்பு மற்றும் சுற்றுச்சூழல் சமநிலைக்கு முக்கியமானது.</p>
+        </div>
+      </div>
+
+      <!-- 5. மேகமலை காடுகள் -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/forest-megamalai.jpg" alt="மேகமலை காடு — பசுமையான மலைகள் மற்றும் மேகங்கள்">
+          <div class="dam-plate">மேகமலை காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">தேனி மாவட்டம் · மேகமலை மலைப்பகுதி</div>
+          <h3>5. மேகமலை காடுகள்</h3>
+          <div class="meta"><span>தேனி</span><span>பசுமையான மலைக்காடு</span></div>
+          <p>மேகமலை பசுமையான மலைகள், அடர்ந்த காடுகள் மற்றும் நீரோடைகளுக்காக புகழ்பெற்றது. மேற்கு தொடர்ச்சி மலைகளின்
+            முக்கியமான இயற்கை மற்றும் உயிரினப் பன்மைப் பகுதிகளில் இதுவும் ஒன்றாகும். மலை, காடு, மேகங்கள் மற்றும் நீர்வள
+            அமைப்பு இணைந்த இயற்கைச் சூழல்.</p>
+        </div>
+      </div>
+
+      <!-- 6. கன்னியாகுமரி காடுகள் -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/forest-kanyakumari.jpg" alt="கன்னியாகுமரி காடு — அடர்ந்த பசுமையான மலைக்காடு">
+          <div class="dam-plate">கன்னியாகுமரி காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">கன்னியாகுமரி மாவட்டம் · கன்னியாகுமரி மலைப்பகுதி</div>
+          <h3>6. கன்னியாகுமரி காடுகள்</h3>
+          <div class="meta"><span>கன்னியாகுமரி</span><span>பசுமைமாறா காடு</span></div>
+          <p>கன்னியாகுமரி மாவட்டத்தின் மலைப்பகுதிகளில் அதிக மழைப்பொழிவு பெறும் பசுமையான காடுகள் காணப்படுகின்றன. இப்பகுதி
+            பல்வேறு தாவரங்கள் மற்றும் விலங்குகளுக்கான முக்கிய வாழிடமாக உள்ளது. நீர்வளம், உயிரினப் பன்மை மற்றும்
+            சுற்றுச்சூழல் பாதுகாப்பிற்கு முக்கியமானது.</p>
+        </div>
+      </div>
+
+      <!-- 7. சிறுவாணி காடுகள் -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/forest-siruvani.jpg" alt="சிறுவாணி காடு — பசுமையான மலைகளும் அடர்ந்த காடுகளும்">
+          <div class="dam-plate">சிறுவாணி காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">கோயம்புத்தூர் மாவட்டம் · சிறுவாணி மலைப்பகுதி</div>
+          <h3>7. சிறுவாணி காடுகள்</h3>
+          <div class="meta"><span>கோயம்புத்தூர்</span><span>நீர்ப்பிடிப்பு பகுதி</span></div>
+          <p>சிறுவாணி பகுதி அடர்ந்த காடுகள் மற்றும் முக்கியமான நீர்வளத்திற்காக அறியப்படுகிறது. மலைக்காடுகளில் பெய்யும்
+            மழைநீர் மற்றும் நீரோடைகள் இப்பகுதியின் நீர்வள அமைப்பிற்கு பங்களிக்கின்றன. அடர்ந்த காடு மற்றும் நீர்வளத்துடன்
+            கூடிய மலைப்பகுதி.</p>
+        </div>
+      </div>
+
+      <!-- 8. கொல்லிமலை காடுகள் -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/forest-kollihills.jpg" alt="கொல்லிமலை — பசுமையான மலைக்காடுகள்">
+          <div class="dam-plate">கொல்லிமலை காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">நாமக்கல் மாவட்டம் · கொல்லிமலை</div>
+          <h3>8. கொல்லிமலை காடுகள்</h3>
+          <div class="meta"><span>நாமக்கல்</span><span>கிழக்குத் தொடர்ச்சி மலை</span></div>
+          <p>கொல்லிமலை காடுகள் கிழக்குத் தொடர்ச்சி மலைகளின் முக்கியமான பசுமைப் பகுதிகளில் ஒன்றாகும். மலைப்பகுதி,
+            காடுகள், நீரோடைகள் மற்றும் பல்வேறு தாவரங்கள் இப்பகுதியின் இயற்கைச் சிறப்புகளாகும். உயிரினப் பன்மை, நீர்வளம்
+            மற்றும் மலைச் சுற்றுலாவிற்கு முக்கியமானது.</p>
+        </div>
+      </div>
+
+      <!-- 9. ஜவ்வாது மலைக் காடுகள் -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/forest-jawadhu.jpg" alt="ஜவ்வாது மலை — பசுமையான மலைக்காடுகள் மற்றும் பள்ளத்தாக்குகள்">
+          <div class="dam-plate">ஜவ்வாது மலைக் காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">திருப்பத்தூர், வேலூர் மற்றும் திருவண்ணாமலை பகுதிகள் · ஜவ்வாது மலை</div>
+          <h3>9. ஜவ்வாது மலைக் காடுகள்</h3>
+          <div class="meta"><span>ஜவ்வாது மலை</span><span>இயற்கை வளம்</span></div>
+          <p>ஜவ்வாது மலைப்பகுதியில் காணப்படும் காடுகள் கிழக்குத் தொடர்ச்சி மலைகளின் முக்கியமான இயற்கை வளங்களில்
+            ஒன்றாகும். இப்பகுதியில் பல்வேறு மரங்கள், தாவரங்கள் மற்றும் வன உயிரினங்கள் காணப்படுகின்றன. மண் பாதுகாப்பு,
+            நீர்வளம் மற்றும் உள்ளூர் இயற்கைச் சூழலுக்கு முக்கியமானது.</p>
+        </div>
+      </div>
+
+      <!-- 10. ஏற்காடு மலைக்காடுகள் -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/forest-yercaud.jpg" alt="ஏற்காடு — பசுமையான மலைக்காடுகள் மற்றும் பள்ளத்தாக்குகள்">
+          <div class="dam-plate">ஏற்காடு மலைக்காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">சேலம் மாவட்டம் · ஏற்காடு</div>
+          <h3>10. ஏற்காடு மலைக்காடுகள்</h3>
+          <div class="meta"><span>சேலம்</span><span>மலைச் சுற்றுலா</span></div>
+          <p>ஏற்காடு மலைப்பகுதி கிழக்குத் தொடர்ச்சி மலைகளில் அமைந்துள்ள முக்கியமான பசுமைப் பகுதியாகும். மலைக்காடுகள்,
+            பல்வேறு மரங்கள் மற்றும் இயற்கையான மலைச்சூழல் இப்பகுதியின் சிறப்புகளாகும். இயற்கை வளப் பாதுகாப்பு மற்றும்
+            சுற்றுலா வளர்ச்சிக்கு முக்கியமானது.</p>
+        </div>
+      </div>
+
+      <!-- 11. கொடைக்கானல் மலைக்காடுகள் -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/forest-kodaikanal.jpg" alt="கொடைக்கானல் — பசுமையான சோலைக் காடு மற்றும் மலைப்பகுதி">
+          <div class="dam-plate">கொடைக்கானல் மலைக்காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">திண்டுக்கல் மாவட்டம் · கொடைக்கானல் மலைப்பகுதி</div>
+          <h3>11. கொடைக்கானல் மலைக்காடுகள்</h3>
+          <div class="meta"><span>திண்டுக்கல்</span><span>சோலைக் காடுகள்</span></div>
+          <p>கொடைக்கானல் மலைப்பகுதியில் சோலைக் காடுகள் மற்றும் மலைப் புல்வெளிகள் காணப்படுகின்றன. இக்காடுகள்
+            மலைப்பகுதியின் நீர்வளத்தையும் பல்வேறு தாவர மற்றும் விலங்கு இனங்களையும் பாதுகாக்க உதவுகின்றன. சோலைக் காடுகள்
+            மற்றும் புல்வெளிகள் இணைந்த உயரமான மலைச் சூழல்.</p>
+        </div>
+      </div>
+
+      <!-- 12. நீலகிரி மலைக்காடுகள் -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/forest-nilgiri.jpg" alt="நீலகிரி — சோலைக் காடுகள் மற்றும் மலைப்புல்வெளி">
+          <div class="dam-plate">நீலகிரி மலைக்காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">நீலகிரி மாவட்டம் · நீலகிரி மலைத்தொடர்</div>
+          <h3>12. நீலகிரி மலைக்காடுகள்</h3>
+          <div class="meta"><span>நீலகிரி</span><span>மலைப் புல்வெளி</span></div>
+          <p>நீலகிரி மலைப்பகுதி தமிழ்நாட்டின் முக்கியமான உயரமான மலை வனப்பகுதிகளில் ஒன்றாகும். இங்கு சோலைக் காடுகள்,
+            புல்வெளிகள் மற்றும் பல்வேறு அரிய தாவரங்கள் மற்றும் விலங்குகள் காணப்படுகின்றன. நீர்வளப் பாதுகாப்பு, உயிரினப்
+            பன்மை மற்றும் வனவிலங்கு பாதுகாப்பிற்கு முக்கியமானது.</p>
+        </div>
+      </div>
+
+      <!-- 13. பழனி மலைக்காடுகள் -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/forest-palani.jpg" alt="பழனி மலைக்காடுகள் — பசுமையான மலைச்சரிவுகள்">
+          <div class="dam-plate">பழனி மலைக்காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">திண்டுக்கல் மற்றும் தேனி · பழனி மலைத்தொடர்</div>
+          <h3>13. பழனி மலைக்காடுகள்</h3>
+          <div class="meta"><span>பழனி மலை</span><span>நீர்ப்பிடிப்பு பகுதி</span></div>
+          <p>பழனி மலைத்தொடரில் பல்வேறு வகையான மலைக்காடுகள் காணப்படுகின்றன. இக்காடுகள் மலைப்பகுதிகளின் இயற்கைச் சூழலையும்
+            நீர்ப்பிடிப்பு பகுதிகளையும் பாதுகாக்க உதவுகின்றன. மலைக்காடுகள் மற்றும் நீர்ப்பிடிப்பு பகுதிகள்.</p>
+        </div>
+      </div>
+
+      <!-- 14. சேவராயன் மலைக்காடுகள் -->
+      <div class="dam rev">
+        <div class="dam-media">
+          <img src="assets/forest-shevaroy.jpg" alt="சேவராயன் மலை — பசுமையான மலைக்காடுகள்">
+          <div class="dam-plate">சேவராயன் மலைக்காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">சேலம் மாவட்டம் · சேவராயன் மலைப்பகுதி</div>
+          <h3>14. சேவராயன் மலைக்காடுகள்</h3>
+          <div class="meta"><span>சேலம்</span><span>கிழக்குத் தொடர்ச்சி மலை</span></div>
+          <p>சேவராயன் மலைப்பகுதி கிழக்குத் தொடர்ச்சி மலைகளின் முக்கியமான மலைச்சூழல்களில் ஒன்றாகும். இப்பகுதியில் பல்வேறு
+            தாவரங்கள், மரங்கள் மற்றும் மலைப்பகுதி உயிரினங்கள் காணப்படுகின்றன. இயற்கை வளப் பாதுகாப்பு மற்றும் மலைச்
+            சுற்றுலாவிற்கு முக்கியமானது.</p>
+        </div>
+      </div>
+
+      <!-- 15. பிச்சாவரம் அலையாத்திக் காடுகள் -->
+      <div class="dam">
+        <div class="dam-media">
+          <img src="assets/forest-pichavaram.jpg" alt="பிச்சாவரம் — நீர்வழிகளுக்கு நடுவே அமைந்த அலையாத்திக் காடு">
+          <div class="dam-plate">பிச்சாவரம் அலையாத்திக் காடுகள்</div>
+        </div>
+        <div class="dam-body">
+          <div class="tag">கடலூர் மாவட்டம் · பிச்சாவரம்</div>
+          <h3>15. பிச்சாவரம் அலையாத்திக் காடுகள்</h3>
+          <div class="meta"><span>கடலூர்</span><span>அலையாத்திக் காடு</span><span>கடற்கரை பாதுகாப்பு</span></div>
+          <p>பிச்சாவரம் தமிழ்நாட்டின் மிகவும் முக்கியமான அலையாத்திக் காடுகளில் ஒன்றாகும். கடல் நீர் மற்றும் நன்னீர்
+            கலக்கும் கடற்கரைச் சூழலில் வளரக்கூடிய தனித்துவமான மரங்கள் மற்றும் தாவரங்கள் இங்கு காணப்படுகின்றன.
+            கால்வாய்கள் மற்றும் நீர்வழிகளால் சூழப்பட்ட அலையாத்திக் காடு.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="table">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="idx">05</span>
+        <h2>முக்கிய காடுகள் — விரைவான பட்டியல்</h2>
+      </div>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>எண்</th>
+              <th>காடு / வனப்பகுதி</th>
+              <th>மாவட்டம்</th>
+              <th>முக்கியத்துவம்</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>முதுமலை</td>
+              <td>நீலகிரி</td>
+              <td>புலிகள் மற்றும் யானைகள் வாழிடம்</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>சத்தியமங்கலம்</td>
+              <td>ஈரோடு</td>
+              <td>முக்கிய உயிரினப் பன்மை மற்றும் வனவிலங்கு வாழிடம்</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>ஆனைமலை</td>
+              <td>கோயம்புத்தூர் / திருப்பூர்</td>
+              <td>புலிகள் மற்றும் யானைகள் வாழிடம்</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>களக்காடு–முண்டந்துறை</td>
+              <td>திருநெல்வேலி / தென்காசி</td>
+              <td>உயிரினப் பன்மை மற்றும் நீர்வளம்</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>மேகமலை</td>
+              <td>தேனி</td>
+              <td>பசுமையான மலைக்காடு மற்றும் வனவிலங்குகள்</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>கன்னியாகுமரி காடுகள்</td>
+              <td>கன்னியாகுமரி</td>
+              <td>அதிக மழைப்பொழிவு மற்றும் பசுமைமாறா காடுகள்</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>சிறுவாணி</td>
+              <td>கோயம்புத்தூர்</td>
+              <td>காடு மற்றும் நீர்வளம்</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>கொல்லிமலை</td>
+              <td>நாமக்கல்</td>
+              <td>கிழக்குத் தொடர்ச்சி மலைக்காடு</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>ஜவ்வாது மலை</td>
+              <td>திருப்பத்தூர் / வேலூர் பகுதிகள்</td>
+              <td>மலைக்காடு மற்றும் இயற்கை வளம்</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>ஏற்காடு மலைக்காடுகள்</td>
+              <td>சேலம்</td>
+              <td>மலைக்காடு மற்றும் சுற்றுலா</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>கொடைக்கானல் மலைக்காடுகள்</td>
+              <td>திண்டுக்கல்</td>
+              <td>சோலைக் காடுகள் மற்றும் நீர்வளம்</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>நீலகிரி மலைக்காடுகள்</td>
+              <td>நீலகிரி</td>
+              <td>சோலைக் காடுகள் மற்றும் உயிரினப் பன்மை</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>பழனி மலைக்காடுகள்</td>
+              <td>திண்டுக்கல் / தேனி</td>
+              <td>நீர்ப்பிடிப்பு மற்றும் மலைச் சூழல்</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>சேவராயன் மலைக்காடுகள்</td>
+              <td>சேலம்</td>
+              <td>கிழக்குத் தொடர்ச்சி மலைச் சூழல்</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>பிச்சாவரம் அலையாத்திக் காடுகள்</td>
+              <td>கடலூர்</td>
+              <td>கடற்கரை பாதுகாப்பு மற்றும் அலையாத்தி சூழல்</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="quote-box">
+        <p>“மழையைச் சேமித்து, ஆறுகளுக்கு உயிரூட்டி, உயிரினங்களைப் பாதுகாத்து, காலநிலையைச் சமநிலைப்படுத்தி, தமிழ்நாட்டின்
+          இயற்கை வளத்தை நிலைநிறுத்துவது — அதன் காடுகள்.”</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <img src="assets/hawwa-logo.png" alt="Hawwa PrintShop">
+          <p>இந்தப் பக்கம் Hawwa PrintShop, Chennai சார்பாக தொகுக்கப்பட்டது.</p>
+        </div>
+        <div>
+          <h4>முகவரி</h4>
+          <address>67, Perianna Mudali Street,<br>Seven Wells North, George Town,<br>Chennai, Tamil Nadu 600001
+          </address>
+        </div>
+        <div>
+          <h4>தொடர்பு</h4>
+          <p>+91 98844 80801</p>
+          <p>திங்கள்–சனி: 10:00 AM – 7:00 PM</p>
+          <p>ஞாயிறு: விடுமுறை</p>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© Hawwa PrintShop</span>
+        <span>படங்கள்: Wikimedia Commons</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

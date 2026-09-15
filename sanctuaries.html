@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="ta">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>தமிழ்நாட்டின் வனவிலங்கு மற்றும் பறவைகள் சரணாலயங்கள் — Hawwa PrintShop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;600;700&family=Noto+Sans+Tamil:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-inner">
+            <div class="brand">
+                <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+            </div>
+
+            <nav class="desktop-nav">
+                <div class="nav-dropdown">
+                    <a href="sanctuaries.html" class="dropdown-toggle active">
+                        சரணாலயங்கள்
+                        <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+                            <path d="M7 10l5 5 5-5z" />
+                        </svg>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">அணைகள் (Dams)</a>
+                        <a href="rivers.html">ஆறுகள் (Rivers)</a>
+                        <a href="falls.html">அருவிகள் (Waterfalls)</a>
+                        <a href="forests.html">காடுகள் (Forests)</a>
+                        <a href="mountains.html">மலைகள் (Mountains)</a>
+                        <a href="lakes.html">ஏரிகள் (Lakes)</a>
+                        <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+                        <a href="sanctuaries.html" class="active">சரணாலயங்கள் (Sanctuaries)</a>
+                        <a href="islands.html">தீவுகள் (Islands)</a>
+                    </div>
+                </div>
+                <a href="#intro">அறிமுகம்</a>
+                <a href="#functions">பயன்கள்</a>
+                <a href="#types">வகைகள்</a>
+                <a href="#profiles">சரணாலயங்கள்</a>
+                <a href="#table">பட்டியல்</a>
+                <a href="#notes">குறிப்புகள்</a>
+            </nav>
+
+            <button class="mobile-toggle" aria-label="பட்டி திற" aria-expanded="false">
+                <svg viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="drawer-backdrop"></div>
+    <div class="mobile-drawer" role="dialog" aria-modal="true">
+        <div class="drawer-header">
+            <div class="brand">
+                <a href="index.html"><img src="assets/hawwa-logo.png" alt="Hawwa PrintShop"></a>
+            </div>
+            <button class="drawer-close" aria-label="மூடு">&times;</button>
+        </div>
+        <div class="drawer-nav">
+            <div class="drawer-section-title">பிரிவுகள்</div>
+            <div class="mobile-cat-accordion">
+                <button class="mobile-cat-toggle" aria-expanded="false">
+                    <span>வகைகள் (Categories)</span>
+                    <svg class="dropdown-arrow" viewBox="0 0 24 24" width="14" height="14">
+                        <path d="M7 10l5 5 5-5z" />
+                    </svg>
+                </button>
+                <div class="mobile-cat-content">
+                    <a href="index.html">அணைகள் (Dams)</a>
+                    <a href="rivers.html">ஆறுகள் (Rivers)</a>
+                    <a href="falls.html">அருவிகள் (Waterfalls)</a>
+                    <a href="forests.html">காடுகள் (Forests)</a>
+                    <a href="mountains.html">மலைகள் (Mountains)</a>
+                    <a href="lakes.html">ஏரிகள் (Lakes)</a>
+                    <a href="beach.html">கடற்கரைகள் (Beaches)</a>
+                    <a href="sanctuaries.html" class="active">சரணாலயங்கள் (Sanctuaries)</a>
+                    <a href="islands.html">தீவுகள் (Islands)</a>
+                </div>
+            </div>
+            <div class="drawer-section-title">பக்கத்தின் பகுதிகள்</div>
+            <a href="#intro">அறிமுகம்</a>
+            <a href="#functions">பயன்கள்</a>
+            <a href="#types">வகைகள்</a>
+            <a href="#profiles">சரணாலயங்கள்</a>
+            <a href="#table">பட்டியல்</a>
+            <a href="#notes">குறிப்புகள்</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="intro">
+        <div class="hero-media">
+            <img src="assets/hero-sanctuaries.jpg" alt="தமிழ்நாட்டின் வனவிலங்கு மற்றும் பறவைகள் சரணாலயங்கள்">
+        </div>
+        <div class="hero-content">
+            <span class="eyebrow-tag">இயற்கை & வனவிலங்கு பாதுகாப்பு</span>
+            <h1>தமிழ்நாட்டின் வனவிலங்கு மற்றும் பறவைகள் சரணாலயங்கள்</h1>
+            <p class="lede">தமிழ்நாட்டின் சரணாலயங்கள், வனவிலங்குகள், பறவைகள், காடுகள் மற்றும் ஈரநிலங்களைப் பாதுகாக்கும்
+                முக்கியமான இயற்கைப் பகுதிகள் ஆகும். யானைகள், புலிகள், மான்கள் முதல் ஆயிரக்கணக்கான புலம்பெயர் பறவைகள் வரை
+                பல உயிரினங்களுக்கு இவை பாதுகாப்பான வாழிடங்களாக விளங்குகின்றன.</p>
+        </div>
+        <svg class="wavecut" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,30 C 200,60 400,0 600,30 C 800,60 1000,0 1200,30 L1200,60 L0,60 Z" fill="#f6f2e7"></path>
+        </svg>
+    </section>
+
+    <!-- Section 2: Count & Key Numbers -->
+    <div class="stats">
+        <div class="stat-row">
+            <div>
+                <span class="stat-num">36</span>
+                <div class="stat-note">முக்கிய சரணாலயங்கள்</div>
+            </div>
+            <div class="stat-text">
+                <p>2026-ஆம் ஆண்டின் நிலவரப்படி, தமிழ்நாட்டில் <strong>36 முக்கியமான சரணாலயங்கள்</strong> உள்ளன. இவை
+                    <strong>18 வனவிலங்கு சரணாலயங்கள்</strong> மற்றும் <strong>18 பறவைகள் சரணாலயங்கள்</strong> எனப்
+                    பிரிக்கப்படுகின்றன.
+                </p>
+
+                <div class="ghats-grid" style="margin-top: 20px;">
+                    <div class="ghat-card">
+                        <div class="ghat-header">
+                            <span class="ghat-title">பாதுகாப்பு மண்டலங்கள்</span>
+                            <span class="ghat-badge">2026 நிலவரம்</span>
+                        </div>
+                        <div class="ghat-pills">
+                            <div class="ghat-pill">🐘 வனவிலங்கு சரணாலயங்கள்: <strong>18</strong></div>
+                            <div class="ghat-pill">🐦 பறவைகள் சரணாலயங்கள்: <strong>18</strong></div>
+                            <div class="ghat-pill">🌳 முக்கிய சரணாலயங்கள்: <strong>36</strong></div>
+                            <div class="ghat-pill">🌿 தேசியப் பூங்காக்கள்: <strong>5</strong></div>
+                            <div class="ghat-pill">🐅 புலிகள் காப்பகங்கள்: <strong>5</strong></div>
+                            <div class="ghat-pill">🐘 யானைகள் காப்பகங்கள்: <strong>5</strong></div>
+                            <div class="ghat-pill">💧 ராம்சார் ஈரநிலத் தளங்கள்: <strong>20</strong></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="wrap">
+            <div class="quote-box" style="margin-top: 32px; margin-bottom: 0;">
+                <p>“சரணாலயங்கள் — காடுகளையும், உயிரினங்களையும், இயற்கையின் சமநிலையையும் காக்கும் பாதுகாப்புக் கவசங்கள்.”
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 3: Functions / Benefits -->
+    <section id="functions">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>சரணாலயங்கள் எவ்வாறு பயனளிக்கின்றன?</h2>
+            </div>
+            <p style="margin-bottom: 24px; color: #38453d; font-size: 1.02rem;">சரணாலயங்கள் அரிய உயிரினங்களைப்
+                பாதுகாப்பதுடன், இயற்கைச் சூழலையும் நீர்வளங்களையும் பாதுகாக்க உதவுகின்றன.</p>
+
+            <div class="func-grid">
+                <div class="func-card">
+                    <span class="ic">🐅</span>
+                    <h3>வனவிலங்கு பாதுகாப்பு</h3>
+                    <p>புலி, யானை, மான் உள்ளிட்ட விலங்குகளுக்கு பாதுகாப்பான வாழிடங்களை வழங்குகின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🐦</span>
+                    <h3>பறவை பாதுகாப்பு</h3>
+                    <p>உள்நாட்டு மற்றும் புலம்பெயர் பறவைகளுக்கு உணவு, இனப்பெருக்கம் மற்றும் ஓய்விடங்களை வழங்குகின்றன.
+                    </p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🌳</span>
+                    <h3>காடுகள் பாதுகாப்பு</h3>
+                    <p>முக்கியமான காட்டு நிலப்பரப்புகளையும் உயிரியல் வளங்களையும் பாதுகாக்கின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🌱</span>
+                    <h3>உயிரியல் பன்மை</h3>
+                    <p>பல்வேறு தாவரங்கள் மற்றும் விலங்கினங்களின் வாழ்வை பாதுகாக்கின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">💧</span>
+                    <h3>ஈரநில பாதுகாப்பு</h3>
+                    <p>ஏரிகள், குளங்கள், சதுப்புநிலங்கள் மற்றும் நீர்நிலங்களைப் பாதுகாக்கின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🌍</span>
+                    <h3>சுற்றுச்சூழல் சமநிலை</h3>
+                    <p>இயற்கைச் சூழலின் சமநிலையை பராமரிக்க உதவுகின்றன.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🧑‍🔬</span>
+                    <h3>ஆராய்ச்சி மற்றும் கல்வி</h3>
+                    <p>வனவிலங்கு மற்றும் சுற்றுச்சூழல் ஆய்வுகளுக்கு உதவுகின்றன.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Sanctuary Types -->
+    <section id="types" style="background: rgba(246, 242, 231, 0.5);">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>சரணாலயங்களின் முக்கிய வகைகள்</h2>
+            </div>
+            <div class="func-grid">
+                <div class="func-card">
+                    <span class="ic">🐅</span>
+                    <h3>வனவிலங்கு சரணாலயங்கள்</h3>
+                    <p>பெரிய பாலூட்டிகள், அரிய விலங்குகள் மற்றும் காட்டு உயிரினங்களின் பாதுகாப்பில் முக்கியத்துவம்
+                        பெறுகின்றன.</p>
+                    <div class="type-eg">உதாரணம்: ஆனைமலை, காவிரி வடக்கு மற்றும் தெற்கு, வல்லநாடு</div>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🐦</span>
+                    <h3>பறவைகள் சரணாலயங்கள்</h3>
+                    <p>ஏரிகள், குளங்கள், ஈரநிலங்கள் மற்றும் கடலோர நீர்நிலைகளைச் சார்ந்த பறவைகளைப் பாதுகாக்கின்றன.</p>
+                    <div class="type-eg">உதாரணம்: புலிக்காட், கூந்தங்குளம், வேடந்தாங்கல், வெள்ளோடு</div>
+                </div>
+                <div class="func-card">
+                    <span class="ic">💧</span>
+                    <h3>ஈரநில அடிப்படையிலான பாதுகாப்புப் பகுதிகள்</h3>
+                    <p>நீர்நிலங்களைச் சார்ந்த உயிரினங்கள் மற்றும் புலம்பெயர் பறவைகளுக்கு முக்கியமானவை.</p>
+                </div>
+                <div class="func-card">
+                    <span class="ic">🌳</span>
+                    <h3>வனவிலங்கு இடம்பெயர்வு வழித்தடங்கள்</h3>
+                    <p>ஒரு காட்டு பகுதியிலிருந்து மற்றொரு பகுதிக்கு யானைகள் மற்றும் பிற விலங்குகள் பாதுகாப்பாக நகர
+                        உதவும் பகுதிகள்.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Profiles of Major Sanctuaries -->
+    <section id="profiles">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>தமிழ்நாட்டின் முக்கியமான சரணாலயங்கள்</h2>
+            </div>
+
+            <!-- 5.1 தந்தை பெரியார் வனவிலங்கு சரணாலயம் -->
+            <div class="dam">
+                <div class="dam-media">
+                    <img src="assets/sanctuary-periyar.jpg" alt="தந்தை பெரியார் வனவிலங்கு சரணாலயம் — ஈரோடு">
+                    <div class="dam-plate">தந்தை பெரியார் வனவிலங்கு சரணாலயம்</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">ஈரோடு மாவட்டம் · அந்தியூர் பகுதி</div>
+                    <h3>தந்தை பெரியார் வனவிலங்கு சரணாலயம் — ஈரோடு</h3>
+                    <div class="meta">
+                        <span>ஈரோடு</span>
+                        <span>கிழக்குத் தொடர்ச்சி மலை</span>
+                        <span>வனவிலங்கு வழித்தடம்</span>
+                    </div>
+                    <p><strong>தந்தை பெரியார் வனவிலங்கு சரணாலயம்</strong> ஈரோடு மாவட்டத்தின் அந்தியூர் பகுதியில்
+                        அமைந்துள்ள முக்கியமான பாதுகாப்புப் பகுதியாகும். இது கிழக்குத் தொடர்ச்சி மலைப் பகுதிகளில் உள்ள
+                        காட்டு நிலப்பரப்புகளை இணைக்கும் முக்கியமான சூழலியல் பகுதியாக விளங்குகிறது.</p>
+                    <p>புலிகள், ஆசிய யானைகள் மற்றும் நீர்நிலைகளைச் சார்ந்த உயிரினங்களுக்கு இப்பகுதி முக்கிய வாழிடமாக
+                        உள்ளது.</p>
+
+                    <div style="margin-top: 10px; font-size: 0.92rem; color: #2c3630;">
+                        <strong style="color: var(--teal);">முக்கியத்துவம்:</strong>
+                        <ul style="margin: 6px 0 0 18px; padding: 0;">
+                            <li>கிழக்குத் தொடர்ச்சி மலைப் பகுதிகளுடன் தொடர்புடையது</li>
+                            <li>யானைகள் மற்றும் புலிகளின் வாழிடமாக உள்ளது</li>
+                            <li>முக்கியமான வனவிலங்கு இடம்பெயர்வு பகுதியாக செயல்படுகிறது</li>
+                            <li>பெரிய காட்டு நிலப்பரப்பைப் பாதுகாக்கிறது</li>
+                        </ul>
+                    </div>
+
+                    <div class="dam-quote">“காடுகள் இணைந்தால், விலங்குகளின் வாழ்வும் பாதுகாப்பாகும்.”</div>
+                </div>
+            </div>
+
+            <!-- 5.2 ஆனைமலை வனவிலங்கு சரணாலயம் -->
+            <div class="dam rev">
+                <div class="dam-media">
+                    <img src="assets/sanctuary-anaimalai.jpg"
+                        alt="ஆனைமலை வனவிலங்கு சரணாலயம் — கோயம்புத்தூர் & திருப்பூர்">
+                    <div class="dam-plate">ஆனைமலை வனவிலங்கு சரணாலயம்</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">கோயம்புத்தூர் & திருப்பூர் மாவட்டங்கள் · ஆனைமலை மலைத்தொடர்</div>
+                    <h3>ஆனைமலை வனவிலங்கு சரணாலயம் — கோயம்புத்தூர் & திருப்பூர்</h3>
+                    <div class="meta">
+                        <span>கோயம்புத்தூர் / திருப்பூர்</span>
+                        <span>இந்திரா காந்தி சரணாலயம்</span>
+                        <span>உயிரியல் பொக்கிஷம்</span>
+                    </div>
+                    <p><strong>ஆனைமலை வனவிலங்கு சரணாலயம்</strong>, தற்போது <strong>இந்திரா காந்தி வனவிலங்கு சரணாலயம்
+                            மற்றும் தேசியப் பூங்கா</strong> என அறியப்படும் பாதுகாப்புப் பகுதியாகும்.</p>
+                    <p>மேற்கு தொடர்ச்சி மலைகளின் முக்கியமான காட்டு மற்றும் மலைச் சூழல்களை உள்ளடக்கிய இப்பகுதி,
+                        <strong>நீலகிரி வரையாடு</strong> மற்றும் <strong>சிங்கவால் குரங்கு</strong> போன்ற அரிய
+                        உயிரினங்களுக்கு முக்கிய வாழிடமாக உள்ளது.
+                    </p>
+
+                    <div style="margin-top: 10px; font-size: 0.92rem; color: #2c3630;">
+                        <strong style="color: var(--teal);">முக்கியத்துவம்:</strong>
+                        <ul style="margin: 6px 0 0 18px; padding: 0;">
+                            <li>மேற்கு தொடர்ச்சி மலைகளின் முக்கியமான பாதுகாப்புப் பகுதி</li>
+                            <li>சிங்கவால் குரங்கு போன்ற அரிய உயிரினங்களின் வாழிடம்</li>
+                            <li>பல்வேறு தாவரங்கள் மற்றும் விலங்குகளின் உயிரியல் பன்மையைப் பாதுகாக்கிறது</li>
+                            <li>காடுகள் மற்றும் மலைச் சூழலை பாதுகாக்கிறது</li>
+                        </ul>
+                    </div>
+
+                    <div class="dam-quote">“ஆனைமலை — மேற்கு தொடர்ச்சி மலைகளின் உயிரியல் பொக்கிஷம்.”</div>
+                </div>
+            </div>
+
+            <!-- 5.3 காவிரி வடக்கு மற்றும் தெற்கு வனவிலங்கு சரணாலயங்கள் -->
+            <div class="dam">
+                <div class="dam-media">
+                    <img src="assets/sanctuary-cauvery.jpg" alt="காவிரி வடக்கு மற்றும் தெற்கு வனவிலங்கு சரணாலயங்கள்">
+                    <div class="dam-plate">காவிரி வடக்கு & தெற்கு சரணாலயங்கள்</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">வடமேற்கு தமிழ்நாடு · காவிரி ஆற்றுப் படுகை</div>
+                    <h3>காவிரி வடக்கு மற்றும் தெற்கு வனவிலங்கு சரணாலயங்கள்</h3>
+                    <div class="meta">
+                        <span>காவிரி ஆற்றங்கரை</span>
+                        <span>தமிழ்நாடு–கர்நாடகா இணைப்பு</span>
+                        <span>ஆற்றங்கரைச் சூழல்</span>
+                    </div>
+                    <p><strong>காவிரி வடக்கு மற்றும் தெற்கு வனவிலங்கு சரணாலயங்கள்</strong> தமிழ்நாட்டின் வடமேற்குப்
+                        பகுதிகளில் காவிரி ஆற்றைச் சுற்றியுள்ள காடுகள் மற்றும் ஆற்றங்கரைச் சூழல்களைப் பாதுகாக்கின்றன.</p>
+                    <p>இவை தமிழ்நாடு மற்றும் கர்நாடகத்தின் வனப்பகுதிகளுக்கு இடையே விலங்குகள் நகர்வதற்கான முக்கியமான
+                        <strong>வனவிலங்கு வழித்தடங்களாக</strong> செயல்படுகின்றன.
+                    </p>
+
+                    <div style="margin-top: 10px; font-size: 0.92rem; color: #2c3630;">
+                        <strong style="color: var(--teal);">முக்கியத்துவம்:</strong>
+                        <ul style="margin: 6px 0 0 18px; padding: 0;">
+                            <li>காவிரி ஆற்றங்கரைச் சூழலைப் பாதுகாக்கின்றன</li>
+                            <li>யானைகள் உள்ளிட்ட வனவிலங்குகளின் இடம்பெயர்வுக்கு உதவுகின்றன</li>
+                            <li>தமிழ்நாடு–கர்நாடக வனப்பகுதிகளை இணைக்கின்றன</li>
+                            <li>ஆற்றைச் சார்ந்த உயிரியல் வளங்களைப் பாதுகாக்கின்றன</li>
+                        </ul>
+                    </div>
+
+                    <div class="dam-quote">“வனவிலங்குகளுக்கு எல்லைகள் இல்லை; பாதுகாப்பான வழித்தடங்கள் மட்டுமே தேவை.”
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5.4 வல்லநாடு கருமான் சரணாலயம் -->
+            <div class="dam rev">
+                <div class="dam-media">
+                    <img src="assets/sanctuary-vallanadu.jpg" alt="வல்லநாடு கருமான் சரணாலயம் — தூத்துக்குடி">
+                    <div class="dam-plate">வல்லநாடு கருமான் சரணாலயம்</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">தூத்துக்குடி மாவட்டம் · வல்லநாடு</div>
+                    <h3>வல்லநாடு கருமான் சரணாலயம் — தூத்துக்குடி</h3>
+                    <div class="meta">
+                        <span>தூத்துக்குடி</span>
+                        <span>இந்திய கருமான் (Blackbuck)</span>
+                        <span>புதர்க்காடு & புல்வெளி</span>
+                    </div>
+                    <p><strong>வல்லநாடு கருமான் சரணாலயம்</strong> தூத்துக்குடி மாவட்டத்தில் அமைந்துள்ள தனித்துவமான
+                        புதர்க்காடு மற்றும் புல்வெளிச் சூழலைப் பாதுகாக்கும் முக்கியமான சரணாலயமாகும்.</p>
+                    <p>இப்பகுதி குறிப்பாக <strong>இந்திய கருமான் (Blackbuck)</strong> இனத்தின் தெற்குப் பகுதியில்
+                        காணப்படும் முக்கியமான வாழிடத்தைப் பாதுகாப்பதற்காக உருவாக்கப்பட்டது.</p>
+
+                    <div style="margin-top: 10px; font-size: 0.92rem; color: #2c3630;">
+                        <strong style="color: var(--teal);">முக்கியத்துவம்:</strong>
+                        <ul style="margin: 6px 0 0 18px; padding: 0;">
+                            <li>இந்திய கருமானைப் பாதுகாக்கிறது</li>
+                            <li>புதர்க்காடு மற்றும் புல்வெளிச் சூழலைப் பாதுகாக்கிறது</li>
+                            <li>தென் தமிழ்நாட்டின் தனித்துவமான உயிரியல் வளத்தைப் பாதுகாக்கிறது</li>
+                            <li>அரிய வனவிலங்குகளுக்கான பாதுகாப்பான வாழிடமாக உள்ளது</li>
+                        </ul>
+                    </div>
+
+                    <div class="dam-quote">“சிறிய புல்வெளியும் ஒரு பெரிய உயிரியல் உலகை தாங்குகிறது.”</div>
+                </div>
+            </div>
+
+            <!-- 5.5 புலிக்காட் ஏரி பறவைகள் சரணாலயம் -->
+            <div class="dam">
+                <div class="dam-media">
+                    <img src="assets/sanctuary-pulicat.jpg" alt="புலிக்காட் ஏரி பறவைகள் சரணாலயம் — திருவள்ளூர்">
+                    <div class="dam-plate">புலிக்காட் ஏரி பறவைகள் சரணாலயம்</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">திருவள்ளூர் மாவட்டம் · தமிழ்நாடு–ஆந்திர எல்லை</div>
+                    <h3>புலிக்காட் ஏரி பறவைகள் சரணாலயம் — திருவள்ளூர்</h3>
+                    <div class="meta">
+                        <span>திருவள்ளூர்</span>
+                        <span>உவர்நீர் ஏரி</span>
+                        <span>ஃபிளமிங்கோ வாழிடம்</span>
+                    </div>
+                    <p><strong>புலிக்காட் ஏரி பறவைகள் சரணாலயம்</strong> தமிழ்நாடு–ஆந்திரப் பிரதேச எல்லைப் பகுதியில்
+                        அமைந்துள்ள புலிக்காட் ஏரியைச் சார்ந்த முக்கியமான பறவைகள் பாதுகாப்புப் பகுதியாகும்.</p>
+                    <p>இது இந்தியாவின் முக்கியமான <strong>உவர்நீர் ஏரி சூழல்களில் ஒன்றாக</strong> விளங்குவதுடன்,
+                        குளிர்காலத்தில் ஆயிரக்கணக்கான புலம்பெயர் பறவைகளுக்கு உணவளிக்கும் பகுதியாக உள்ளது.</p>
+
+                    <div style="margin-top: 10px; font-size: 0.92rem; color: #2c3630;">
+                        <strong style="color: var(--teal);">முக்கியத்துவம்:</strong>
+                        <ul style="margin: 6px 0 0 18px; padding: 0;">
+                            <li>புலம்பெயர் பறவைகளின் முக்கிய வாழிடம்</li>
+                            <li>ஃபிளமிங்கோ உள்ளிட்ட நீர்ப்பறவைகளுக்கு உணவளிக்கும் பகுதி</li>
+                            <li>கடலோர ஈரநிலச் சூழலைப் பாதுகாக்கிறது</li>
+                            <li>புலிக்காட் ஏரியின் உயிரியல் வளத்தைப் பாதுகாக்கிறது</li>
+                        </ul>
+                    </div>
+
+                    <div class="dam-quote">“புலிக்காட் — கடலும் ஈரநிலமும் பறவைகளுக்கு புகலிடமாகும் இடம்.”</div>
+                </div>
+            </div>
+
+            <!-- 5.6 கூந்தங்குளம் பறவைகள் சரணாலயம் -->
+            <div class="dam rev">
+                <div class="dam-media">
+                    <img src="assets/sanctuary-koonthankulam.jpg" alt="கூந்தங்குளம் பறவைகள் சரணாலயம் — திருநெல்வேலி">
+                    <div class="dam-plate">கூந்தங்குளம் பறவைகள் சரணாலயம்</div>
+                </div>
+                <div class="dam-body">
+                    <div class="tag">திருநெல்வேலி மாவட்டம் · கூந்தங்குளம்</div>
+                    <h3>கூந்தங்குளம் பறவைகள் சரணாலயம் — திருநெல்வேலி</h3>
+                    <div class="meta">
+                        <span>திருநெல்வேலி</span>
+                        <span>சமூகப் பங்களிப்பு</span>
+                        <span>நீர்ப்பறவைகள் இனப்பெருக்கம்</span>
+                    </div>
+                    <p><strong>கூந்தங்குளம் பறவைகள் சரணாலயம்</strong> திருநெல்வேலி மாவட்டத்தில் அமைந்துள்ள முக்கியமான
+                        பறவைகள் சரணாலயமாகும்.</p>
+                    <p>இப்பகுதியில் உள்ளூர் மக்கள் மற்றும் பாதுகாப்பு அமைப்புகளின் பங்களிப்புடன் பறவைகள்
+                        பாதுகாக்கப்படுவது இதன் சிறப்பாகும். பல்வேறு புலம்பெயர் பறவைகள் இங்கு வந்து இனப்பெருக்கம்
+                        செய்கின்றன.</p>
+
+                    <div style="margin-top: 10px; font-size: 0.92rem; color: #2c3630;">
+                        <strong style="color: var(--teal);">முக்கியத்துவம்:</strong>
+                        <ul style="margin: 6px 0 0 18px; padding: 0;">
+                            <li>புலம்பெயர் பறவைகளின் முக்கிய இனப்பெருக்கப் பகுதி</li>
+                            <li>கூழைக்கடா, அரிவாள் மூக்கன் போன்ற நீர்ப்பறவைகள் காணப்படுகின்றன</li>
+                            <li>உள்ளூர் சமூகத்தின் பங்களிப்புடன் பாதுகாப்பு நடைபெறுகிறது</li>
+                            <li>ஈரநிலச் சூழலைப் பாதுகாக்கிறது</li>
+                        </ul>
+                    </div>
+
+                    <div class="dam-quote">“மக்களும் இயற்கையும் இணைந்தால், பறவைகளுக்கு பாதுகாப்பான வீடு உருவாகும்.”
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 6: Quick List Table -->
+    <section id="table">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>தமிழ்நாட்டின் முக்கிய சரணாலயங்கள் — விரைவுப் பட்டியல்</h2>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>சரணாலயம்</th>
+                            <th>வகை</th>
+                            <th>முக்கிய சிறப்பு</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>தந்தை பெரியார்</strong></td>
+                            <td>வனவிலங்கு</td>
+                            <td>புலி, யானை மற்றும் வனவிலங்கு வழித்தடம்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ஆனைமலை</strong></td>
+                            <td>வனவிலங்கு</td>
+                            <td>சிங்கவால் குரங்கு, நீலகிரி வரையாடு</td>
+                        </tr>
+                        <tr>
+                            <td><strong>காவிரி வடக்கு & தெற்கு</strong></td>
+                            <td>வனவிலங்கு</td>
+                            <td>யானைகள் மற்றும் ஆற்றங்கரைச் சூழல்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>வல்லநாடு</strong></td>
+                            <td>வனவிலங்கு</td>
+                            <td>இந்திய கருமான்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>புலிக்காட்</strong></td>
+                            <td>பறவைகள்</td>
+                            <td>ஃபிளமிங்கோ மற்றும் புலம்பெயர் பறவைகள்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>கூந்தங்குளம்</strong></td>
+                            <td>பறவைகள்</td>
+                            <td>சமூகப் பங்களிப்புடன் பறவை பாதுகாப்பு</td>
+                        </tr>
+                        <tr>
+                            <td><strong>வேடந்தாங்கல்</strong></td>
+                            <td>பறவைகள்</td>
+                            <td>நீர்ப்பறவைகள் மற்றும் இனப்பெருக்கம்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>வெள்ளோடு</strong></td>
+                            <td>பறவைகள்</td>
+                            <td>ஈரநிலப் பறவைகள்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>மேல்செல்வனூர்–கீழ்செல்வனூர்</strong></td>
+                            <td>பறவைகள்</td>
+                            <td>புலம்பெயர் பறவைகள்</td>
+                        </tr>
+                        <tr>
+                            <td><strong>கரிக்கிலி</strong></td>
+                            <td>பறவைகள்</td>
+                            <td>நீர்ப்பறவைகளின் முக்கிய வாழிடம்</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Notes -->
+    <section id="notes">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>முக்கிய குறிப்புகள்</h2>
+            </div>
+
+            <div class="info-card" style="margin-bottom: 28px;">
+                <ul style="margin: 0; padding-left: 20px; color: #2d3832; line-height: 1.8; font-size: 1.02rem;">
+                    <li style="margin-bottom: 10px;">தமிழ்நாட்டில் <strong>36 முக்கியமான சரணாலயங்கள்</strong> உள்ளன.
+                    </li>
+                    <li style="margin-bottom: 10px;">இதில் <strong>18 வனவிலங்கு சரணாலயங்களும் 18 பறவைகள்
+                            சரணாலயங்களும்</strong> அடங்கும்.</li>
+                    <li style="margin-bottom: 10px;">சரணாலயங்கள் தனித்தனி பகுதிகளாக மட்டுமல்லாமல், <strong>தேசியப்
+                            பூங்காக்கள், புலிகள் காப்பகங்கள், யானைகள் காப்பகங்கள் மற்றும் ஈரநிலப் பாதுகாப்புப்
+                            பகுதிகளுடன் இணைந்து</strong> பெரிய பாதுகாப்பு வலையமைப்பை உருவாக்குகின்றன.</li>
+                    <li style="margin-bottom: 10px;">தமிழ்நாட்டின் பல சரணாலயங்கள் <strong>மேற்கு தொடர்ச்சி மலைகள்,
+                            கிழக்குத் தொடர்ச்சி மலைகள், காவிரி ஆற்றுப்பகுதி மற்றும் கடலோர ஈரநிலங்கள்</strong> போன்ற
+                        வெவ்வேறு சூழல்களைப் பாதுகாக்கின்றன.</li>
+                    <li style="margin-bottom: 10px;">புலிக்காட், கூந்தங்குளம் போன்ற பறவைகள் சரணாலயங்கள் புலம்பெயர்
+                        பறவைகளுக்கு முக்கியமான இடங்களாக உள்ளன.</li>
+                    <li style="margin-bottom: 12px;">ஆனைமலை, காவிரி மற்றும் பிற வனவிலங்கு பகுதிகள் யானைகள், புலிகள்
+                        மற்றும் அரிய உயிரினங்களின் வாழ்வுக்கும் இடம்பெயர்வுக்கும் முக்கியமானவை.</li>
+                </ul>
+            </div>
+
+            <div class="quote-box">
+                <p>“இயற்கையைப் பாதுகாப்பது என்பது விலங்குகளை மட்டும் காப்பது அல்ல; நமது எதிர்காலத்தையும் காப்பதாகும்.”
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wrap">
+            <div class="foot-grid">
+                <div class="foot-brand">
+                    <img src="assets/hawwa-logo.png" alt="Hawwa PrintShop">
+                    <p>இந்தப் பக்கம் Hawwa PrintShop, Chennai சார்பாக தொகுக்கப்பட்டது.</p>
+                </div>
+                <div>
+                    <h4>முகவரி</h4>
+                    <address>67, Perianna Mudali Street,<br>Seven Wells North, George Town,<br>Chennai, Tamil Nadu
+                        600001</address>
+                </div>
+                <div>
+                    <h4>தொடர்பு</h4>
+                    <p>+91 98844 80801</p>
+                    <p>திங்கள்–சனி: 10:00 AM – 7:00 PM</p>
+                    <p>ஞாயிறு: விடுமுறை</p>
+                </div>
+            </div>
+            <div class="foot-bottom">
+                <span>© Hawwa PrintShop</span>
+                <span>படங்கள்: Wikimedia Commons</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
